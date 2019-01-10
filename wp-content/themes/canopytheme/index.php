@@ -59,7 +59,50 @@
             <a href="mailto:yo@canopy-la.com?Subject=Hello%20there" target="_top" class="coming-soon-text">yo@canopy-la.com</a >
         </div> -->
     </div>
-    <div class="main"></div>
+    <div class="main">
+        <div class="body-header">
+            <h3>Canopy LA</h3>
+            <span>sound + music + immersion</span>
+            <a>LEARN MORE</a>
+        </div>
+        <div class="grid-container">
+            <div class="grid">
+                <div class="grid-row">
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/1000">
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
     <div class="feature"></div>
 
 <?php get_footer(); ?>

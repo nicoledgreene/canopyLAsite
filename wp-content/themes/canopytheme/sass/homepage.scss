@@ -74,3 +74,64 @@ h1 {
     width: 100%;
     padding-bottom: 20px;
 }
+
+.main {
+
+    .body-header {
+        padding: 50px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        h3 {
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+        span, a {
+            font-size: 0.8em;
+            letter-spacing: 2px;
+        }
+        span {
+            padding: 10px 0px;
+        }
+        a {
+            padding-top: 10px;
+            color: #00592B;
+            font-weight: 600;
+            cursor:pointer;
+        }
+    }
+
+    .grid-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 0px 60px;
+            .grid-row {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                div {
+                    position: relative;
+                    // border: 1px solid red;
+                    width: 33%;
+                    // padding-top: 33%;
+                    img {
+                        padding: 10px;
+                        width: calc(100% - 20px);
+                        // height: calc(100% - 10px);
+                    }
+                }
+            }
+        }
+    }
+
+}
+

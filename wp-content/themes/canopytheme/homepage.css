@@ -82,3 +82,64 @@ h1 {
   width: 100%;
   padding-bottom: 20px;
 }
+
+/* line 80, sass/homepage.scss */
+.main .body-header {
+  padding: 50px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+/* line 87, sass/homepage.scss */
+.main .body-header h3 {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+/* line 91, sass/homepage.scss */
+.main .body-header span, .main .body-header a {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+/* line 95, sass/homepage.scss */
+.main .body-header span {
+  padding: 10px 0px;
+}
+/* line 98, sass/homepage.scss */
+.main .body-header a {
+  padding-top: 10px;
+  color: #00592B;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* line 106, sass/homepage.scss */
+.main .grid-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* line 111, sass/homepage.scss */
+.main .grid-container .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 60px;
+}
+/* line 117, sass/homepage.scss */
+.main .grid-container .grid .grid-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+/* line 121, sass/homepage.scss */
+.main .grid-container .grid .grid-row div {
+  position: relative;
+  width: 33%;
+}
+/* line 126, sass/homepage.scss */
+.main .grid-container .grid .grid-row div img {
+  padding: 10px;
+  width: calc(100% - 20px);
+}
