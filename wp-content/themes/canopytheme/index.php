@@ -30,10 +30,34 @@
     <div class="hero">
         <div class="blur"></div>
         <h1>CANOPY LA</h1>
-        <img id="title-logo" src="/images/logos/CANOPY_LOGO_ai_FULL_WHT.png">
-        <div class="coming-soon">
-            <a href="mailto:yo@canopy-la.com?Subject=Hello%20there" target="_top" class="coming-soon-text">yo@canopy-la.com</a >
+        <div class="main-menu">
+            <div>
+                <img id="title-logo" src="/images/logos/CANOPY_LOGO_ai_FULL_WHT.png">
+            </div>
+            <ul class="nav">
+                <li>
+                    <span>ABOUT</span>
+                </li>
+                <li>
+                    <span class="projects-link">PROJECTS</span>
+                    <div class="projects-sub-list">
+                        <span>COMMERCIAL</span>
+                        <span>FILM</span>
+                        <span>VIDEO GAME</span>
+                        <span>IMMERSIVE EXPERIENCE</span>
+                    </div>
+                </li>
+                <li>
+                    <span>GEAR & PROCESS</span>
+                </li>
+                <li>
+                    <span>STORE</span>
+                </li>
+            </ul>
         </div>
+        <!-- <div class="coming-soon">
+            <a href="mailto:yo@canopy-la.com?Subject=Hello%20there" target="_top" class="coming-soon-text">yo@canopy-la.com</a >
+        </div> -->
     </div>
     <div class="main"></div>
     <div class="feature"></div>

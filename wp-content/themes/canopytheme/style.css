@@ -6,72 +6,171 @@ Version: 1.0
 Author: Nicole Greene
 Author URI: nicolegilbert.com.
 */
+/* line 5, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
+/* line 22, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
 
+/* line 24, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, sass/theme.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
+/* line 11, sass/theme.scss */
 body {
-    margin: 0;
-    font-family: brother-1816, sans-serif;
-    font-style: normal;
-    font-weight: 100;
+  margin: 0;
+  font-family: brother-1816, sans-serif;
+  font-style: normal;
+  font-weight: 100;
 }
 
+/* line 1, sass/homepage.scss */
 .hero {
-    background-image: url(/images/placeholder/tropical-forest.jpg);
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    position: relative;
+  background-image: url(/images/placeholder/tropical-forest.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
 }
 
+/* line 9, sass/homepage.scss */
 .blur {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    z-index: 2;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(255,255,255,0.5)));
-    background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,0.5));
-    background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,0.5));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 2;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.5)));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
 }
 
+/* line 21, sass/homepage.scss */
 h1 {
-    visibility: hidden;
+  visibility: hidden;
 }
 
+/* line 25, sass/homepage.scss */
+.main-menu {
+  width: 200px;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8em;
+}
+/* line 34, sass/homepage.scss */
+.main-menu .nav {
+  list-style-type: none;
+  padding-left: 0px;
+  font-weight: 600;
+  color: white;
+}
+/* line 40, sass/homepage.scss */
+.main-menu .nav li {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+/* line 46, sass/homepage.scss */
+.main-menu .nav li .projects-link {
+  border-bottom: 1px solid white;
+}
+/* line 49, sass/homepage.scss */
+.main-menu .nav li span {
+  padding: 10px 0px;
+}
+/* line 53, sass/homepage.scss */
+.main-menu .nav li .projects-sub-list {
+  display: flex;
+  flex-direction: column;
+}
+/* line 56, sass/homepage.scss */
+.main-menu .nav li .projects-sub-list span {
+  padding: 10px 20px;
+}
+/* line 59, sass/homepage.scss */
+.main-menu .nav li .projects-sub-list span:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+/* line 66, sass/homepage.scss */
+.main-menu .nav li:nth-of-type(2) {
+  padding: 0px !important;
+}
+
+/* line 72, sass/homepage.scss */
 #title-logo {
-    position: absolute;
-    height: 200px;
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
-
-.coming-soon {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 100;
-}
-
-.coming-soon-text {
-    text-decoration: none;
-    cursor: pointer;
-    color: white;
-    font-size: 1.3em;
+  display: block;
+  width: 100%;
+  padding-bottom: 20px;
 }
