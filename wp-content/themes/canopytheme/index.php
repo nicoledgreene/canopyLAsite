@@ -60,6 +60,7 @@
         </div> -->
     </div>
     <div class="main">
+        <img class="wave" src="/images/backgrounds/waves.png">
         <div class="body-header">
             <h3>Canopy LA</h3>
             <span>sound + music + immersion</span>
@@ -103,6 +104,16 @@
             </div>
         </div>    
     </div>
-    <div class="feature"></div>
+    <div class="feature">
+        <div class="focus-image"></div>
+        <div class="focus-text">
+            <span class="focus-heading">BEHIND THE SCENES</span>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis scelerisque nisi, sit amet sollicitudin tortor interdum a. Vestibulum vehicula dui lacus, vel mollis erat pharetra a. Ut tempor, arcu eget porttitor aliquam, enim nisi blandit eros, eget pretium risus purus sit amet augue. Vivamus ac rutrum mauris, id hendrerit nulla. Sed sagittis gravida nisi vitae dapibus.
+            </span>
+            <div class="focus-button">
+                <span>LEARN MORE</span>
+            </div>
+        </div>
+    </div>
 
 <?php get_footer(); ?>
