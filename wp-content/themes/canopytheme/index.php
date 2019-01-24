@@ -62,7 +62,7 @@
         </div>
         <div class="main">
             <div id="wave">
-                <img src="/images/backgrounds/waves.png">
+                <img src="/wordpress/images/backgrounds/waves.png">
             </div>
             <div class="body-header">
                 <h3>Canopy LA</h3>
@@ -73,35 +73,35 @@
                 <div class="grid">
                     <div class="grid-row">
                         <div>
-                            <img src="https://picsum.photos/1000">
+                            <img src="/wordpress/images/placeholder/clips1.png">
                         </div>
                         <div>
-                            <img src="https://picsum.photos/1000">
+                            <img src="/wordpress/images/placeholder/clips2.png">
                         </div>
                         <div>
-                            <img src="https://picsum.photos/1000">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div>
-                            <img src="https://picsum.photos/1000">
-                        </div>
-                        <div>
-                            <img src="https://picsum.photos/1000">
-                        </div>
-                        <div>
-                            <img src="https://picsum.photos/1000">
+                            <img src="/wordpress/images/placeholder/clips3.png">
                         </div>
                     </div>
                     <div class="grid-row">
                         <div>
-                            <img src="https://picsum.photos/1000">
+                            <img src="/wordpress/images/placeholder/clips4.png">
                         </div>
                         <div>
-                            <img src="https://picsum.photos/1000">
+                            <img src="/wordpress/images/placeholder/clips5.png">
                         </div>
                         <div>
-                            <img src="https://picsum.photos/1000">
+                            <img src="/wordpress/images/placeholder/clips6.png">
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div>
+                            <img src="/wordpress/images/placeholder/clips7.png">
+                        </div>
+                        <div>
+                            <img src="/wordpress/images/placeholder/clips8.png">
+                        </div>
+                        <div>
+                            <img src="/wordpress/images/placeholder/clips9.png">
                         </div>
                     </div>
                 </div>

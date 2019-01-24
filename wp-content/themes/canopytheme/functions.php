@@ -11,7 +11,7 @@ function addStyleSheets() {
 
 function addScripts() {
 
-  wp_enqueue_script( 'indexJS', get_stylesheet_directory_uri(), '/js/index.js');
+  wp_enqueue_script( 'indexJS', get_stylesheet_directory_uri(), '/wp-content/themes/canopytheme/js/index.js');
   
   wp_enqueue_script( 'scrollReveal', get_stylesheet_directory_uri(), 'https://unpkg.com/scrollreveal');
 

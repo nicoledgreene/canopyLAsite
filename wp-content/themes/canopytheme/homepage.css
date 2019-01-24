@@ -110,7 +110,11 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* line 103, sass/homepage.scss */
+/* line 102, sass/homepage.scss */
+.main #wave img {
+  width: 100%;
+}
+/* line 107, sass/homepage.scss */
 .main .body-header {
   padding: 50px 0px;
   width: 100%;
@@ -119,34 +123,34 @@ h1 {
   text-align: center;
   justify-content: center;
 }
-/* line 110, sass/homepage.scss */
+/* line 114, sass/homepage.scss */
 .main .body-header h3 {
   font-weight: 600;
   font-size: 1.5em;
 }
-/* line 114, sass/homepage.scss */
+/* line 118, sass/homepage.scss */
 .main .body-header span, .main .body-header a {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
-/* line 118, sass/homepage.scss */
+/* line 122, sass/homepage.scss */
 .main .body-header span {
   padding: 10px 0px;
 }
-/* line 121, sass/homepage.scss */
+/* line 125, sass/homepage.scss */
 .main .body-header a {
   padding-top: 10px;
   color: #00592B;
   font-weight: 600;
   cursor: pointer;
 }
-/* line 129, sass/homepage.scss */
+/* line 133, sass/homepage.scss */
 .main .grid-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/* line 134, sass/homepage.scss */
+/* line 138, sass/homepage.scss */
 .main .grid-container .grid {
   display: flex;
   flex-direction: column;
@@ -155,24 +159,29 @@ h1 {
   padding: 0px 60px;
   margin-bottom: 100px;
 }
-/* line 141, sass/homepage.scss */
+/* line 145, sass/homepage.scss */
 .main .grid-container .grid .grid-row {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-/* line 145, sass/homepage.scss */
+/* line 150, sass/homepage.scss */
 .main .grid-container .grid .grid-row div {
+  margin: 10px;
+  height: 0;
   position: relative;
   width: 33%;
+  overflow: hidden;
+  padding-bottom: 33%;
 }
-/* line 150, sass/homepage.scss */
+/* line 157, sass/homepage.scss */
 .main .grid-container .grid .grid-row div img {
-  padding: 10px;
-  width: calc(100% - 20px);
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* line 162, sass/homepage.scss */
+/* line 169, sass/homepage.scss */
 .feature {
   display: flex;
   flex-direction: row;
@@ -182,44 +191,44 @@ h1 {
   padding: 24px 100px;
   overflow: hidden;
 }
-/* line 171, sass/homepage.scss */
+/* line 178, sass/homepage.scss */
 .feature .focus-image {
   background-color: lightgray;
   width: 33%;
   flex-basis: 100%;
   min-height: 300px;
 }
-/* line 178, sass/homepage.scss */
+/* line 185, sass/homepage.scss */
 .feature .focus-text {
   padding-left: 100px;
   padding-right: 100px;
 }
-/* line 181, sass/homepage.scss */
+/* line 188, sass/homepage.scss */
 .feature .focus-text span {
   display: block;
   line-height: 1.5em;
 }
-/* line 185, sass/homepage.scss */
+/* line 192, sass/homepage.scss */
 .feature .focus-text .focus-heading {
   font-size: 1.2em;
 }
-/* line 188, sass/homepage.scss */
+/* line 195, sass/homepage.scss */
 .feature .focus-text span:nth-of-type(2) {
   padding: 24px 0px;
 }
-/* line 193, sass/homepage.scss */
+/* line 200, sass/homepage.scss */
 .feature .focus-button {
   border: 2px solid white;
   border-radius: 5px;
   width: 140px;
   text-align: center;
 }
-/* line 198, sass/homepage.scss */
+/* line 205, sass/homepage.scss */
 .feature .focus-button span {
   font-size: 0.8em;
   padding: 12px 24px;
 }
-/* line 204, sass/homepage.scss */
+/* line 211, sass/homepage.scss */
 .feature .focus-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;

@@ -7,7 +7,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="/styles/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ysh4zhf.css"> -->
     <script type="text/javascript" src="https://unpkg.com/scrollreveal"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/wordpress/wp-content/themes/canopytheme/js/index.js"></script>
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <?php wp_head(); ?>
 </head>
