@@ -1,0 +1,43 @@
+footer {
+    background-color: transparent;
+    background-image: url(/images/placeholder/tropical-forest.jpg);
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 2em;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.contact-col {
+    padding-right: 50px;
+}
+
+.top-row {
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#social-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+#copyright {
+    text-decoration: italic;
+}
