@@ -44,8 +44,12 @@ footer {
   display: flex;
   flex-direction: row;
 }
+/* line 40, sass/footer.scss */
+#social-icons .fas {
+  color: white;
+}
 
-/* line 41, sass/footer.scss */
+/* line 45, sass/footer.scss */
 #copyright {
   text-decoration: italic;
 }

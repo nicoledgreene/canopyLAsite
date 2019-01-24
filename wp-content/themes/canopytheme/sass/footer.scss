@@ -36,6 +36,10 @@ footer {
 #social-icons {
     display: flex;
     flex-direction: row;
+    
+    .fas {
+        color: white;
+    }
 }
 
 #copyright {
