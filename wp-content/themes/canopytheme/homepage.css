@@ -1,12 +1,17 @@
 /* line 1, sass/homepage.scss */
+.hidden {
+  display: none !important;
+}
+
+/* line 5, sass/homepage.scss */
 .container {
   position: relative;
   width: 100%;
 }
 
-/* line 6, sass/homepage.scss */
+/* line 10, sass/homepage.scss */
 .hero {
-  background-image: url(/images/placeholder/tropical-forest.jpg);
+  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
   height: 100vh;
   width: 100%;
   position: relative;
@@ -16,7 +21,7 @@
   background-size: cover;
 }
 
-/* line 17, sass/homepage.scss */
+/* line 21, sass/homepage.scss */
 .blur {
   position: absolute;
   bottom: 0;
@@ -29,12 +34,12 @@
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
 }
 
-/* line 29, sass/homepage.scss */
+/* line 33, sass/homepage.scss */
 h1 {
   visibility: hidden;
 }
 
-/* line 33, sass/homepage.scss */
+/* line 37, sass/homepage.scss */
 .main-menu {
   width: 200px;
   height: 100%;
@@ -44,60 +49,60 @@ h1 {
   justify-content: center;
   font-size: 0.8em;
 }
-/* line 42, sass/homepage.scss */
+/* line 46, sass/homepage.scss */
 .main-menu .nav {
   list-style-type: none;
   padding-left: 0px;
   font-weight: 600;
   color: white;
 }
-/* line 48, sass/homepage.scss */
+/* line 52, sass/homepage.scss */
 .main-menu .nav li {
   padding: 10px 0px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
 }
-/* line 54, sass/homepage.scss */
+/* line 58, sass/homepage.scss */
 .main-menu .nav li .projects-link {
   border-bottom: 1px solid white;
 }
-/* line 57, sass/homepage.scss */
+/* line 61, sass/homepage.scss */
 .main-menu .nav li span {
   padding: 10px 0px;
 }
-/* line 61, sass/homepage.scss */
+/* line 65, sass/homepage.scss */
 .main-menu .nav li .projects-sub-list {
   display: flex;
   flex-direction: column;
 }
-/* line 64, sass/homepage.scss */
+/* line 68, sass/homepage.scss */
 .main-menu .nav li .projects-sub-list span {
   padding: 10px 20px;
 }
-/* line 67, sass/homepage.scss */
+/* line 71, sass/homepage.scss */
 .main-menu .nav li .projects-sub-list span:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
 }
-/* line 74, sass/homepage.scss */
+/* line 78, sass/homepage.scss */
 .main-menu .nav li:nth-of-type(2) {
   padding: 0px !important;
 }
 
-/* line 80, sass/homepage.scss */
+/* line 84, sass/homepage.scss */
 #title-logo {
   display: block;
   width: 100%;
   padding-bottom: 20px;
 }
 
-/* line 86, sass/homepage.scss */
+/* line 90, sass/homepage.scss */
 .main {
   position: relative;
   overflow: hidden;
 }
-/* line 90, sass/homepage.scss */
+/* line 94, sass/homepage.scss */
 .main #wave {
   z-index: -2;
   position: absolute;
@@ -110,11 +115,11 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* line 102, sass/homepage.scss */
+/* line 106, sass/homepage.scss */
 .main #wave img {
   width: 100%;
 }
-/* line 107, sass/homepage.scss */
+/* line 111, sass/homepage.scss */
 .main .body-header {
   padding: 50px 0px;
   width: 100%;
@@ -123,34 +128,34 @@ h1 {
   text-align: center;
   justify-content: center;
 }
-/* line 114, sass/homepage.scss */
+/* line 118, sass/homepage.scss */
 .main .body-header h3 {
   font-weight: 600;
   font-size: 1.5em;
 }
-/* line 118, sass/homepage.scss */
+/* line 122, sass/homepage.scss */
 .main .body-header span, .main .body-header a {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
-/* line 122, sass/homepage.scss */
+/* line 126, sass/homepage.scss */
 .main .body-header span {
   padding: 10px 0px;
 }
-/* line 125, sass/homepage.scss */
+/* line 129, sass/homepage.scss */
 .main .body-header a {
   padding-top: 10px;
   color: #00592B;
   font-weight: 600;
   cursor: pointer;
 }
-/* line 133, sass/homepage.scss */
+/* line 137, sass/homepage.scss */
 .main .grid-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/* line 138, sass/homepage.scss */
+/* line 142, sass/homepage.scss */
 .main .grid-container .grid {
   display: flex;
   flex-direction: column;
@@ -159,14 +164,14 @@ h1 {
   padding: 0px 60px;
   margin-bottom: 100px;
 }
-/* line 145, sass/homepage.scss */
+/* line 149, sass/homepage.scss */
 .main .grid-container .grid .grid-row {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-/* line 150, sass/homepage.scss */
-.main .grid-container .grid .grid-row div {
+/* line 154, sass/homepage.scss */
+.main .grid-container .grid .grid-row .grid-item-1, .main .grid-container .grid .grid-row .grid-item-2, .main .grid-container .grid .grid-row .grid-item-3 {
   margin: 10px;
   height: 0;
   position: relative;
@@ -174,61 +179,88 @@ h1 {
   overflow: hidden;
   padding-bottom: 33%;
 }
-/* line 157, sass/homepage.scss */
-.main .grid-container .grid .grid-row div img {
+/* line 161, sass/homepage.scss */
+.main .grid-container .grid .grid-row .grid-item-1 img, .main .grid-container .grid .grid-row .grid-item-2 img, .main .grid-container .grid .grid-row .grid-item-3 img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 169, sass/homepage.scss */
+/* line 173, sass/homepage.scss */
+.grid-item-1, .grid-item-2, .grid-item-3 {
+  position: relative;
+}
+
+/* line 176, sass/homepage.scss */
+.grid-item-1:hover, .grid-item-2:hover, .grid-item-3:hover {
+  cursor: pointer;
+}
+
+/* line 180, sass/homepage.scss */
+.grid-item-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 191, sass/homepage.scss */
 .feature {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.85);
   color: white;
-  padding: 24px 100px;
-  overflow: hidden;
+  padding: 0px 100px;
+  margin-bottom: 75px;
+  height: 350px;
 }
-/* line 178, sass/homepage.scss */
+/* line 201, sass/homepage.scss */
 .feature .focus-image {
   background-color: lightgray;
-  width: 33%;
-  flex-basis: 100%;
-  min-height: 300px;
+  width: 45%;
+  height: 100%;
 }
-/* line 185, sass/homepage.scss */
+/* line 209, sass/homepage.scss */
 .feature .focus-text {
-  padding-left: 100px;
-  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 24px 100px;
+  width: 30%;
 }
-/* line 188, sass/homepage.scss */
+/* line 215, sass/homepage.scss */
 .feature .focus-text span {
-  display: block;
   line-height: 1.5em;
 }
-/* line 192, sass/homepage.scss */
+/* line 218, sass/homepage.scss */
 .feature .focus-text .focus-heading {
   font-size: 1.2em;
 }
-/* line 195, sass/homepage.scss */
+/* line 221, sass/homepage.scss */
 .feature .focus-text span:nth-of-type(2) {
   padding: 24px 0px;
 }
-/* line 200, sass/homepage.scss */
+/* line 226, sass/homepage.scss */
 .feature .focus-button {
   border: 2px solid white;
   border-radius: 5px;
   width: 140px;
   text-align: center;
+  height: 2.5em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* line 205, sass/homepage.scss */
+/* line 236, sass/homepage.scss */
 .feature .focus-button span {
   font-size: 0.8em;
-  padding: 12px 24px;
 }
-/* line 211, sass/homepage.scss */
+/* line 241, sass/homepage.scss */
 .feature .focus-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;

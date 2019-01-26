@@ -1,7 +1,7 @@
 /* line 1, sass/footer.scss */
 footer {
   background-color: transparent;
-  background-image: url(/images/placeholder/tropical-forest.jpg);
+  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -64,4 +64,10 @@ footer {
 /* line 61, sass/footer.scss */
 #copyright {
   text-decoration: italic;
+}
+
+/* line 66, sass/footer.scss */
+.links-col span:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }

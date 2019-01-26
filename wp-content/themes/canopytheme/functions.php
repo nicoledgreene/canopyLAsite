@@ -22,6 +22,10 @@
   function addScripts() {
     wp_register_script('scrollReveal', 'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js');
     wp_enqueue_script('scrollReveal');
+
+    wp_register_script('jQuery', 'https://code.jquery.com/jquery-3.3.1.min.js');
+    wp_enqueue_script('jQuery');
+
     wp_enqueue_script( 'indexJS', '/wp-content/themes/canopytheme/js/index.js');
 
   }

@@ -72,35 +72,62 @@
             <div class="grid-container">
                 <div class="grid">
                     <div class="grid-row">
-                        <div class="grid-item-1">
+                        <div id="g1" class="grid-item-1">
+                            <div id="o1" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips1.png">
                         </div>
-                        <div class="grid-item-2">
+                        <div id="g2" class="grid-item-2">
+                            <div id="o2" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips2.png">
                         </div>
-                        <div class="grid-item-3">
+                        <div id="g3" class="grid-item-3">
+                            <div id="o3" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips3.png">
                         </div>
                     </div>
                     <div class="grid-row">
-                        <div class="grid-item-1">
+                        <div id="g4" class="grid-item-1">
+                            <div id="o4" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips4.png">
                         </div>
-                        <div class="grid-item-2">
+                        <div id="g5" class="grid-item-2">
+                            <div id="o5" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips5.png">
                         </div>
-                        <div class="grid-item-3">
+                        <div id="g6" class="grid-item-3">
+                            <div id="o6" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips6.png">
                         </div>
                     </div>
                     <div class="grid-row">
-                        <div class="grid-item-1">
+                        <div id="g7" class="grid-item-1">
+                            <div id="o7" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips7.png">
                         </div>
-                        <div class="grid-item-2">
+                        <div id="g8" class="grid-item-2">
+                            <div id="o8" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips8.png">
                         </div>
-                        <div class="grid-item-3">
+                        <div id="g9" class="grid-item-3">
+                            <div id="o9" class="grid-item-overlay hidden">
+                                <span>PROJECT INFO</span>
+                            </div>
                             <img src="/wordpress/images/placeholder/clips9.png">
                         </div>
                     </div>
@@ -111,8 +138,7 @@
             <div class="focus-image"></div>
             <div class="focus-text">
                 <span class="focus-heading">BEHIND THE SCENES</span>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis scelerisque nisi, sit amet sollicitudin tortor interdum a. Vestibulum vehicula dui lacus, vel mollis erat pharetra a. Ut tempor, arcu eget porttitor aliquam, enim nisi blandit eros, eget pretium risus purus sit amet augue. Vivamus ac rutrum mauris, id hendrerit nulla. Sed sagittis gravida nisi vitae dapibus.
-                </span>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis scelerisque nisi, sit amet sollicitudin tortor interdum a. Vestibulum vehicula dui lacus, vel mollis erat pharetra a. </span>
                 <div class="focus-button">
                     <span>LEARN MORE</span>
                 </div>

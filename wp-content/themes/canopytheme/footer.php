@@ -6,7 +6,7 @@
                     <span>E yo@canopyla.com</span>
                     <span>P xxx-xxx-xxxx</span>
                 </div>
-                <div class="flex-column">
+                <div class="flex-column links-col">
                     <span>ABOUT</span>
                     <span>PROJECTS</span>
                     <span>PROCESS & GEAR</span>
