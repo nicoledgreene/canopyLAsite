@@ -37,22 +37,22 @@
                 </div>
                 <ul class="nav">
                     <li>
-                        <span>ABOUT</span>
+                        <span id="nav1">ABOUT</span>
                     </li>
                     <li>
-                        <span class="projects-link">PROJECTS</span>
+                        <span class="projects-link" id="nav2">PROJECTS</span>
                         <div class="projects-sub-list">
-                            <span>COMMERCIAL</span>
-                            <span>FILM</span>
-                            <span>VIDEO GAME</span>
-                            <span>IMMERSIVE EXPERIENCE</span>
+                            <span id="nav3">COMMERCIAL</span>
+                            <span id="nav4">FILM</span>
+                            <span id="nav5">VIDEO GAME</span>
+                            <span id="nav6">IMMERSIVE EXPERIENCE</span>
                         </div>
                     </li>
                     <li>
-                        <span>GEAR & PROCESS</span>
+                        <span id="nav7">GEAR & PROCESS</span>
                     </li>
                     <li>
-                        <span>STORE</span>
+                        <span id="nav8">STORE</span>
                     </li>
                 </ul>
             </div>
@@ -72,35 +72,35 @@
             <div class="grid-container">
                 <div class="grid">
                     <div class="grid-row">
-                        <div>
+                        <div class="grid-item-1">
                             <img src="/wordpress/images/placeholder/clips1.png">
                         </div>
-                        <div>
+                        <div class="grid-item-2">
                             <img src="/wordpress/images/placeholder/clips2.png">
                         </div>
-                        <div>
+                        <div class="grid-item-3">
                             <img src="/wordpress/images/placeholder/clips3.png">
                         </div>
                     </div>
                     <div class="grid-row">
-                        <div>
+                        <div class="grid-item-1">
                             <img src="/wordpress/images/placeholder/clips4.png">
                         </div>
-                        <div>
+                        <div class="grid-item-2">
                             <img src="/wordpress/images/placeholder/clips5.png">
                         </div>
-                        <div>
+                        <div class="grid-item-3">
                             <img src="/wordpress/images/placeholder/clips6.png">
                         </div>
                     </div>
                     <div class="grid-row">
-                        <div>
+                        <div class="grid-item-1">
                             <img src="/wordpress/images/placeholder/clips7.png">
                         </div>
-                        <div>
+                        <div class="grid-item-2">
                             <img src="/wordpress/images/placeholder/clips8.png">
                         </div>
-                        <div>
+                        <div class="grid-item-3">
                             <img src="/wordpress/images/placeholder/clips9.png">
                         </div>
                     </div>

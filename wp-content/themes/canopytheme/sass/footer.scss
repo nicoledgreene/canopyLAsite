@@ -36,10 +36,26 @@ footer {
 #social-icons {
     display: flex;
     flex-direction: row;
-    
-    .fas {
-        color: white;
-    }
+    margin: 12px 0px;
+
+    // .fas, .fa {
+    //     font-family: 'FontAwesome' !important;
+    //     color: white;
+    //     font-weight: 600 !important;
+    // }
+}
+
+.fas, .fa {
+    font-family: 'FontAwesome' !important;
+    color: white;
+    font-weight: 300 !important;
+    font-size: 30px;
+    margin: 0px 6px;
+}
+
+.fas:hover, .fa:hover {
+    color: rgba(255,255,255,0.5);
+    cursor:pointer;
 }
 
 #copyright {

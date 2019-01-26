@@ -17,10 +17,10 @@
                 <div>
                     <span>SOCIAL</span>
                     <div #social-icons>
-                        <i class="fas facebook-f"></i>
-                        <i class="fas instagram"></i>
-                        <i class="fas twitter"></i>
-                        <i class="fas youtube"></i>
+                        <i class="fa fa-facebook-square"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-youtube"></i>
                     </div>
                 <div>
                 <span id=#copyright>COPYRIGHT. ALL RIGHTS RESERVED</span>

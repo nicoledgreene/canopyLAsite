@@ -43,13 +43,25 @@ footer {
 #social-icons {
   display: flex;
   flex-direction: row;
-}
-/* line 40, sass/footer.scss */
-#social-icons .fas {
-  color: white;
+  margin: 12px 0px;
 }
 
-/* line 45, sass/footer.scss */
+/* line 48, sass/footer.scss */
+.fas, .fa {
+  font-family: 'FontAwesome' !important;
+  color: white;
+  font-weight: 300 !important;
+  font-size: 30px;
+  margin: 0px 6px;
+}
+
+/* line 56, sass/footer.scss */
+.fas:hover, .fa:hover {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+/* line 61, sass/footer.scss */
 #copyright {
   text-decoration: italic;
 }
