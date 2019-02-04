@@ -80,7 +80,7 @@ $('#g4').mouseleave(() => {
 $('#g5').mouseleave(() => {
     hideElementByGridMap('g5');
 })
-$('#g6').mouseleave(() => {
+$('#g6').mouseleave(() => { 
     hideElementByGridMap('g6');
 })
 $('#g7').mouseleave(() => {

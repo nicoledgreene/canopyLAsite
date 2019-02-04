@@ -68,6 +68,6 @@ footer {
 
 /* line 66, sass/footer.scss */
 .links-col span:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
 }

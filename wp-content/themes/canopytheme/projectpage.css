@@ -1,0 +1,11 @@
+/* line 1, sass/projectpage.scss */
+body {
+  margin: 0 !important;
+}
+
+/* line 5, sass/projectpage.scss */
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
