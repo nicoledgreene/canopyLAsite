@@ -211,6 +211,9 @@ h1 {
         // flex-basis: 100%;
         width:45%;
         height:100%;
+        img {
+            width: 100%;
+        }
     }
 
     .focus-text {
@@ -219,11 +222,16 @@ h1 {
         padding: 24px 0px 24px 100px;
         width: 30%;
         //TODO: FIX RESPONSIVENESS OF THIS SECTION
-        span {
+        span, a {
             line-height: 1.5em;
         }
+        a {
+            color: white;
+            text-decoration: none;
+        }
         .focus-heading {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            text-transform: uppercase;
         }
         span:nth-of-type(2) {
             padding: 24px 0px;

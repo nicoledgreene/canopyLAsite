@@ -1,4 +1,36 @@
 <?php get_header(); ?>
+<!-- /*
+Template Name: Homepage
+*/ -->
+
+<?php
+    $host = '/wordpress';
+
+    if(get_field('feature_header', 29)) {
+        $feature_header = get_field('feature_header', 29);
+    }
+    else {
+        $feature_title = 'Feature Title';
+    }
+    if(get_field('feature_text', 29)) {
+        $feature_text = get_field('feature_text', 29);
+    }
+    else {
+        $feature_text = 'Feature Text';
+    }
+    if(get_field('feature_image', 29)) {
+        $feature_image = get_field('feature_image', 29);
+    }
+    else {
+        $feature_image = 'Feature Image';
+    }
+    if(get_field('feature_link', 29)) {
+        $feature_link = get_field('feature_link', 29);
+    }
+    else {
+        $feature_link = '/';
+    }
+?>
 
 <body>
     <?php if ( have_posts() ) : ?>
@@ -33,7 +65,7 @@
             <h1>CANOPY LA</h1>
             <div class="main-menu">
                 <div>
-                    <img id="title-logo" src="/wordpress/images/logos/CANOPY_LOGO_ai_FULL_WHT.png">
+                    <img id="title-logo" src="<?php echo $host . '/images/logos/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
                 </div>
                 <ul class="nav">
                     <li>
@@ -56,13 +88,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="coming-soon">
-                <a href="mailto:yo@canopy-la.com?Subject=Hello%20there" target="_top" class="coming-soon-text">yo@canopy-la.com</a >
-            </div> -->
         </div>
         <div class="main">
             <div id="wave">
-                <img src="/wordpress/images/backgrounds/waves.png">
+                <img src="<?php echo $host . '/images/backgrounds/waves.png' ?>">
             </div>
             <div class="body-header">
                 <h3>Canopy LA</h3>
@@ -76,19 +105,19 @@
                             <div id="o1" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips1.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips1.png' ?>">
                         </div>
                         <div id="g2" class="grid-item-2">
                             <div id="o2" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips2.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips2.png' ?>">
                         </div>
                         <div id="g3" class="grid-item-3">
                             <div id="o3" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips3.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips3.png' ?>">
                         </div>
                     </div>
                     <div class="grid-row">
@@ -96,19 +125,19 @@
                             <div id="o4" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips4.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips4.png' ?>">                            
                         </div>
                         <div id="g5" class="grid-item-2">
                             <div id="o5" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips5.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips5.png' ?>">
                         </div>
                         <div id="g6" class="grid-item-3">
                             <div id="o6" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips6.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips6.png' ?>">
                         </div>
                     </div>
                     <div class="grid-row">
@@ -116,30 +145,32 @@
                             <div id="o7" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips7.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips7.png' ?>">
                         </div>
                         <div id="g8" class="grid-item-2">
                             <div id="o8" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips8.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips8.png' ?>">
                         </div>
                         <div id="g9" class="grid-item-3">
                             <div id="o9" class="grid-item-overlay hidden">
                                 <span>PROJECT INFO</span>
                             </div>
-                            <img src="/wordpress/images/placeholder/clips9.png">
+                            <img src="<?php echo $host . '/images/placeholder/clips9.png' ?>">
                         </div>
                     </div>
                 </div>
             </div>    
         </div>
         <div class="feature">
-            <div class="focus-image"></div>
+            <div class="focus-image">
+                <img src="<?php echo $feature_image ?>" />
+            </div>
             <div class="focus-text">
-                <span class="focus-heading">BEHIND THE SCENES</span>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis scelerisque nisi, sit amet sollicitudin tortor interdum a. Vestibulum vehicula dui lacus, vel mollis erat pharetra a. </span>
-                <div class="focus-button">
+                <span id="focus-header" class="focus-heading"><?php echo $feature_header ?></span>
+                <span><?php echo $feature_text ?></span>
+                <div class="focus-button" onClick="document.location.href='<?php echo $host ?> + <?php echo $feature_link ?>'">
                     <span>LEARN MORE</span>
                 </div>
             </div>
