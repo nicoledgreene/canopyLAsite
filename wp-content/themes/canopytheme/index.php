@@ -3,34 +3,7 @@
 Template Name: Homepage
 */ -->
 
-<?php
-    $host = '/wordpress';
-
-    if(get_field('feature_header', 29)) {
-        $feature_header = get_field('feature_header', 29);
-    }
-    else {
-        $feature_title = 'Feature Title';
-    }
-    if(get_field('feature_text', 29)) {
-        $feature_text = get_field('feature_text', 29);
-    }
-    else {
-        $feature_text = 'Feature Text';
-    }
-    if(get_field('feature_image', 29)) {
-        $feature_image = get_field('feature_image', 29);
-    }
-    else {
-        $feature_image = 'Feature Image';
-    }
-    if(get_field('feature_link', 29)) {
-        $feature_link = get_field('feature_link', 29);
-    }
-    else {
-        $feature_link = '/';
-    }
-?>
+<?php include 'variables.php' ?>
 
 <body>
     <?php if ( have_posts() ) : ?>
@@ -72,20 +45,20 @@ Template Name: Homepage
                         <span id="nav1">ABOUT</span>
                     </li>
                     <li>
-                        <span class="projects-link" id="nav2">PROJECTS</span>
-                        <div class="projects-sub-list">
+                        <span class="projects-link" id="nav2" onClick="document.location.href='#gridNav'">PROJECTS</span>
+                        <!-- <div class="projects-sub-list">
                             <span id="nav3">COMMERCIAL</span>
                             <span id="nav4">FILM</span>
                             <span id="nav5">VIDEO GAME</span>
                             <span id="nav6">IMMERSIVE EXPERIENCE</span>
-                        </div>
+                        </div> -->
                     </li>
-                    <li>
+                    <!-- <li>
                         <span id="nav7">GEAR & PROCESS</span>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <span id="nav8">STORE</span>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -93,71 +66,71 @@ Template Name: Homepage
             <div id="wave">
                 <img src="<?php echo $host . '/images/backgrounds/waves.png' ?>">
             </div>
-            <div class="body-header">
+            <div id="gridNav" class="body-header">
                 <h3>Canopy LA</h3>
                 <span>sound + music + immersion</span>
                 <a>LEARN MORE</a>
             </div>
             <div class="grid-container">
-                <div class="grid">
+                <div class="grid"> 
                     <div class="grid-row">
                         <div id="g1" class="grid-item-1">
                             <div id="o1" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[0]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips1.png' ?>">
+                            <img src="<?php echo $gridImages[0]["url"] ?>">
                         </div>
                         <div id="g2" class="grid-item-2">
                             <div id="o2" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[1]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips2.png' ?>">
+                            <img src="<?php echo $gridImages[1]["url"] ?>">
                         </div>
                         <div id="g3" class="grid-item-3">
                             <div id="o3" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[2]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips3.png' ?>">
+                            <img src="<?php echo $gridImages[2]["url"] ?>">
                         </div>
                     </div>
                     <div class="grid-row">
                         <div id="g4" class="grid-item-1">
                             <div id="o4" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[3]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips4.png' ?>">                            
+                            <img src="<?php echo $gridImages[3]["url"] ?>">                            
                         </div>
                         <div id="g5" class="grid-item-2">
                             <div id="o5" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[4]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips5.png' ?>">
+                            <img src="<?php echo $gridImages[4]["url"] ?>">
                         </div>
                         <div id="g6" class="grid-item-3">
                             <div id="o6" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[5]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips6.png' ?>">
+                            <img src="<?php echo $gridImages[5]["url"] ?>">
                         </div>
                     </div>
                     <div class="grid-row">
                         <div id="g7" class="grid-item-1">
                             <div id="o7" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[6]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips7.png' ?>">
+                            <img src="<?php echo $gridImages[6]["url"] ?>">
                         </div>
                         <div id="g8" class="grid-item-2">
                             <div id="o8" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[7]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips8.png' ?>">
+                            <img src="<?php echo $gridImages[7]["url"] ?>">
                         </div>
                         <div id="g9" class="grid-item-3">
                             <div id="o9" class="grid-item-overlay hidden">
-                                <span>PROJECT INFO</span>
+                                <span><?php echo $gridImages[8]["description"] ?></span>
                             </div>
-                            <img src="<?php echo $host . '/images/placeholder/clips9.png' ?>">
+                            <img src="<?php echo $gridImages[8]["url"] ?>">
                         </div>
                     </div>
                 </div>

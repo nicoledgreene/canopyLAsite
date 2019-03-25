@@ -8,12 +8,12 @@ window.sr = ScrollReveal({
 sr.reveal('#title-logo', {delay: 100});
 sr.reveal('#nav1', {delay: 200});
 sr.reveal('#nav2', {delay: 300});
-sr.reveal('#nav3', {delay: 400});
-sr.reveal('#nav4', {delay: 500});
-sr.reveal('#nav5', {delay: 600});
-sr.reveal('#nav6', {delay: 700});
-sr.reveal('#nav7', {delay: 800});
-sr.reveal('#nav8', {delay: 900});
+// sr.reveal('#nav3', {delay: 400});
+// sr.reveal('#nav4', {delay: 500});
+// sr.reveal('#nav5', {delay: 600});
+// sr.reveal('#nav6', {delay: 700});
+sr.reveal('#nav7', {delay: 400});
+// sr.reveal('#nav8', {delay: 900});
 
 //grid animations
 sr.reveal('.grid-item-1', {delay: 200});
@@ -97,3 +97,44 @@ function hideElementByGridMap(key) {
     let val = gridMap[key];
     $(val).attr('class', 'grid-item-overlay hidden');
 }
+
+$(function() {
+
+	// Find all YouTube videos
+	var $allVideos = $("iframe[src^='http:///player.vimeo.com']"),
+
+	    // The element that is fluid width
+	    $fluidEl = $("body");
+
+	// Figure out and save aspect ratio for each video
+	$allVideos.each(function() {
+
+		$(this)
+			.data('aspectRatio', this.height / this.width)
+			
+			// and remove the hard coded width/height
+			.removeAttr('height')
+			.removeAttr('width');
+
+	});
+
+	// When the window is resized
+	// (You'll probably want to debounce this)
+	$(window).resize(function() {
+
+		var newWidth = $fluidEl.width();
+		
+		// Resize all videos according to their own aspect ratio
+		$allVideos.each(function() {
+
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.data('aspectRatio'));
+
+		});
+
+	// Kick off one resize to fix all videos on page load
+	}).resize();
+
+});

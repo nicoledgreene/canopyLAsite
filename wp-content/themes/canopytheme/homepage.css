@@ -73,10 +73,6 @@ h1 {
   flex-direction: column;
   cursor: pointer;
 }
-/* line 65, sass/homepage.scss */
-.main-menu .nav li .projects-link {
-  border-bottom: 1px solid white;
-}
 /* line 68, sass/homepage.scss */
 .main-menu .nav li span {
   padding: 10px 0px;
@@ -231,40 +227,52 @@ h1 {
 }
 /* line 208, sass/homepage.scss */
 .feature .focus-image {
-  background-color: lightgray;
+  position: relative;
   width: 45%;
   height: 100%;
+  overflow: hidden;
+  z-index: 1;
 }
 /* line 214, sass/homepage.scss */
 .feature .focus-image img {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
   width: 100%;
+  transform: translate(-50%, -50%);
 }
-/* line 219, sass/homepage.scss */
+/* line 221, sass/homepage.scss */
+.feature .focus-image img.max {
+  width: auto;
+  height: 100%;
+}
+/* line 225, sass/homepage.scss */
 .feature .focus-text {
   display: flex;
   flex-direction: column;
   padding: 24px 0px 24px 100px;
   width: 30%;
 }
-/* line 225, sass/homepage.scss */
+/* line 231, sass/homepage.scss */
 .feature .focus-text span, .feature .focus-text a {
   line-height: 1.5em;
 }
-/* line 228, sass/homepage.scss */
+/* line 234, sass/homepage.scss */
 .feature .focus-text a {
   color: white;
   text-decoration: none;
 }
-/* line 232, sass/homepage.scss */
+/* line 238, sass/homepage.scss */
 .feature .focus-text .focus-heading {
   font-size: 1.5em;
   text-transform: uppercase;
 }
-/* line 236, sass/homepage.scss */
+/* line 242, sass/homepage.scss */
 .feature .focus-text span:nth-of-type(2) {
   padding: 24px 0px;
 }
-/* line 241, sass/homepage.scss */
+/* line 247, sass/homepage.scss */
 .feature .focus-button {
   border: 2px solid white;
   border-radius: 5px;
@@ -276,11 +284,11 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-/* line 251, sass/homepage.scss */
+/* line 257, sass/homepage.scss */
 .feature .focus-button span {
   font-size: 0.8em;
 }
-/* line 256, sass/homepage.scss */
+/* line 262, sass/homepage.scss */
 .feature .focus-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;

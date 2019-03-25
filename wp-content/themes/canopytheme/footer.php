@@ -9,8 +9,8 @@
                 <div class="flex-column links-col">
                     <span>ABOUT</span>
                     <span>PROJECTS</span>
-                    <span>PROCESS & GEAR</span>
-                    <span>STORE</span>
+                    <!-- <span>PROCESS & GEAR</span>
+                    <span>STORE</span> -->
                 </div>
             </div>
             <div class="flex-column social">
