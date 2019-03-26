@@ -32,6 +32,7 @@
         <h1>CANOPY LA</h1>
         <img id="title-logo" src="/images/logos/CANOPY_LOGO_ai_FULL_WHT.png">
         <div class="coming-soon">
+            <span class="in-touch">Get in touch</span>
             <a href="mailto:yo@canopy-la.com?Subject=Hello%20there" target="_top" class="coming-soon-text">yo@canopy-la.com</a >
         </div>
     </div>
