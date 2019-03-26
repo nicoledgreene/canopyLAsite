@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Project Page With Video
+Template Name: Project Page
 */
 get_header();
 ?>
@@ -8,9 +8,32 @@ get_header();
 <?php include 'project_variables.php' ?>
 
 <div class="project-container">
-    <div class="slideshow">
-        <div class="videoWrapper">
-            <?php echo $video_link ?>
+    <div class="slider">
+        <?php 
+            if($video_link) {
+                    echo "<div id='slideItem100' class='videoWrapper'>";
+                        echo $video_link;
+                    echo "</div>";
+            }
+        ?>
+        <?php
+            if(!empty($sliderImages)) {
+                foreach ($sliderImages as $key=>$image) {
+                    echo "<div class='slide' id='slideItem";
+                    echo $key;
+                    echo "'>";
+                        echo "<img src=";
+                        echo $image["url"];
+                        echo ">";
+                    echo "</div>";
+                }
+            }
+        ?>
+        <div id="slidePrevious">
+            <i class="fa fa-chevron-circle-left"></i>
+        </div>
+        <div id="slideNext">
+            <i class="fa fa-chevron-circle-right"></i>
         </div>
     </div>
     <div class="project-info-detail">
@@ -39,7 +62,6 @@ get_header();
                 <div class="breakdown-column">
                     <span class="subhead">CONTACT US</span>
                     <span><?php echo $contact_us?></span>
-                    <!-- //add button here/ -->
                 </div>
             </div>
         </div>

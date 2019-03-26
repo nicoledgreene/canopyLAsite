@@ -1,11 +1,15 @@
 footer {
-    background-color: transparent;
-    background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
+    background-color: black;
     background-attachment: fixed;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 2em;
+}
+
+.footer-background {
+    background-color: transparent !important;
+    background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
 }
 
 .flex-row {

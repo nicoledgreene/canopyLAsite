@@ -27,7 +27,7 @@
     wp_enqueue_script('jQuery');
 
     wp_enqueue_script( 'indexJS', '/wp-content/themes/canopytheme/js/index.js');
-
+    wp_enqueue_script( 'sliderJS', '/wp-content/themes/canopytheme/js/slider.js');
   }
   add_action('wp_head', 'addScripts');
 

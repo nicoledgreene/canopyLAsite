@@ -1,7 +1,6 @@
 /* line 1, sass/footer.scss */
 footer {
-  background-color: transparent;
-  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
+  background-color: black;
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -9,44 +8,50 @@ footer {
   line-height: 2em;
 }
 
-/* line 11, sass/footer.scss */
+/* line 10, sass/footer.scss */
+.footer-background {
+  background-color: transparent !important;
+  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
+}
+
+/* line 15, sass/footer.scss */
 .flex-row {
   display: flex;
   flex-direction: row;
   color: white;
 }
 
-/* line 17, sass/footer.scss */
+/* line 21, sass/footer.scss */
 .contact-col {
   padding-right: 50px;
 }
 
-/* line 21, sass/footer.scss */
+/* line 25, sass/footer.scss */
 .top-row {
   justify-content: space-between;
   padding: 50px 100px;
 }
 
-/* line 26, sass/footer.scss */
+/* line 30, sass/footer.scss */
 .flex-column {
   display: flex;
   flex-direction: column;
 }
 
-/* line 31, sass/footer.scss */
+/* line 35, sass/footer.scss */
 .social {
   justify-content: space-between;
   align-items: flex-end;
 }
 
-/* line 36, sass/footer.scss */
+/* line 40, sass/footer.scss */
 #social-icons {
   display: flex;
   flex-direction: row;
   margin: 12px 0px;
 }
 
-/* line 48, sass/footer.scss */
+/* line 52, sass/footer.scss */
 .fas, .fa {
   font-family: 'FontAwesome' !important;
   color: white;
@@ -55,18 +60,18 @@ footer {
   margin: 0px 6px;
 }
 
-/* line 56, sass/footer.scss */
+/* line 60, sass/footer.scss */
 .fas:hover, .fa:hover {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
-/* line 61, sass/footer.scss */
+/* line 65, sass/footer.scss */
 #copyright {
   text-decoration: italic;
 }
 
-/* line 66, sass/footer.scss */
+/* line 70, sass/footer.scss */
 .links-col span:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;

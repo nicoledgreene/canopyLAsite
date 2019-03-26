@@ -2,6 +2,55 @@ body {
     margin: 0 !important;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.slider {
+    position: relative;
+    #slidePrevious, #slideNext {
+        position: absolute;
+        top: calc(50% - 75px);
+        z-index: 50;
+        // background-color: rgba(0,0,0,0.3);
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        text-align: center;
+        i {
+            font-size: 75px !important;
+            color: rgba(255,255,255,0.8);
+        }
+        i:hover {
+            color: white;
+        }
+    }
+    #slidePrevious:hover, #slideNext:hover {
+        cursor:pointer;
+        // background-color: rgba(0,0,0,0.1);
+    }
+    #slidePrevious {
+        left: 10px !important;
+    }
+    #slideNext {
+        right: 10px;
+    }
+    .slide {
+        width: 100%;
+        img {
+            width: 100% !important;
+        }
+    }
+}
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
