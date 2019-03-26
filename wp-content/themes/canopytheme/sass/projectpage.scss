@@ -31,12 +31,15 @@ body {
     h4 {
         font-size: 2em;
         padding-bottom: 24px;
+        font-family: Acumin Pro Bold, sans-serif;
+        font-weight: 700;
     }
 
     .proj-subtitle {
         text-transform: uppercase;
         display: block;
-        font-weight: 500;
+        font-family: Acumin Pro Bold, sans-serif;
+        font-weight: 700;
     }
 
     #proj-desc {
@@ -44,6 +47,8 @@ body {
         column-count: 2;
         -webkit-column-count: 2;
         -moz-column-count: 2;
+        font-family: brother-1816, sans-serif;
+
     }
 
     .line {
@@ -71,8 +76,9 @@ body {
                 padding: 24px 24px;
         
                 .subhead {
-                    font-weight: 500;
                     display: block;
+                    font-family: Acumin Pro Bold, sans-serif;
+                    font-weight: 700;
                 }
                 #tools {
                     column-count: 2;

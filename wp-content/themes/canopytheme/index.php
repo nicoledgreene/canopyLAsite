@@ -143,7 +143,7 @@ Template Name: Homepage
             <div class="focus-text">
                 <span id="focus-header" class="focus-heading"><?php echo $feature_header ?></span>
                 <span><?php echo $feature_text ?></span>
-                <div class="focus-button" onClick="document.location.href='<?php echo $host ?> + <?php echo $feature_link ?>'">
+                <div class="focus-button" onClick="document.location.href='<?php echo trim($host) ?>' + '<?php echo trim($feature_link) ?>'">
                     <span>LEARN MORE</span>
                 </div>
             </div>
