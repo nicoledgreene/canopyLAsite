@@ -1,5 +1,5 @@
 <?php
-    $host = '/wordpress';
+    $host = '';
 
     if(get_field('grid_image_1', 29)) {
         $grid_img_1 = get_field('grid_image_1', 29);

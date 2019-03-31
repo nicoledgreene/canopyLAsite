@@ -1,5 +1,5 @@
 <?php
-    $host = '/wordpress';
+    $host = '';
 
     if(get_field('project_video_link')) {
         $video_link = get_field('project_video_link');

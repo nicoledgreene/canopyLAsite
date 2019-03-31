@@ -113,7 +113,7 @@ body {
 
 /* line 17, sass/homepage.scss */
 .hero {
-  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
+  background-image: url(/images/backgrounds/canopy-bg.png);
   height: 100vh;
   width: 100%;
   position: relative;
@@ -399,7 +399,7 @@ footer {
 /* line 10, sass/footer.scss */
 .footer-background {
   background-color: transparent !important;
-  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
+  background-image: url(/images/backgrounds/canopy-bg.png);
 }
 
 /* line 15, sass/footer.scss */
