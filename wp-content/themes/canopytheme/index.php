@@ -42,7 +42,7 @@ Template Name: Homepage
                 </div>
                 <ul class="nav">
                     <li>
-                        <span id="nav1">ABOUT</span>
+                        <span id="nav1" onClick="location.href='<?php echo $host?>/about'">ABOUT</span>
                     </li>
                     <li>
                         <span class="projects-link" id="nav2" onClick="document.location.href='#gridNav'">PROJECTS</span>

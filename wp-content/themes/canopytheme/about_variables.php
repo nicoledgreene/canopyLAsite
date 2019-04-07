@@ -35,4 +35,13 @@
     if(get_field('person_3_email')) {
         $p3_email = get_field('person_3_email');
     }
+    if(get_field('person_3_title')) {
+        $p3_title = get_field('person_3_title');
+    }
+    if(get_field('person_2_title')) {
+        $p2_title = get_field('person_2_title');
+    }
+    if(get_field('person_1_title')) {
+        $p1_title = get_field('person_1_title');
+    }
 ?>
