@@ -85,7 +85,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* line 11, sass/theme.scss */
 body {
   margin: 0;
-  font-family: brother-1816, sans-serif;
+  font-family: acumin-pro, sans-serif;
   font-style: normal;
   font-weight: 100;
 }
@@ -523,13 +523,19 @@ body {
 /* line 46, sass/projectpage.scss */
 .slider .slide {
   width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
 }
-/* line 48, sass/projectpage.scss */
+/* line 53, sass/projectpage.scss */
 .slider .slide img {
   width: 100% !important;
 }
 
-/* line 54, sass/projectpage.scss */
+/* line 59, sass/projectpage.scss */
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -538,7 +544,7 @@ body {
   height: 0;
 }
 
-/* line 60, sass/projectpage.scss */
+/* line 65, sass/projectpage.scss */
 .videoWrapper iframe {
   position: absolute;
   top: 0;
@@ -547,36 +553,36 @@ body {
   height: 100%;
 }
 
-/* line 68, sass/projectpage.scss */
+/* line 73, sass/projectpage.scss */
 .project-container {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-/* line 72, sass/projectpage.scss */
+/* line 77, sass/projectpage.scss */
 .project-container .project-info-detail {
   padding: 48px 96px;
 }
 
-/* line 77, sass/projectpage.scss */
+/* line 82, sass/projectpage.scss */
 .project-info-detail {
   line-height: 2em;
 }
-/* line 80, sass/projectpage.scss */
+/* line 85, sass/projectpage.scss */
 .project-info-detail h4 {
   font-size: 2em;
   padding-bottom: 24px;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 87, sass/projectpage.scss */
+/* line 92, sass/projectpage.scss */
 .project-info-detail .proj-subtitle {
   text-transform: uppercase;
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 94, sass/projectpage.scss */
+/* line 99, sass/projectpage.scss */
 .project-info-detail #proj-desc {
   line-height: 1.5em !important;
   column-count: 2;
@@ -584,50 +590,218 @@ body {
   -moz-column-count: 2;
   font-family: brother-1816, sans-serif;
 }
-/* line 103, sass/projectpage.scss */
+/* line 108, sass/projectpage.scss */
 .project-info-detail .line {
   width: 100%;
   height: 1px;
   background-color: black;
   margin-top: 24px;
 }
-/* line 110, sass/projectpage.scss */
+/* line 115, sass/projectpage.scss */
 .project-info-detail .project-breakdown {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
 }
-/* line 116, sass/projectpage.scss */
+/* line 121, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column:first-of-type {
   padding-right: 50px;
 }
-/* line 120, sass/projectpage.scss */
+/* line 125, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column {
   display: flex;
   flex-direction: row;
 }
-/* line 124, sass/projectpage.scss */
+/* line 129, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column {
   padding: 24px 24px;
 }
-/* line 127, sass/projectpage.scss */
+/* line 132, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column .subhead {
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 132, sass/projectpage.scss */
+/* line 137, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column #tools {
   column-count: 2;
   -webkit-column-count: 2;
   -moz-column-count: 2;
 }
-/* line 138, sass/projectpage.scss */
+/* line 143, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul {
   margin-left: 24px !important;
 }
-/* line 140, sass/projectpage.scss */
+/* line 145, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul li {
   list-style-type: initial !important;
+}
+
+/* line 1, sass/about.scss */
+.about-container {
+  position: relative;
+}
+
+/* line 5, sass/about.scss */
+.about-upper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background: transparent;
+  z-index: 0;
+}
+
+/* line 15, sass/about.scss */
+.background-upper {
+  background-color: black;
+  width: 100%;
+  height: 120vh;
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+}
+
+/* line 25, sass/about.scss */
+.nav {
+  margin-top: 50px;
+  width: 100%;
+  justify-content: space-between;
+}
+/* line 29, sass/about.scss */
+.nav .small-logo {
+  margin-left: 50px;
+}
+/* line 31, sass/about.scss */
+.nav .small-logo img {
+  width: 150px;
+}
+/* line 35, sass/about.scss */
+.nav .hamburger {
+  margin-right: 50px;
+  align-items: center;
+}
+/* line 38, sass/about.scss */
+.nav .hamburger .line {
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  margin: 3px 0px;
+}
+
+/* line 47, sass/about.scss */
+.about-hero {
+  width: 100%;
+  height: 90vh;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 5vw;
+}
+/* line 58, sass/about.scss */
+.about-hero .company-name {
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+/* line 63, sass/about.scss */
+.about-hero .company-about {
+  font-size: 3vw;
+  padding: 0px 50px;
+}
+
+/* line 69, sass/about.scss */
+.about-info {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 79, sass/about.scss */
+.the-gang, .bios {
+  width: 75%;
+}
+
+/* line 83, sass/about.scss */
+.bios {
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* line 89, sass/about.scss */
+.bios .person {
+  width: calc(33% - 24px);
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+/* line 95, sass/about.scss */
+.bios .person .name {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+/* line 99, sass/about.scss */
+.bios .person .name span:nth-of-type(1) {
+  font-size: 40px;
+}
+/* line 102, sass/about.scss */
+.bios .person .name span:nth-of-type(2) {
+  margin-top: 16px;
+  font-size: 16px;
+}
+/* line 107, sass/about.scss */
+.bios .person .bio-desc {
+  font-family: brother-1816, sans-serif;
+  padding: 24px 0px;
+  font-size: 15px;
+}
+/* line 112, sass/about.scss */
+.bios .person .bio-email {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* line 120, sass/about.scss */
+  .about-hero {
+    line-height: 2em;
+  }
+  /* line 122, sass/about.scss */
+  .about-hero .company-name {
+    font-size: 30px;
+  }
+  /* line 125, sass/about.scss */
+  .about-hero .company-about {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 132, sass/about.scss */
+  .the-gang, .bios {
+    width: 95%;
+  }
+
+  /* line 135, sass/about.scss */
+  .bios {
+    flex-direction: column;
+  }
+  /* line 137, sass/about.scss */
+  .bios .person {
+    width: 100%;
+    padding: 12px 0px;
+  }
+  /* line 141, sass/about.scss */
+  .bios .person:nth-of-type(1), .bios .person:nth-of-type(2) {
+    border-bottom: 1px solid black;
+  }
 }
