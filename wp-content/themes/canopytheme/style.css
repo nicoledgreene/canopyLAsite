@@ -85,7 +85,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* line 11, sass/theme.scss */
 body {
   margin: 0;
-  font-family: brother-1816, sans-serif;
+  font-family: acumin-pro, sans-serif;
   font-style: normal;
   font-weight: 100;
 }
@@ -630,4 +630,41 @@ body {
 /* line 140, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul li {
   list-style-type: initial !important;
+}
+
+/* line 1, sass/about.scss */
+.about-container {
+  position: relative;
+}
+/* line 3, sass/about.scss */
+.about-container .nav {
+  width: 100%;
+  justify-content: space-between;
+}
+/* line 6, sass/about.scss */
+.about-container .nav img {
+  width: 100px;
+}
+
+/* line 12, sass/about.scss */
+.about-hero {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 5em;
+}
+/* line 23, sass/about.scss */
+.about-hero .company-name {
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+/* line 28, sass/about.scss */
+.about-hero .company-about {
+  font-size: 3em;
+  padding: 0px 50px;
 }
