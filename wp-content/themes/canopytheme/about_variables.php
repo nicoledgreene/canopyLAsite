@@ -1,5 +1,5 @@
 <?php
-    $host = '/wordpress';
+    $host = '';
 
     if(get_field('hero_text')) {
         $hero_text = get_field('hero_text');
