@@ -1,4 +1,4 @@
-    <footer <?php if (is_home()) { ?> class="footer-background" <?php } ?> >
+    <footer>
         <div class="flex-row top-row">
             <div class="flex-row">
                 <div class="flex-column contact-col">

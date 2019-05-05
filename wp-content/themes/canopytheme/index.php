@@ -40,7 +40,7 @@ Template Name: Homepage
                 <div>
                     <img id="title-logo" src="<?php echo $host . '/images/logos/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
                 </div>
-                <ul class="nav">
+                <ul class="home-nav">
                     <li>
                         <span id="nav1" onClick="location.href='<?php echo $host?>/about'">ABOUT</span>
                     </li>
@@ -53,19 +53,22 @@ Template Name: Homepage
                             <span id="nav6">IMMERSIVE EXPERIENCE</span>
                         </div> -->
                     </li>
-                    <!-- <li>
-                        <span id="nav7">GEAR & PROCESS</span>
-                    </li> -->
+                    <li>
+                        <span id="nav7">CONTACT</span>
+                    </li>
                     <!-- <li>
                         <span id="nav8">STORE</span>
                     </li> -->
                 </ul>
             </div>
         </div>
-        <div class="main">
-            <div id="wave">
-                <img src="<?php echo $host . '/images/backgrounds/waves.png' ?>">
+        <div class="tag-line flex-column">
+            <span>We are all things sound, music, and immersion.</span>
+            <div class="link-div">
+                <a>LEARN MORE</a>
             </div>
+        </div>
+        <div class="main">
             <div id="gridNav" class="body-header">
                 <h3>Canopy LA</h3>
                 <span>sound + music + immersion</span>

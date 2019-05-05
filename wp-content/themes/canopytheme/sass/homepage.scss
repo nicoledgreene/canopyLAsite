@@ -15,7 +15,8 @@ body {
 }
 
 .hero {
-    background-image: url(/images/backgrounds/canopy-bg.png);
+    //TODO remove wordpress from path
+    background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
     height: 100vh;
     width: 100%;
     position: relative;
@@ -42,31 +43,31 @@ h1 {
 }
 
 .main-menu {
-    width: 200px;
-    height: 100%;
-    padding-left: 50px;
+    width: calc(100% - 50px);
+    margin: 0px 25px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.8em;
 
-    .nav {
+    .home-nav {
+        display: flex;
+        flex-direction: row;
         list-style-type: none;
         padding-left: 0px;
         font-weight: 600;
         color: white;
 
         li {
-            padding: 10px 0px;
+            padding: 0px 20px;
             display: flex;
             flex-direction: column;
             cursor: pointer;
+            letter-spacing: 2px;
 
             .projects-link {
                 // border-bottom: 1px solid white;
-            }
-            span {
-                padding: 10px 0px;
             }
 
             .projects-sub-list {
@@ -90,8 +91,41 @@ h1 {
 
 #title-logo {
     display: block;
-    width: 100%;
-    padding-bottom: 20px;
+    width: 200px;
+}
+
+.tag-line {
+    width: calc(100% - 50px);
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Acumin Pro, sans-serif;
+    padding: 0px 25px;
+    span {
+        font-size: 3.2em;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+    .link-div {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-bottom: 100px;
+        a {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 7px;
+            border-bottom: 5px solid white;
+        }
+        a:hover {
+            color: rgba(255,255,255,0.8);
+            border-bottom: 5px solid rgba(255,255,255,0.8);
+            cursor:pointer;
+        }
+    }
+
 }
 
 .main {

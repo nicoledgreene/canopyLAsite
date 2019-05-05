@@ -113,7 +113,7 @@ body {
 
 /* line 17, sass/homepage.scss */
 .hero {
-  background-image: url(/images/backgrounds/canopy-bg.png);
+  background-image: url(/wordpress/images/backgrounds/canopy-bg.png);
   height: 100vh;
   width: 100%;
   position: relative;
@@ -123,7 +123,7 @@ body {
   background-size: cover;
 }
 
-/* line 28, sass/homepage.scss */
+/* line 29, sass/homepage.scss */
 .blur {
   position: absolute;
   bottom: 0;
@@ -136,71 +136,107 @@ body {
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
 }
 
-/* line 40, sass/homepage.scss */
+/* line 41, sass/homepage.scss */
 h1 {
   visibility: hidden;
 }
 
-/* line 44, sass/homepage.scss */
+/* line 45, sass/homepage.scss */
 .main-menu {
-  width: 200px;
-  height: 100%;
-  padding-left: 50px;
+  width: calc(100% - 50px);
+  margin: 0px 25px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.8em;
 }
-/* line 53, sass/homepage.scss */
-.main-menu .nav {
+/* line 54, sass/homepage.scss */
+.main-menu .home-nav {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   padding-left: 0px;
   font-weight: 600;
   color: white;
 }
-/* line 59, sass/homepage.scss */
-.main-menu .nav li {
-  padding: 10px 0px;
+/* line 62, sass/homepage.scss */
+.main-menu .home-nav li {
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  letter-spacing: 2px;
 }
-/* line 68, sass/homepage.scss */
-.main-menu .nav li span {
-  padding: 10px 0px;
-}
-/* line 72, sass/homepage.scss */
-.main-menu .nav li .projects-sub-list {
+/* line 73, sass/homepage.scss */
+.main-menu .home-nav li .projects-sub-list {
   display: flex;
   flex-direction: column;
 }
-/* line 75, sass/homepage.scss */
-.main-menu .nav li .projects-sub-list span {
+/* line 76, sass/homepage.scss */
+.main-menu .home-nav li .projects-sub-list span {
   padding: 10px 20px;
 }
-/* line 78, sass/homepage.scss */
-.main-menu .nav li .projects-sub-list span:hover {
+/* line 79, sass/homepage.scss */
+.main-menu .home-nav li .projects-sub-list span:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
 }
-/* line 85, sass/homepage.scss */
-.main-menu .nav li:nth-of-type(2) {
+/* line 86, sass/homepage.scss */
+.main-menu .home-nav li:nth-of-type(2) {
   padding: 0px !important;
 }
 
-/* line 91, sass/homepage.scss */
+/* line 92, sass/homepage.scss */
 #title-logo {
   display: block;
-  width: 100%;
-  padding-bottom: 20px;
+  width: 200px;
 }
 
 /* line 97, sass/homepage.scss */
+.tag-line {
+  width: calc(100% - 50px);
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Acumin Pro, sans-serif;
+  padding: 0px 25px;
+}
+/* line 104, sass/homepage.scss */
+.tag-line span {
+  font-size: 3.2em;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+/* line 111, sass/homepage.scss */
+.tag-line .link-div {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-bottom: 100px;
+}
+/* line 116, sass/homepage.scss */
+.tag-line .link-div a {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 7px;
+  border-bottom: 5px solid white;
+}
+/* line 122, sass/homepage.scss */
+.tag-line .link-div a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+/* line 131, sass/homepage.scss */
 .main {
   position: relative;
   overflow: hidden;
 }
-/* line 101, sass/homepage.scss */
+/* line 135, sass/homepage.scss */
 .main #wave {
   z-index: -2;
   position: absolute;
@@ -213,11 +249,11 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* line 113, sass/homepage.scss */
+/* line 147, sass/homepage.scss */
 .main #wave img {
   width: 100%;
 }
-/* line 118, sass/homepage.scss */
+/* line 152, sass/homepage.scss */
 .main .body-header {
   padding: 50px 0px;
   width: 100%;
@@ -226,34 +262,34 @@ h1 {
   text-align: center;
   justify-content: center;
 }
-/* line 125, sass/homepage.scss */
+/* line 159, sass/homepage.scss */
 .main .body-header h3 {
   font-weight: 600;
   font-size: 1.5em;
 }
-/* line 129, sass/homepage.scss */
+/* line 163, sass/homepage.scss */
 .main .body-header span, .main .body-header a {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
-/* line 133, sass/homepage.scss */
+/* line 167, sass/homepage.scss */
 .main .body-header span {
   padding: 10px 0px;
 }
-/* line 136, sass/homepage.scss */
+/* line 170, sass/homepage.scss */
 .main .body-header a {
   padding-top: 10px;
   color: #00592B;
   font-weight: 600;
   cursor: pointer;
 }
-/* line 144, sass/homepage.scss */
+/* line 178, sass/homepage.scss */
 .main .grid-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/* line 149, sass/homepage.scss */
+/* line 183, sass/homepage.scss */
 .main .grid-container .grid {
   display: flex;
   flex-direction: column;
@@ -262,13 +298,13 @@ h1 {
   padding: 0px 60px;
   margin-bottom: 100px;
 }
-/* line 156, sass/homepage.scss */
+/* line 190, sass/homepage.scss */
 .main .grid-container .grid .grid-row {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-/* line 161, sass/homepage.scss */
+/* line 195, sass/homepage.scss */
 .main .grid-container .grid .grid-row .grid-item-1, .main .grid-container .grid .grid-row .grid-item-2, .main .grid-container .grid .grid-row .grid-item-3 {
   margin: 10px;
   height: 0;
@@ -277,24 +313,24 @@ h1 {
   overflow: hidden;
   padding-bottom: 33%;
 }
-/* line 168, sass/homepage.scss */
+/* line 202, sass/homepage.scss */
 .main .grid-container .grid .grid-row .grid-item-1 img, .main .grid-container .grid .grid-row .grid-item-2 img, .main .grid-container .grid .grid-row .grid-item-3 img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 180, sass/homepage.scss */
+/* line 214, sass/homepage.scss */
 .grid-item-1, .grid-item-2, .grid-item-3 {
   position: relative;
 }
 
-/* line 183, sass/homepage.scss */
+/* line 217, sass/homepage.scss */
 .grid-item-1:hover, .grid-item-2:hover, .grid-item-3:hover {
   cursor: pointer;
 }
 
-/* line 187, sass/homepage.scss */
+/* line 221, sass/homepage.scss */
 .grid-item-overlay {
   position: absolute;
   height: 100%;
@@ -306,7 +342,7 @@ h1 {
   align-items: center;
 }
 
-/* line 198, sass/homepage.scss */
+/* line 232, sass/homepage.scss */
 .feature {
   display: flex;
   flex-direction: row;
@@ -317,7 +353,7 @@ h1 {
   margin-bottom: 75px;
   height: 350px;
 }
-/* line 208, sass/homepage.scss */
+/* line 242, sass/homepage.scss */
 .feature .focus-image {
   position: relative;
   width: 45%;
@@ -325,7 +361,7 @@ h1 {
   overflow: hidden;
   z-index: 1;
 }
-/* line 214, sass/homepage.scss */
+/* line 248, sass/homepage.scss */
 .feature .focus-image img {
   position: absolute;
   z-index: 2;
@@ -334,37 +370,37 @@ h1 {
   width: 100%;
   transform: translate(-50%, -50%);
 }
-/* line 221, sass/homepage.scss */
+/* line 255, sass/homepage.scss */
 .feature .focus-image img.max {
   width: auto;
   height: 100%;
 }
-/* line 225, sass/homepage.scss */
+/* line 259, sass/homepage.scss */
 .feature .focus-text {
   display: flex;
   flex-direction: column;
   padding: 24px 0px 24px 100px;
   width: 30%;
 }
-/* line 231, sass/homepage.scss */
+/* line 265, sass/homepage.scss */
 .feature .focus-text span, .feature .focus-text a {
   line-height: 1.5em;
 }
-/* line 234, sass/homepage.scss */
+/* line 268, sass/homepage.scss */
 .feature .focus-text a {
   color: white;
   text-decoration: none;
 }
-/* line 238, sass/homepage.scss */
+/* line 272, sass/homepage.scss */
 .feature .focus-text .focus-heading {
   font-size: 1.5em;
   text-transform: uppercase;
 }
-/* line 242, sass/homepage.scss */
+/* line 276, sass/homepage.scss */
 .feature .focus-text span:nth-of-type(2) {
   padding: 24px 0px;
 }
-/* line 247, sass/homepage.scss */
+/* line 281, sass/homepage.scss */
 .feature .focus-button {
   border: 2px solid white;
   border-radius: 5px;
@@ -376,11 +412,11 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-/* line 257, sass/homepage.scss */
+/* line 291, sass/homepage.scss */
 .feature .focus-button span {
   font-size: 0.8em;
 }
-/* line 262, sass/homepage.scss */
+/* line 296, sass/homepage.scss */
 .feature .focus-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
