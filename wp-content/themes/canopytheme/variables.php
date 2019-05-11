@@ -1,5 +1,39 @@
 <?php
-    $host = '';
+    function debugToConsole($msg) { 
+        echo "<script>console.log(".json_encode($msg).")</script>";
+    }
+
+    //TODO update this on publish
+    // $host = '';
+    $host = '/wordpress';
+
+    $commercialLinks = array();
+    $filmLinks = array();
+    $videoGameLinks = array();
+    $immersiveLinks = array();
+
+    $nav_links = get_field('nav_links', 29);
+    if( have_rows('nav_links', 29) ):
+        while ( have_rows('nav_links', 29) ) : the_row();
+            $object = new stdClass();
+            $object->text = get_sub_field('nav_link_text', 29);
+            $object->url = get_sub_field('nav_link_url', 29);
+            if(get_sub_field('parent_link', 29) == 'commercial')
+                array_push($commercialLinks, $object)
+            ;
+            else if(get_sub_field('parent_link', 29) == 'film')
+                array_push($filmLinks, $object)
+            ;
+            else if(get_sub_field('parent_link', 29)== 'video_game')
+                array_push($videoGameLinks, $object)
+            ;
+            else if(get_sub_field('parent_link', 29) == 'immersive_experience')
+                array_push($immersiveLinks, $object)
+            ;
+        endwhile;
+    else: 
+        debugToConsole('no rows found for top nav links');
+    endif;
 
     if(get_field('grid_image_1', 29)) {
         $grid_img_1 = get_field('grid_image_1', 29);

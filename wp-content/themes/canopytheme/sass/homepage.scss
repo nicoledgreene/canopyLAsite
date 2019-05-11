@@ -42,49 +42,92 @@ h1 {
     visibility: hidden;
 }
 
+.parent-link {
+    margin: 0px 20px;
+    padding: 6px 0px;
+    border-bottom: 4px solid transparent;
+    cursor:pointer;
+}
+
+.parent-link:hover {
+    border-bottom: 4px solid white;
+}
+.active-main-link {
+    border-bottom: 4px solid white;
+}
+
 .main-menu {
     width: calc(100% - 50px);
     margin: 0px 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
 
     .home-nav {
+        margin-top: 45px; //TODO fix this for mobile
         display: flex;
         flex-direction: row;
-        list-style-type: none;
         padding-left: 0px;
         font-weight: 600;
         color: white;
-
-        li {
-            padding: 0px 20px;
+        align-items: flex-start;
+        .expandable-nav {
             display: flex;
             flex-direction: column;
-            cursor: pointer;
-            letter-spacing: 2px;
+        }
+        .about-div {
+            margin-top: 6px;
+        }
+    }
 
-            .projects-link {
-                // border-bottom: 1px solid white;
+    #projects-sub-nav {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        color: white;
+        font-size: 0.8em;
+        margin-top: 6px;
+        .sub-nav-item {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            .sub-nav-item-title {
+                padding: 6px 0px;
+                padding-left: 3px;
+            }
+            .sub-nav-item-title:hover {
+                cursor:pointer;
+            }
+            .active-title {
+                background-color: rgba(255,255,255,0.3)
             }
 
-            .projects-sub-list {
+
+            .sub-project-links {
+                margin-top: 6px;
+                margin-bottom: 6px;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                span {
-                    padding: 10px 20px;
+                .project-nav-link {
+                    padding: 6px 24px;
                 }
-                span:hover{
-                    background-color: rgba(255,255,255,0.15);
+                .project-nav-link:hover {
+                    cursor: pointer;
+                }
+    
+                .even-link {
                     cursor:pointer;
+                    background-color: rgba(255,255,255,0.5);
+                    color: black;
+                }
+                .odd-link {
+                    cursor:pointer;
+                    background-color: rgba(255,255,255,0.3);
                 }
             }
-        }
-
-        li:nth-of-type(2) {
-            padding: 0px !important;
         }
     }
 }
@@ -157,8 +200,10 @@ h1 {
         text-align: center;
         justify-content: center;
         h3 {
-            font-weight: 600;
-            font-size: 1.5em;
+            font-weight: 700;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
         }
         span, a {
             font-size: 0.8em;
@@ -179,43 +224,20 @@ h1 {
         width: 100%;
         display: flex;
         justify-content: center;
-
         .grid {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 80%;
-            padding: 0px 60px;
-            margin-bottom: 100px;
-            .grid-row {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                // margin: 20px;
-                .grid-item-1, .grid-item-2, .grid-item-3 {
-                    margin: 10px;
-                    height: 0;
-                    position: relative;
-                    width: 33%;
-                    overflow: hidden;
-                    padding-bottom: 33%;
-                    img {
-                        display: block;
-                        width: 100%;
-                        height: auto;
-                    }
-                }
+            margin: 0px 50px;
+            width: calc(100% - 100px);
+
+            .grid-item {
+                display: inline;
+                width: calc(33% - 24px);
+                height: 0;
+                padding-bottom: calc(33% - 24px);
+                padding: 12px;
             }
         }
     }
 
-}
-
-.grid-item-1, .grid-item-2, .grid-item-3 {
-    position: relative;
-}
-.grid-item-1:hover, .grid-item-2:hover, .grid-item-3:hover {
-    cursor:pointer;
 }
 
 .grid-item-overlay {

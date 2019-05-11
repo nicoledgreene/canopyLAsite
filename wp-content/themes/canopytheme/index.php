@@ -40,26 +40,112 @@ Template Name: Homepage
                 <div>
                     <img id="title-logo" src="<?php echo $host . '/images/logos/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
                 </div>
-                <ul class="home-nav">
-                    <li>
-                        <span id="nav1" onClick="location.href='<?php echo $host?>/about'">ABOUT</span>
-                    </li>
-                    <li>
-                        <span class="projects-link" id="nav2" onClick="document.location.href='#gridNav'">PROJECTS</span>
-                        <!-- <div class="projects-sub-list">
-                            <span id="nav3">COMMERCIAL</span>
-                            <span id="nav4">FILM</span>
-                            <span id="nav5">VIDEO GAME</span>
-                            <span id="nav6">IMMERSIVE EXPERIENCE</span>
-                        </div> -->
-                    </li>
-                    <li>
-                        <span id="nav7">CONTACT</span>
-                    </li>
-                    <!-- <li>
-                        <span id="nav8">STORE</span>
-                    </li> -->
-                </ul>
+                <div>
+                    <div class="home-nav">
+                        <div class="about-div">
+                            <span class="parent-link" id="nav1" onClick="location.href='<?php echo $host?>/about'">ABOUT</span>
+                        </div>
+                        <!-- onClick="document.location.href='#gridNav'" -->
+                        <div class="expandable-nav">
+                            <div class="flex-row">
+                                <span class="parent-link" id="nav2" class="projects-link">PROJECTS</span>
+                                <span class="parent-link" id="nav3" onClick="location.href='<?php echo $host?>/contact'">CONTACT</span>
+                            </div>
+                            <div id="projects-sub-nav" class="hidden">
+                                <div class="sub-nav-item">
+                                    <span class="sub-nav-item-title" id="commercialToggle">COMMERCIAL</span>
+                                    <div class="hidden sub-project-links" id="commercialSub">
+                                    <?php $index = 0;
+                                        foreach($commercialLinks as $item) {
+                                            $index+=1;
+                                            $link = $host . $item->url;
+                                            if(($index % 2)==0) {
+                                                echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                                                echo $link;
+                                                echo '\'">+ ';
+                                            }
+                                            else {
+                                                echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                                                echo $link;
+                                                echo '\'">+ ';
+                                            }
+                                            echo $item->text;
+                                            echo "</span>";
+                                        }
+                                    ?>
+                                    </div>
+                                </div>
+                                <div class="sub-nav-item">
+                                    <span class="sub-nav-item-title" id="filmToggle">FILM</span>
+                                    <div class="hidden sub-project-links" id="filmSub">
+                                    <?php 
+                                        $index = 0;
+                                        foreach($filmLinks as $item) {
+                                            $index+=1;
+                                            $link = $host . $item->url;
+                                            if(($index % 2)==0) {
+                                                echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                                                echo $link;
+                                                echo '\'">+ ';
+                                            }
+                                            else {
+                                                echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                                                echo $link;
+                                                echo '\'">+ ';
+                                            }
+                                            echo $item->text;
+                                            echo "</span>";
+                                        }
+                                    ?>
+                                    </div>
+                                </div>
+                                <div class="sub-nav-item">
+                                    <span class="sub-nav-item-title" id="videoGameToggle">VIDEO GAME</span>
+                                    <div class="hidden sub-project-links" id="videoGameSub">
+                                    <?php 
+                                        $index = 0;
+                                        foreach($videoGameLinks as $item) {
+                                            $index+=1;
+                                            $link = $host . $item->url;
+                                            if(($index % 2)==0) {
+                                                echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                                                echo $link;
+                                                echo '\'">+ ';
+                                            }
+                                            else {
+                                                echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                                                echo $link;
+                                                echo '\'">+ ';
+                                            }
+                                            echo $item->text;
+                                            echo "</span>";
+                                        }
+                                    ?>
+                                    </div>
+                                </div>
+                                <div class="sub-nav-item">
+                                    <span class="sub-nav-item-title" id="immersiveToggle">IMMERSIVE EXPERIENCE</span>
+                                    <div class="hidden sub-project-links" id="immersiveSub">
+                                    <?php 
+                                        $index = 0;
+                                        foreach($immersiveLinks as $item) {
+                                            $index+=1;
+                                            if(($index % 2)==0) {
+                                                echo "<span class='project-nav-link even-link'>+ ";
+                                            }
+                                            else {
+                                                echo "<span class='project-nav-link odd-link'>+ ";
+                                            }
+                                            echo $item->text;
+                                            echo "</span>";
+                                        }
+                                    ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="tag-line flex-column">
@@ -70,72 +156,19 @@ Template Name: Homepage
         </div>
         <div class="main">
             <div id="gridNav" class="body-header">
-                <h3>Canopy LA</h3>
-                <span>sound + music + immersion</span>
-                <a>LEARN MORE</a>
+                <h3>Our Work</h3>
+                <!-- <span>sound + music + immersion</span>
+                <a>LEARN MORE</a> -->
             </div>
             <div class="grid-container">
                 <div class="grid"> 
-                    <div class="grid-row">
-                        <div id="g1" class="grid-item-1">
-                            <div id="o1" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[0]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[0]["url"] ?>">
-                        </div>
-                        <div id="g2" class="grid-item-2">
-                            <div id="o2" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[1]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[1]["url"] ?>">
-                        </div>
-                        <div id="g3" class="grid-item-3">
-                            <div id="o3" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[2]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[2]["url"] ?>">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div id="g4" class="grid-item-1">
-                            <div id="o4" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[3]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[3]["url"] ?>">                            
-                        </div>
-                        <div id="g5" class="grid-item-2">
-                            <div id="o5" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[4]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[4]["url"] ?>">
-                        </div>
-                        <div id="g6" class="grid-item-3">
-                            <div id="o6" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[5]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[5]["url"] ?>">
-                        </div>
-                    </div>
-                    <div class="grid-row">
-                        <div id="g7" class="grid-item-1">
-                            <div id="o7" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[6]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[6]["url"] ?>">
-                        </div>
-                        <div id="g8" class="grid-item-2">
-                            <div id="o8" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[7]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[7]["url"] ?>">
-                        </div>
-                        <div id="g9" class="grid-item-3">
-                            <div id="o9" class="grid-item-overlay hidden">
-                                <span><?php echo $gridImages[8]["description"] ?></span>
-                            </div>
-                            <img src="<?php echo $gridImages[8]["url"] ?>">
-                        </div>
-                    </div>
+                    <?php 
+                        foreach($gridImages as $key=>$image) {
+                            echo "<img class='grid-item src=";
+                            echo $image["url"];
+                            echo "> ";
+                        }
+                    ?>
                 </div>
             </div>    
         </div>

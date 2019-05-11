@@ -8,95 +8,147 @@ window.sr = ScrollReveal({
 sr.reveal('#title-logo', {delay: 100});
 sr.reveal('#nav1', {delay: 200});
 sr.reveal('#nav2', {delay: 300});
-// sr.reveal('#nav3', {delay: 400});
-// sr.reveal('#nav4', {delay: 500});
-// sr.reveal('#nav5', {delay: 600});
-// sr.reveal('#nav6', {delay: 700});
-sr.reveal('#nav7', {delay: 400});
-// sr.reveal('#nav8', {delay: 900});
+sr.reveal('#nav3', {delay: 400});
 
-//grid animations
-sr.reveal('.grid-item-1', {delay: 200});
-sr.reveal('.grid-item-2', {delay: 400});
-sr.reveal('.grid-item-3', {delay: 600});
+//nav hide/show
+//parent links
+$('#nav2').click(() => {
+    $("#nav2").toggleClass('active-main-link');
+    $('#projects-sub-nav').toggleClass('hidden');
+})
+//project links
+// $('#filmToggle').mouseover(() => {
+//     showNavSubItems('filmToggle');
+// })
+// $('#videoGameToggle').mouseover(() => {
+//     showNavSubItems('videoGameToggle');
+// })
+// $('#immersiveToggle').mouseover(() => {
+//     showNavSubItems('immersiveToggle');
+// })
+// $('#commercialToggle').mouseover(() => {
+//     showNavSubItems('commercialToggle');
+// })
+$('#filmToggle').click(() => {
+    showNavSubItems('filmToggle');
+})
+$('#videoGameToggle').click(() => {
+    showNavSubItems('videoGameToggle');
+})
+$('#immersiveToggle').click(() => {
+    showNavSubItems('immersiveToggle');
+})
+$('#commercialToggle').click(() => {
+    showNavSubItems('commercialToggle');
+})
 
-const gridMap = {
-    'g1': '#o1',
-    'g2': '#o2',
-    'g3': '#o3',
-    'g4': '#o4',
-    'g5': '#o5',
-    'g6': '#o6',
-    'g7': '#o7',
-    'g8': '#o8',
-    'g9': '#o9',
+const navMap = {
+    'immersiveToggle': '#immersiveSub',
+    'videoGameToggle': '#videoGameSub',
+    'filmToggle': '#filmSub',
+    'commercialToggle': '#commercialSub'
+}
+function showNavSubItems(itemKey) {
+    for(let key in navMap) {
+        let val = navMap[key];
+        if(key===itemKey) {
+            $(val).attr('class', 'sub-project-links');
+            $('#'+key).attr('class', 'sub-nav-item-title active-title');
+        }
+        else {
+            $(val).attr('class', 'sub-project-links hidden');
+            $('#'+key).attr('class', 'sub-nav-item-title');
+        }
+    }
 }
 
-$('#g1').hover(() => {
-    showElementByGridMap('g1');
-})
-$('#g2').hover(() => {
-    showElementByGridMap('g2');
-})
-$('#g3').hover(() => {
-    showElementByGridMap('g3');
-})
-$('#g4').hover(() => {
-    showElementByGridMap('g4');
-})
-$('#g5').hover(() => {
-    showElementByGridMap('g5');
-})
-$('#g6').hover(() => {
-    showElementByGridMap('g6');
-})
-$('#g7').hover(() => {
-    showElementByGridMap('g7');
-})
-$('#g8').hover(() => {
-    showElementByGridMap('g8');
-})
-$('#g9').hover(() => {
-    showElementByGridMap('g9');
-})
+//Homepage top features
 
-function showElementByGridMap(key) {
-    let val = gridMap[key];
-    $(val).attr('class', 'grid-item-overlay');
-}
 
-$('#g1').mouseleave(() => {
-    hideElementByGridMap('g1');
-})
-$('#g2').mouseleave(() => {
-    hideElementByGridMap('g2');
-})
-$('#g3').mouseleave(() => {
-    hideElementByGridMap('g3');
-})
-$('#g4').mouseleave(() => {
-    hideElementByGridMap('g4');
-})
-$('#g5').mouseleave(() => {
-    hideElementByGridMap('g5');
-})
-$('#g6').mouseleave(() => { 
-    hideElementByGridMap('g6');
-})
-$('#g7').mouseleave(() => {
-    hideElementByGridMap('g7');
-})
-$('#g8').mouseleave(() => {
-    hideElementByGridMap('g8');
-})
-$('#g9').mouseleave(() => {
-    hideElementByGridMap('g9');
-})
 
-function hideElementByGridMap(key) {
-    let val = gridMap[key];
-    $(val).attr('class', 'grid-item-overlay hidden');
-}
+
+// //grid animations
+// sr.reveal('.grid-item-1', {delay: 200});
+// sr.reveal('.grid-item-2', {delay: 400});
+// sr.reveal('.grid-item-3', {delay: 600});
+
+// const gridMap = {
+//     'g1': '#o1',
+//     'g2': '#o2',
+//     'g3': '#o3',
+//     'g4': '#o4',
+//     'g5': '#o5',
+//     'g6': '#o6',
+//     'g7': '#o7',
+//     'g8': '#o8',
+//     'g9': '#o9',
+// }
+
+// $('#g1').hover(() => {
+//     showElementByGridMap('g1');
+// })
+// $('#g2').hover(() => {
+//     showElementByGridMap('g2');
+// })
+// $('#g3').hover(() => {
+//     showElementByGridMap('g3');
+// })
+// $('#g4').hover(() => {
+//     showElementByGridMap('g4');
+// })
+// $('#g5').hover(() => {
+//     showElementByGridMap('g5');
+// })
+// $('#g6').hover(() => {
+//     showElementByGridMap('g6');
+// })
+// $('#g7').hover(() => {
+//     showElementByGridMap('g7');
+// })
+// $('#g8').hover(() => {
+//     showElementByGridMap('g8');
+// })
+// $('#g9').hover(() => {
+//     showElementByGridMap('g9');
+// })
+
+// function showElementByGridMap(key) {
+//     let val = gridMap[key];
+//     $(val).attr('class', 'grid-item-overlay');
+// }
+
+// $('#g1').mouseleave(() => {
+//     hideElementByGridMap('g1');
+// })
+// $('#g2').mouseleave(() => {
+//     hideElementByGridMap('g2');
+// })
+// $('#g3').mouseleave(() => {
+//     hideElementByGridMap('g3');
+// })
+// $('#g4').mouseleave(() => {
+//     hideElementByGridMap('g4');
+// })
+// $('#g5').mouseleave(() => {
+//     hideElementByGridMap('g5');
+// })
+// $('#g6').mouseleave(() => { 
+//     hideElementByGridMap('g6');
+// })
+// $('#g7').mouseleave(() => {
+//     hideElementByGridMap('g7');
+// })
+// $('#g8').mouseleave(() => {
+//     hideElementByGridMap('g8');
+// })
+// $('#g9').mouseleave(() => {
+//     hideElementByGridMap('g9');
+// })
+
+// function hideElementByGridMap(key) {
+//     let val = gridMap[key];
+//     $(val).attr('class', 'grid-item-overlay hidden');
+// }
 
 $(function() {
 

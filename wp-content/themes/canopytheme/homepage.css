@@ -50,58 +50,115 @@ h1 {
 }
 
 /* line 45, sass/homepage.scss */
+.parent-link {
+  margin: 0px 20px;
+  padding: 6px 0px;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+}
+
+/* line 52, sass/homepage.scss */
+.parent-link:hover {
+  border-bottom: 4px solid white;
+}
+
+/* line 55, sass/homepage.scss */
+.active-main-link {
+  border-bottom: 4px solid white;
+}
+
+/* line 59, sass/homepage.scss */
 .main-menu {
   width: calc(100% - 50px);
   margin: 0px 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
-/* line 54, sass/homepage.scss */
+/* line 67, sass/homepage.scss */
 .main-menu .home-nav {
+  margin-top: 45px;
   display: flex;
   flex-direction: row;
-  list-style-type: none;
   padding-left: 0px;
   font-weight: 600;
   color: white;
+  align-items: flex-start;
 }
-/* line 62, sass/homepage.scss */
-.main-menu .home-nav li {
-  padding: 0px 20px;
+/* line 75, sass/homepage.scss */
+.main-menu .home-nav .expandable-nav {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
-  letter-spacing: 2px;
-}
-/* line 73, sass/homepage.scss */
-.main-menu .home-nav li .projects-sub-list {
-  display: flex;
-  flex-direction: column;
-}
-/* line 76, sass/homepage.scss */
-.main-menu .home-nav li .projects-sub-list span {
-  padding: 10px 20px;
 }
 /* line 79, sass/homepage.scss */
-.main-menu .home-nav li .projects-sub-list span:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+.main-menu .home-nav .about-div {
+  margin-top: 6px;
+}
+/* line 84, sass/homepage.scss */
+.main-menu #projects-sub-nav {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: white;
+  font-size: 0.8em;
+  margin-top: 6px;
+}
+/* line 92, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+/* line 96, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-nav-item-title {
+  padding: 6px 0px;
+  padding-left: 3px;
+}
+/* line 100, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-nav-item-title:hover {
   cursor: pointer;
 }
-/* line 86, sass/homepage.scss */
-.main-menu .home-nav li:nth-of-type(2) {
-  padding: 0px !important;
+/* line 103, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .active-title {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* line 108, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-project-links {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* line 114, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-project-links .project-nav-link {
+  padding: 6px 24px;
+}
+/* line 117, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-project-links .project-nav-link:hover {
+  cursor: pointer;
+}
+/* line 121, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-project-links .even-link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+/* line 126, sass/homepage.scss */
+.main-menu #projects-sub-nav .sub-nav-item .sub-project-links .odd-link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 92, sass/homepage.scss */
+/* line 135, sass/homepage.scss */
 #title-logo {
   display: block;
   width: 200px;
 }
 
-/* line 97, sass/homepage.scss */
+/* line 140, sass/homepage.scss */
 .tag-line {
   width: calc(100% - 50px);
   background-color: black;
@@ -110,7 +167,7 @@ h1 {
   font-family: Acumin Pro, sans-serif;
   padding: 0px 25px;
 }
-/* line 104, sass/homepage.scss */
+/* line 147, sass/homepage.scss */
 .tag-line span {
   font-size: 3.2em;
   margin-top: 100px;
@@ -118,33 +175,33 @@ h1 {
   font-weight: 700;
   letter-spacing: 5px;
 }
-/* line 111, sass/homepage.scss */
+/* line 154, sass/homepage.scss */
 .tag-line .link-div {
   width: 100%;
   text-align: center;
   display: block;
   margin-bottom: 100px;
 }
-/* line 116, sass/homepage.scss */
+/* line 159, sass/homepage.scss */
 .tag-line .link-div a {
   font-size: 1.5em;
   font-weight: 700;
   letter-spacing: 7px;
   border-bottom: 5px solid white;
 }
-/* line 122, sass/homepage.scss */
+/* line 165, sass/homepage.scss */
 .tag-line .link-div a:hover {
   color: rgba(255, 255, 255, 0.8);
   border-bottom: 5px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
-/* line 131, sass/homepage.scss */
+/* line 174, sass/homepage.scss */
 .main {
   position: relative;
   overflow: hidden;
 }
-/* line 135, sass/homepage.scss */
+/* line 178, sass/homepage.scss */
 .main #wave {
   z-index: -2;
   position: absolute;
@@ -157,11 +214,11 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* line 147, sass/homepage.scss */
+/* line 190, sass/homepage.scss */
 .main #wave img {
   width: 100%;
 }
-/* line 152, sass/homepage.scss */
+/* line 195, sass/homepage.scss */
 .main .body-header {
   padding: 50px 0px;
   width: 100%;
@@ -170,75 +227,50 @@ h1 {
   text-align: center;
   justify-content: center;
 }
-/* line 159, sass/homepage.scss */
+/* line 202, sass/homepage.scss */
 .main .body-header h3 {
-  font-weight: 600;
-  font-size: 1.5em;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
-/* line 163, sass/homepage.scss */
+/* line 208, sass/homepage.scss */
 .main .body-header span, .main .body-header a {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
-/* line 167, sass/homepage.scss */
+/* line 212, sass/homepage.scss */
 .main .body-header span {
   padding: 10px 0px;
 }
-/* line 170, sass/homepage.scss */
+/* line 215, sass/homepage.scss */
 .main .body-header a {
   padding-top: 10px;
   color: #00592B;
   font-weight: 600;
   cursor: pointer;
 }
-/* line 178, sass/homepage.scss */
+/* line 223, sass/homepage.scss */
 .main .grid-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-/* line 183, sass/homepage.scss */
+/* line 227, sass/homepage.scss */
 .main .grid-container .grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  padding: 0px 60px;
-  margin-bottom: 100px;
+  margin: 0px 50px;
+  width: calc(100% - 100px);
 }
-/* line 190, sass/homepage.scss */
-.main .grid-container .grid .grid-row {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-/* line 195, sass/homepage.scss */
-.main .grid-container .grid .grid-row .grid-item-1, .main .grid-container .grid .grid-row .grid-item-2, .main .grid-container .grid .grid-row .grid-item-3 {
-  margin: 10px;
+/* line 231, sass/homepage.scss */
+.main .grid-container .grid .grid-item {
+  display: inline;
+  width: calc(33% - 24px);
   height: 0;
-  position: relative;
-  width: 33%;
-  overflow: hidden;
-  padding-bottom: 33%;
-}
-/* line 202, sass/homepage.scss */
-.main .grid-container .grid .grid-row .grid-item-1 img, .main .grid-container .grid .grid-row .grid-item-2 img, .main .grid-container .grid .grid-row .grid-item-3 img {
-  display: block;
-  width: 100%;
-  height: auto;
+  padding-bottom: calc(33% - 24px);
+  padding: 12px;
 }
 
-/* line 214, sass/homepage.scss */
-.grid-item-1, .grid-item-2, .grid-item-3 {
-  position: relative;
-}
-
-/* line 217, sass/homepage.scss */
-.grid-item-1:hover, .grid-item-2:hover, .grid-item-3:hover {
-  cursor: pointer;
-}
-
-/* line 221, sass/homepage.scss */
+/* line 243, sass/homepage.scss */
 .grid-item-overlay {
   position: absolute;
   height: 100%;
@@ -250,7 +282,7 @@ h1 {
   align-items: center;
 }
 
-/* line 232, sass/homepage.scss */
+/* line 254, sass/homepage.scss */
 .feature {
   display: flex;
   flex-direction: row;
@@ -261,7 +293,7 @@ h1 {
   margin-bottom: 75px;
   height: 350px;
 }
-/* line 242, sass/homepage.scss */
+/* line 264, sass/homepage.scss */
 .feature .focus-image {
   position: relative;
   width: 45%;
@@ -269,7 +301,7 @@ h1 {
   overflow: hidden;
   z-index: 1;
 }
-/* line 248, sass/homepage.scss */
+/* line 270, sass/homepage.scss */
 .feature .focus-image img {
   position: absolute;
   z-index: 2;
@@ -278,37 +310,37 @@ h1 {
   width: 100%;
   transform: translate(-50%, -50%);
 }
-/* line 255, sass/homepage.scss */
+/* line 277, sass/homepage.scss */
 .feature .focus-image img.max {
   width: auto;
   height: 100%;
 }
-/* line 259, sass/homepage.scss */
+/* line 281, sass/homepage.scss */
 .feature .focus-text {
   display: flex;
   flex-direction: column;
   padding: 24px 0px 24px 100px;
   width: 30%;
 }
-/* line 265, sass/homepage.scss */
+/* line 287, sass/homepage.scss */
 .feature .focus-text span, .feature .focus-text a {
   line-height: 1.5em;
 }
-/* line 268, sass/homepage.scss */
+/* line 290, sass/homepage.scss */
 .feature .focus-text a {
   color: white;
   text-decoration: none;
 }
-/* line 272, sass/homepage.scss */
+/* line 294, sass/homepage.scss */
 .feature .focus-text .focus-heading {
   font-size: 1.5em;
   text-transform: uppercase;
 }
-/* line 276, sass/homepage.scss */
+/* line 298, sass/homepage.scss */
 .feature .focus-text span:nth-of-type(2) {
   padding: 24px 0px;
 }
-/* line 281, sass/homepage.scss */
+/* line 303, sass/homepage.scss */
 .feature .focus-button {
   border: 2px solid white;
   border-radius: 5px;
@@ -320,11 +352,11 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-/* line 291, sass/homepage.scss */
+/* line 313, sass/homepage.scss */
 .feature .focus-button span {
   font-size: 0.8em;
 }
-/* line 296, sass/homepage.scss */
+/* line 318, sass/homepage.scss */
 .feature .focus-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
