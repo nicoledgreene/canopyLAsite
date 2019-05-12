@@ -181,7 +181,7 @@ h1 {
 /* line 75, sass/homepage.scss */
 .main-menu .home-nav .expandable-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 /* line 79, sass/homepage.scss */
 .main-menu .home-nav .about-div {
@@ -196,27 +196,31 @@ h1 {
   color: white;
   font-size: 0.8em;
   margin-top: 6px;
+  position: absolute;
+  top: 90px;
+  z-index: 500;
 }
-/* line 92, sass/homepage.scss */
+/* line 95, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item {
   display: flex;
   flex-direction: column;
   width: 200px;
 }
-/* line 96, sass/homepage.scss */
+/* line 99, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-nav-item-title {
   padding: 6px 0px;
   padding-left: 3px;
 }
-/* line 100, sass/homepage.scss */
+/* line 103, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-nav-item-title:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-/* line 103, sass/homepage.scss */
+/* line 107, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .active-title {
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* line 108, sass/homepage.scss */
+/* line 112, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-project-links {
   margin-top: 6px;
   margin-bottom: 6px;
@@ -224,33 +228,104 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-/* line 114, sass/homepage.scss */
+/* line 118, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-project-links .project-nav-link {
   padding: 6px 24px;
 }
-/* line 117, sass/homepage.scss */
+/* line 121, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-project-links .project-nav-link:hover {
   cursor: pointer;
 }
-/* line 121, sass/homepage.scss */
+/* line 125, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-project-links .even-link {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
 }
-/* line 126, sass/homepage.scss */
+/* line 130, sass/homepage.scss */
 .main-menu #projects-sub-nav .sub-nav-item .sub-project-links .odd-link {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 135, sass/homepage.scss */
+/* line 139, sass/homepage.scss */
+.diagonal-strikethrough {
+  position: relative;
+}
+
+/* line 142, sass/homepage.scss */
+.diagonal-strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: inherit;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+/* line 158, sass/homepage.scss */
+.main-features {
+  width: calc(100vw - 100px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+/* line 170, sass/homepage.scss */
+.main-features .active-feature {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5vw;
+}
+/* line 174, sass/homepage.scss */
+.main-features .active-feature span:first-of-type {
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  font-weight: 700;
+}
+/* line 180, sass/homepage.scss */
+.main-features .active-feature span:nth-of-type(2) {
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+/* line 185, sass/homepage.scss */
+.main-features .active-feature span:nth-of-type(3) {
+  font-family: brother-1816, sans-serif;
+  font-weight: 500;
+  font-size: 1.4vw;
+}
+/* line 192, sass/homepage.scss */
+.main-features .feat-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6vw;
+  font-weight: 700;
+  line-height: 2vw;
+}
+/* line 200, sass/homepage.scss */
+.main-features .feat-select span {
+  padding: 0px 6px;
+}
+
+/* line 206, sass/homepage.scss */
 #title-logo {
   display: block;
   width: 200px;
 }
 
-/* line 140, sass/homepage.scss */
+/* line 211, sass/homepage.scss */
 .tag-line {
   width: calc(100% - 50px);
   background-color: black;
@@ -259,7 +334,7 @@ h1 {
   font-family: Acumin Pro, sans-serif;
   padding: 0px 25px;
 }
-/* line 147, sass/homepage.scss */
+/* line 218, sass/homepage.scss */
 .tag-line span {
   font-size: 3.2em;
   margin-top: 100px;
@@ -267,33 +342,33 @@ h1 {
   font-weight: 700;
   letter-spacing: 5px;
 }
-/* line 154, sass/homepage.scss */
+/* line 225, sass/homepage.scss */
 .tag-line .link-div {
   width: 100%;
   text-align: center;
   display: block;
   margin-bottom: 100px;
 }
-/* line 159, sass/homepage.scss */
+/* line 230, sass/homepage.scss */
 .tag-line .link-div a {
   font-size: 1.5em;
   font-weight: 700;
   letter-spacing: 7px;
   border-bottom: 5px solid white;
 }
-/* line 165, sass/homepage.scss */
+/* line 236, sass/homepage.scss */
 .tag-line .link-div a:hover {
   color: rgba(255, 255, 255, 0.8);
   border-bottom: 5px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
-/* line 191, sass/homepage.scss */
+/* line 262, sass/homepage.scss */
 .main {
   position: relative;
   overflow: hidden;
 }
-/* line 195, sass/homepage.scss */
+/* line 266, sass/homepage.scss */
 .main #wave {
   z-index: -2;
   position: absolute;
@@ -306,11 +381,11 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* line 207, sass/homepage.scss */
+/* line 278, sass/homepage.scss */
 .main #wave img {
   width: 100%;
 }
-/* line 212, sass/homepage.scss */
+/* line 283, sass/homepage.scss */
 .main .body-header {
   padding: 50px 0px;
   width: 100%;
@@ -319,61 +394,61 @@ h1 {
   text-align: center;
   justify-content: center;
 }
-/* line 219, sass/homepage.scss */
+/* line 290, sass/homepage.scss */
 .main .body-header h3 {
   font-weight: 700;
   font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-/* line 225, sass/homepage.scss */
+/* line 296, sass/homepage.scss */
 .main .body-header span, .main .body-header a {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
-/* line 229, sass/homepage.scss */
+/* line 300, sass/homepage.scss */
 .main .body-header span {
   padding: 10px 0px;
 }
-/* line 232, sass/homepage.scss */
+/* line 303, sass/homepage.scss */
 .main .body-header a {
   padding-top: 10px;
   color: #00592B;
   font-weight: 600;
   cursor: pointer;
 }
-/* line 240, sass/homepage.scss */
+/* line 311, sass/homepage.scss */
 .main .grid-container {
   width: 100%;
   margin-bottom: 38px;
 }
-/* line 243, sass/homepage.scss */
+/* line 314, sass/homepage.scss */
 .main .grid-container .grid {
   width: calc(100% - 24px);
   margin: 0px 12px;
 }
-/* line 246, sass/homepage.scss */
+/* line 317, sass/homepage.scss */
 .main .grid-container .grid .resize-box {
   display: inline-block;
   width: calc(33.3% - 24px);
   padding: 12px;
   overflow: hidden;
 }
-/* line 252, sass/homepage.scss */
+/* line 323, sass/homepage.scss */
 .main .grid-container .grid .resize-box .grid-item {
   cursor: pointer;
   position: relative;
   position: relative;
   overflow: hidden;
 }
-/* line 176, sass/homepage.scss */
+/* line 247, sass/homepage.scss */
 .main .grid-container .grid .resize-box .grid-item:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 75%;
 }
-/* line 182, sass/homepage.scss */
+/* line 253, sass/homepage.scss */
 .main .grid-container .grid .resize-box .grid-item > .grid-item-content {
   position: absolute;
   top: 0;
@@ -381,12 +456,12 @@ h1 {
   right: 0;
   bottom: 0;
 }
-/* line 259, sass/homepage.scss */
+/* line 330, sass/homepage.scss */
 .main .grid-container .grid .resize-box .grid-item .grid-item-content img {
   width: 100%;
 }
 
-/* line 269, sass/homepage.scss */
+/* line 340, sass/homepage.scss */
 .grid-item-overlay {
   cursor: pointer;
   font-family: Acumin Pro, sans-serif;
@@ -403,13 +478,13 @@ h1 {
   justify-content: flex-end;
   align-items: center;
 }
-/* line 284, sass/homepage.scss */
+/* line 355, sass/homepage.scss */
 .grid-item-overlay span:first-of-type {
   font-size: 26px;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 289, sass/homepage.scss */
+/* line 360, sass/homepage.scss */
 .grid-item-overlay span:nth-of-type(2) {
   font-size: 21px;
   font-weight: 300;
@@ -417,7 +492,7 @@ h1 {
   font-style: italic;
   padding-bottom: 90px;
 }
-/* line 296, sass/homepage.scss */
+/* line 367, sass/homepage.scss */
 .grid-item-overlay span:nth-of-type(3) {
   font-size: 21px;
   font-weight: 500;
@@ -425,106 +500,111 @@ h1 {
   padding-bottom: 12px;
 }
 
-/* line 304, sass/homepage.scss */
+/* line 375, sass/homepage.scss */
 .feature {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: white;
-  padding: 0px 100px;
-  margin-bottom: 75px;
-  height: 350px;
+  justify-content: space-between;
+  padding: 50px 50px 100px 50px;
+  color: black;
 }
-/* line 314, sass/homepage.scss */
-.feature .focus-image {
-  position: relative;
-  width: 45%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
+/* line 382, sass/homepage.scss */
+.feature .feat-arrow-previous, .feature .feat-arrow-next {
+  padding: 0px 6px;
 }
-/* line 320, sass/homepage.scss */
-.feature .focus-image img {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
+/* line 384, sass/homepage.scss */
+.feature .feat-arrow-previous i, .feature .feat-arrow-next i {
+  color: black;
+}
+/* line 388, sass/homepage.scss */
+.feature .feat-content {
   width: 100%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
 }
-/* line 327, sass/homepage.scss */
-.feature .focus-image img.max {
-  width: auto;
-  height: 100%;
+/* line 392, sass/homepage.scss */
+.feature .feat-content .feat-img {
+  width: calc(50% - 12px);
+  margin: 0px 6px;
+  position: relative;
+  border: 4px solid black;
 }
-/* line 331, sass/homepage.scss */
-.feature .focus-text {
+/* line 247, sass/homepage.scss */
+.feature .feat-content .feat-img:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 56.25%;
+}
+/* line 253, sass/homepage.scss */
+.feature .feat-content .feat-img > .grid-item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 398, sass/homepage.scss */
+.feature .feat-content .feat-text {
+  width: calc(50% - 12px);
   display: flex;
   flex-direction: column;
-  padding: 24px 0px 24px 100px;
-  width: 30%;
-}
-/* line 337, sass/homepage.scss */
-.feature .focus-text span, .feature .focus-text a {
-  line-height: 1.5em;
-}
-/* line 340, sass/homepage.scss */
-.feature .focus-text a {
-  color: white;
-  text-decoration: none;
-}
-/* line 344, sass/homepage.scss */
-.feature .focus-text .focus-heading {
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-/* line 348, sass/homepage.scss */
-.feature .focus-text span:nth-of-type(2) {
-  padding: 24px 0px;
-}
-/* line 353, sass/homepage.scss */
-.feature .focus-button {
-  border: 2px solid white;
-  border-radius: 5px;
-  width: 140px;
-  text-align: center;
-  height: 2.5em;
-  position: relative;
-  display: flex;
+  line-height: 2.5em;
+  margin-left: 12px;
   justify-content: center;
-  align-items: center;
 }
-/* line 363, sass/homepage.scss */
-.feature .focus-button span {
-  font-size: 0.8em;
+/* line 405, sass/homepage.scss */
+.feature .feat-content .feat-text span:nth-of-type(1) {
+  font-size: 27px;
+  font-weight: 700;
 }
-/* line 368, sass/homepage.scss */
-.feature .focus-button:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+/* line 409, sass/homepage.scss */
+.feature .feat-content .feat-text span:nth-of-type(2) {
+  font-size: 40px;
+  font-weight: 700;
+}
+/* line 413, sass/homepage.scss */
+.feature .feat-content .feat-text span:nth-of-type(3) {
+  font-family: brother-1816, sans-serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+/* line 418, sass/homepage.scss */
+.feature .feat-content .feat-text .feat-link {
+  padding-top: 50px;
+}
+/* line 420, sass/homepage.scss */
+.feature .feat-content .feat-text .feat-link span {
+  font-size: 27px;
+  font-weight: 700;
+}
+/* line 424, sass/homepage.scss */
+.feature .feat-content .feat-text .feat-link span:hover {
+  border-bottom: 4px solid black;
   cursor: pointer;
 }
 
-/* line 374, sass/homepage.scss */
+/* line 433, sass/homepage.scss */
 .hidden-overlay {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 379, sass/homepage.scss */
+  /* line 440, sass/homepage.scss */
   .hidden-overlay {
     display: block;
   }
 
-  /* line 382, sass/homepage.scss */
+  /* line 443, sass/homepage.scss */
   .grid-item-overlay {
     cursor: pointer;
     font-family: Acumin Pro, sans-serif;
     font-weight: 500;
     position: absolute;
-    top: 60%;
+    top: calc(100% - 100px);
     left: 0;
-    height: 40%;
+    height: 100px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 100;
@@ -533,13 +613,13 @@ h1 {
     justify-content: center;
     align-items: center;
   }
-  /* line 397, sass/homepage.scss */
+  /* line 458, sass/homepage.scss */
   .grid-item-overlay span:first-of-type {
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
   }
-  /* line 402, sass/homepage.scss */
+  /* line 463, sass/homepage.scss */
   .grid-item-overlay span:nth-of-type(2) {
     font-size: 10px;
     font-weight: 300;
@@ -547,85 +627,181 @@ h1 {
     font-style: italic;
     padding-bottom: 6px;
   }
-  /* line 409, sass/homepage.scss */
+  /* line 470, sass/homepage.scss */
   .grid-item-overlay span:nth-of-type(3) {
     font-size: 10px;
     font-weight: 500;
     font-family: brother-1816, sans-serif;
     padding-bottom: 12px;
   }
+
+  /* line 479, sass/homepage.scss */
+  .main-features .active-feature {
+    line-height: 1.5em;
+  }
+  /* line 481, sass/homepage.scss */
+  .main-features .active-feature span:first-of-type {
+    font-size: 14px;
+  }
+  /* line 484, sass/homepage.scss */
+  .main-features .active-feature span:nth-of-type(2) {
+    font-size: 25px;
+  }
+  /* line 487, sass/homepage.scss */
+  .main-features .active-feature span:nth-of-type(3) {
+    font-size: 14px;
+  }
+  /* line 491, sass/homepage.scss */
+  .main-features .feat-select {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
 }
 @media only screen and (max-width: 600px) {
-  /* line 419, sass/homepage.scss */
+  /* line 499, sass/homepage.scss */
   .about-div {
     margin-bottom: 10px;
   }
 
-  /* line 422, sass/homepage.scss */
+  /* line 502, sass/homepage.scss */
   .main-menu {
     flex-direction: column;
     justify-content: center;
   }
-  /* line 428, sass/homepage.scss */
+  /* line 508, sass/homepage.scss */
   .main-menu div {
     justify-content: center;
   }
-  /* line 430, sass/homepage.scss */
+  /* line 510, sass/homepage.scss */
   .main-menu div img {
     padding-top: 50px;
     margin: auto;
   }
-  /* line 436, sass/homepage.scss */
+  /* line 516, sass/homepage.scss */
   .main-menu #projects-sub-nav {
     font-size: 0.9em !important;
   }
-  /* line 440, sass/homepage.scss */
+  /* line 520, sass/homepage.scss */
   .main-menu .home-nav {
     flex-direction: column;
     align-items: center;
   }
-  /* line 444, sass/homepage.scss */
+  /* line 524, sass/homepage.scss */
   .main-menu .home-nav .expandable-nav {
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 528, sass/homepage.scss */
+  .main-menu .home-nav .expandable-nav #nav3 {
+    order: 1;
+  }
+  /* line 531, sass/homepage.scss */
+  .main-menu .home-nav .expandable-nav #nav2 {
+    order: 2;
+  }
+  /* line 536, sass/homepage.scss */
+  .main-menu .home-nav #projects-sub-nav {
+    top: 300px;
   }
 
-  /* line 452, sass/homepage.scss */
+  /* line 542, sass/homepage.scss */
   .tag-line span {
     font-size: 2em;
   }
 
-  /* line 456, sass/homepage.scss */
+  /* line 546, sass/homepage.scss */
   .tag-line .link-div {
     margin-top: 10px;
   }
 
-  /* line 459, sass/homepage.scss */
+  /* line 549, sass/homepage.scss */
   .tag-line .link-div a {
     font-size: 1em;
   }
 
-  /* line 463, sass/homepage.scss */
+  /* line 553, sass/homepage.scss */
   .main .body-header h3 {
     font-size: 1.5em;
   }
 
-  /* line 467, sass/homepage.scss */
+  /* line 557, sass/homepage.scss */
   .main .grid-container .grid .resize-box {
     width: calc(100% - 24px);
   }
 
-  /* line 472, sass/homepage.scss */
+  /* line 562, sass/homepage.scss */
   .grid-item-overlay span:first-of-type {
     font-size: 24px;
   }
-  /* line 475, sass/homepage.scss */
+  /* line 565, sass/homepage.scss */
   .grid-item-overlay span:nth-of-type(2) {
     font-size: 15px;
     margin-bottom: 12px;
   }
-  /* line 479, sass/homepage.scss */
+  /* line 569, sass/homepage.scss */
   .grid-item-overlay span:nth-of-type(3) {
     font-size: 15px;
+  }
+
+  /* line 574, sass/homepage.scss */
+  .main-features {
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+  }
+
+  /* line 582, sass/homepage.scss */
+  .feature .feat-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 586, sass/homepage.scss */
+  .feature .feat-content .feat-img {
+    width: calc(100% - 12px);
+    position: relative;
+    border: 4px solid black;
+  }
+  /* line 247, sass/homepage.scss */
+  .feature .feat-content .feat-img:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  /* line 253, sass/homepage.scss */
+  .feature .feat-content .feat-img > .grid-item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  /* line 591, sass/homepage.scss */
+  .feature .feat-content .feat-text {
+    width: 100%;
+  }
+  /* line 593, sass/homepage.scss */
+  .feature .feat-content .feat-text span:nth-of-type(1) {
+    font-size: 20px;
+  }
+  /* line 596, sass/homepage.scss */
+  .feature .feat-content .feat-text span:nth-of-type(2) {
+    font-size: 30px;
+  }
+  /* line 599, sass/homepage.scss */
+  .feature .feat-content .feat-text span:nth-of-type(3) {
+    font-size: 20px;
+  }
+  /* line 602, sass/homepage.scss */
+  .feature .feat-content .feat-text .feat-link {
+    padding-top: 25px;
+  }
+  /* line 604, sass/homepage.scss */
+  .feature .feat-content .feat-text .feat-link span {
+    border-bottom: 4px solid black;
   }
 }
 /* line 1, sass/footer.scss */
@@ -650,38 +826,39 @@ footer {
   flex-direction: row;
   color: white;
 }
-
-/* line 21, sass/footer.scss */
-.contact-col {
-  padding-right: 50px;
+/* line 20, sass/footer.scss */
+.flex-row .small-logo img {
+  width: 200px;
 }
 
-/* line 25, sass/footer.scss */
-.top-row {
+/* line 26, sass/footer.scss */
+.footer-row {
   justify-content: space-between;
   padding: 50px 100px;
+  display: flex;
+  flex-direction: row;
 }
 
-/* line 30, sass/footer.scss */
+/* line 33, sass/footer.scss */
 .flex-column {
   display: flex;
   flex-direction: column;
 }
 
-/* line 35, sass/footer.scss */
+/* line 38, sass/footer.scss */
 .social {
   justify-content: space-between;
   align-items: flex-end;
 }
 
-/* line 40, sass/footer.scss */
+/* line 43, sass/footer.scss */
 #social-icons {
   display: flex;
   flex-direction: row;
   margin: 12px 0px;
 }
 
-/* line 52, sass/footer.scss */
+/* line 49, sass/footer.scss */
 .fas, .fa {
   font-family: 'FontAwesome' !important;
   color: white;
@@ -690,23 +867,51 @@ footer {
   margin: 0px 6px;
 }
 
-/* line 60, sass/footer.scss */
+/* line 57, sass/footer.scss */
 .fas:hover, .fa:hover {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
-/* line 65, sass/footer.scss */
-#copyright {
-  text-decoration: italic;
+/* line 62, sass/footer.scss */
+.footer-links {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 20px;
 }
-
-/* line 70, sass/footer.scss */
-.links-col span:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+/* line 66, sass/footer.scss */
+.footer-links span {
+  border-bottom: 4px solid transparent;
+}
+/* line 69, sass/footer.scss */
+.footer-links span:hover {
+  border-bottom: 4px solid white;
   cursor: pointer;
+  display: block;
 }
 
+/* line 76, sass/footer.scss */
+#copyright {
+  margin-top: 20px;
+  margin-left: 12px;
+  text-decoration: italic;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 86, sass/footer.scss */
+  .footer-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 90, sass/footer.scss */
+  .footer-row .small-logo {
+    margin-bottom: 20px;
+  }
+}
 /* line 1, sass/projectpage.scss */
 body {
   margin: 0 !important;

@@ -59,10 +59,8 @@ Template Name: Homepage
                         </div>
                         <!-- onClick="document.location.href='#gridNav'" -->
                         <div class="expandable-nav">
-                            <div class="flex-row">
-                                <span class="parent-link" id="nav2" class="projects-link">PROJECTS</span>
-                                <span class="parent-link" id="nav3" onClick="location.href='<?php echo $host?>/contact'">CONTACT</span>
-                            </div>
+                            <span class="parent-link" id="nav2" class="projects-link">PROJECTS</span>
+                            <span class="parent-link" id="nav3" onClick="location.href='<?php echo $host?>/contact'">CONTACT</span>
                             <div id="projects-sub-nav" class="hidden">
                                 <div class="sub-nav-item">
                                     <span class="sub-nav-item-title" id="commercialToggle">COMMERCIAL</span>
@@ -159,6 +157,18 @@ Template Name: Homepage
                     </div>
                 </div>
             </div>
+            <div class="main-features">
+                <div class="active-feature">
+                    <span>Bagdley Mischka</span>
+                    <span>Interactive Fashion Experience</span>
+                    <span>Sound | Music | Install</span>
+                </div>
+                <div class="feat-select">
+                    <span class="diagonal-strikethrough">01</span>
+                    <span>02</span>
+                    <span>03</span>
+                </div>
+            </div>
         </div>
         <div class="tag-line flex-column">
             <span>We are all things sound, music, and immersion.</span>
@@ -211,16 +221,25 @@ Template Name: Homepage
                 </div>
             </div>    
         </div>
+
         <div class="feature">
-            <div class="focus-image">
-                <img src="<?php echo $feature_image ?>" />
+            <div class="feat-arrow-previous">
+                <i class="fa fa-chevron-left"></i>                
             </div>
-            <div class="focus-text">
-                <span id="focus-header" class="focus-heading"><?php echo $feature_header ?></span>
-                <span><?php echo $feature_text ?></span>
-                <div class="focus-button" onClick="document.location.href='<?php echo trim($host) ?>' + '<?php echo trim($feature_link) ?>'">
-                    <span>LEARN MORE</span>
+            <div class="feat-content">
+                <div class="feat-img">
                 </div>
+                <div class="feat-text">
+                    <span>PRESS</span>
+                    <span>A VR Acid Trip is All the Fun Without the Pesky Come Down</span>
+                    <span>Wired | April 22, 2019</span>
+                    <div class="feat-link">
+                        <span>LEARN MORE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feat-arrow-next">
+                <i class="fa fa-chevron-right"></i>                
             </div>
         </div>
 

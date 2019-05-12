@@ -16,15 +16,18 @@ footer {
     display: flex;
     flex-direction: row;
     color: white;
+    .small-logo {
+        img {
+            width: 200px;
+        }
+    }
 }
 
-.contact-col {
-    padding-right: 50px;
-}
-
-.top-row {
+.footer-row {
     justify-content: space-between;
     padding: 50px 100px;
+    display: flex;
+    flex-direction: row;
 }
 
 .flex-column {
@@ -41,12 +44,6 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 12px 0px;
-
-    // .fas, .fa {
-    //     font-family: 'FontAwesome' !important;
-    //     color: white;
-    //     font-weight: 600 !important;
-    // }
 }
 
 .fas, .fa {
@@ -62,13 +59,36 @@ footer {
     cursor:pointer;
 }
 
-#copyright {
-    text-decoration: italic;
+.footer-links {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 20px;
+    span {
+        border-bottom: 4px solid transparent;
+    }
+    span:hover {
+        border-bottom: 4px solid white;
+        cursor:pointer;
+        display: block;
+    }
 }
 
-.links-col {
-    span:hover {
-        background-color: rgba(255,255,255,0.15);
-        cursor:pointer;
+#copyright {
+    margin-top: 20px;
+    margin-left: 12px;
+    text-decoration: italic;
+    line-height: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .small-logo {
+            margin-bottom: 20px;
+        }
     }
 }

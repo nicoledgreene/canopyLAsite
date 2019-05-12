@@ -9,6 +9,7 @@ sr.reveal('#title-logo', {delay: 100});
 sr.reveal('#nav1', {delay: 200});
 sr.reveal('#nav2', {delay: 300});
 sr.reveal('#nav3', {delay: 400});
+sr.reveal('.main-features', {delay: 500});
 
 //nav hide/show
 //parent links

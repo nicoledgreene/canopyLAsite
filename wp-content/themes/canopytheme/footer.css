@@ -20,38 +20,39 @@ footer {
   flex-direction: row;
   color: white;
 }
-
-/* line 21, sass/footer.scss */
-.contact-col {
-  padding-right: 50px;
+/* line 20, sass/footer.scss */
+.flex-row .small-logo img {
+  width: 200px;
 }
 
-/* line 25, sass/footer.scss */
-.top-row {
+/* line 26, sass/footer.scss */
+.footer-row {
   justify-content: space-between;
   padding: 50px 100px;
+  display: flex;
+  flex-direction: row;
 }
 
-/* line 30, sass/footer.scss */
+/* line 33, sass/footer.scss */
 .flex-column {
   display: flex;
   flex-direction: column;
 }
 
-/* line 35, sass/footer.scss */
+/* line 38, sass/footer.scss */
 .social {
   justify-content: space-between;
   align-items: flex-end;
 }
 
-/* line 40, sass/footer.scss */
+/* line 43, sass/footer.scss */
 #social-icons {
   display: flex;
   flex-direction: row;
   margin: 12px 0px;
 }
 
-/* line 52, sass/footer.scss */
+/* line 49, sass/footer.scss */
 .fas, .fa {
   font-family: 'FontAwesome' !important;
   color: white;
@@ -60,19 +61,48 @@ footer {
   margin: 0px 6px;
 }
 
-/* line 60, sass/footer.scss */
+/* line 57, sass/footer.scss */
 .fas:hover, .fa:hover {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
-/* line 65, sass/footer.scss */
-#copyright {
-  text-decoration: italic;
+/* line 62, sass/footer.scss */
+.footer-links {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+/* line 66, sass/footer.scss */
+.footer-links span {
+  border-bottom: 4px solid transparent;
+}
+/* line 69, sass/footer.scss */
+.footer-links span:hover {
+  border-bottom: 4px solid white;
+  cursor: pointer;
+  display: block;
 }
 
-/* line 70, sass/footer.scss */
-.links-col span:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  cursor: pointer;
+/* line 76, sass/footer.scss */
+#copyright {
+  margin-top: 20px;
+  margin-left: 12px;
+  text-decoration: italic;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 86, sass/footer.scss */
+  .footer-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 90, sass/footer.scss */
+  .footer-row .small-logo {
+    margin-bottom: 20px;
+  }
 }
