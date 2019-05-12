@@ -171,6 +171,23 @@ h1 {
 
 }
 
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+    > .grid-item-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+}
+
 .main {
     position: relative;
     overflow: hidden;
@@ -222,33 +239,66 @@ h1 {
 
     .grid-container {
         width: 100%;
-        display: flex;
-        justify-content: center;
+        margin-bottom: 38px;
         .grid {
-            margin: 0px 50px;
-            width: calc(100% - 100px);
-
-            .grid-item {
-                display: inline;
-                width: calc(33% - 24px);
-                height: 0;
-                padding-bottom: calc(33% - 24px);
+            width: calc(100% - 24px);
+            margin: 0px 12px;
+            .resize-box {
+                display: inline-block;
+                width: calc(33.3% - 24px);
                 padding: 12px;
+                // position: relative;
+                overflow: hidden;
+                .grid-item {
+                    cursor: pointer;
+                    position: relative;
+                    @include aspect-ratio(4,3);
+                    overflow:hidden;
+                    .grid-item-content {
+                        // position: relative;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
-
 }
 
 .grid-item-overlay {
+    cursor: pointer;
+    font-family: Acumin Pro, sans-serif;
+    font-weight: 500;
     position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(255,255,255,0.7);
     z-index: 100;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
+    span:first-of-type {
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    span:nth-of-type(2) {
+        font-size: 21px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-style: italic;
+        padding-bottom: 90px;
+    }
+    span:nth-of-type(3) {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: brother-1816, sans-serif;
+        padding-bottom: 12px;
+    }
 }
 
 .feature {
@@ -319,4 +369,116 @@ h1 {
         background-color: rgba(255,255,255,0.15);
         cursor: pointer;
     }
+}
+
+.hidden-overlay {
+    display: none;
+}
+
+@media only screen and(max-width: 1024px) {
+    .hidden-overlay {
+        display: block;
+    }
+    .grid-item-overlay {
+        cursor: pointer;
+        font-family: Acumin Pro, sans-serif;
+        font-weight: 500;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        height: 40%;
+        width: 100%;
+        background-color: rgba(255,255,255,0.5);
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span:first-of-type {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        span:nth-of-type(2) {
+            font-size: 10px;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-style: italic;
+            padding-bottom: 6px;
+        }
+        span:nth-of-type(3) {
+            font-size: 10px;
+            font-weight: 500;
+            font-family: brother-1816, sans-serif;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+@media only screen and(max-width: 600px) {
+    .about-div {
+        margin-bottom: 10px;
+    }
+    .main-menu {
+        flex-direction: column;
+        justify-content: center;
+        // div:first-of-type {
+        //     padding-top: 20px;
+        // }
+        div {
+            justify-content: center;
+            img {
+                padding-top: 50px;
+                margin: auto;
+            }
+        }
+
+        #projects-sub-nav {
+            font-size: 0.9em !important;
+        }
+
+        .home-nav {
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            .expandable-nav {
+                justify-content: center;
+
+
+            }
+        }
+    }
+
+    .tag-line span {
+        font-size: 2em;
+    }
+
+    .tag-line .link-div {
+        margin-top: 10px;
+    }
+    .tag-line .link-div a {
+        font-size: 1em;
+    }
+
+    .main .body-header h3 {
+        font-size:1.5em;
+    }
+
+    .main .grid-container .grid .resize-box {
+        width: calc(100% - 24px);
+    }
+
+    .grid-item-overlay {
+        span:first-of-type {
+            font-size: 24px;
+        }
+        span:nth-of-type(2) {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        span:nth-of-type(3) {
+            font-size: 15px;
+        }
+    }
+
 }

@@ -196,12 +196,12 @@ h1 {
   cursor: pointer;
 }
 
-/* line 174, sass/homepage.scss */
+/* line 191, sass/homepage.scss */
 .main {
   position: relative;
   overflow: hidden;
 }
-/* line 178, sass/homepage.scss */
+/* line 195, sass/homepage.scss */
 .main #wave {
   z-index: -2;
   position: absolute;
@@ -214,11 +214,11 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* line 190, sass/homepage.scss */
+/* line 207, sass/homepage.scss */
 .main #wave img {
   width: 100%;
 }
-/* line 195, sass/homepage.scss */
+/* line 212, sass/homepage.scss */
 .main .body-header {
   padding: 50px 0px;
   width: 100%;
@@ -227,62 +227,113 @@ h1 {
   text-align: center;
   justify-content: center;
 }
-/* line 202, sass/homepage.scss */
+/* line 219, sass/homepage.scss */
 .main .body-header h3 {
   font-weight: 700;
   font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-/* line 208, sass/homepage.scss */
+/* line 225, sass/homepage.scss */
 .main .body-header span, .main .body-header a {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
-/* line 212, sass/homepage.scss */
+/* line 229, sass/homepage.scss */
 .main .body-header span {
   padding: 10px 0px;
 }
-/* line 215, sass/homepage.scss */
+/* line 232, sass/homepage.scss */
 .main .body-header a {
   padding-top: 10px;
   color: #00592B;
   font-weight: 600;
   cursor: pointer;
 }
-/* line 223, sass/homepage.scss */
+/* line 240, sass/homepage.scss */
 .main .grid-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 38px;
 }
-/* line 227, sass/homepage.scss */
+/* line 243, sass/homepage.scss */
 .main .grid-container .grid {
-  margin: 0px 50px;
-  width: calc(100% - 100px);
+  width: calc(100% - 24px);
+  margin: 0px 12px;
 }
-/* line 231, sass/homepage.scss */
-.main .grid-container .grid .grid-item {
-  display: inline;
-  width: calc(33% - 24px);
-  height: 0;
-  padding-bottom: calc(33% - 24px);
+/* line 246, sass/homepage.scss */
+.main .grid-container .grid .resize-box {
+  display: inline-block;
+  width: calc(33.3% - 24px);
   padding: 12px;
+  overflow: hidden;
+}
+/* line 252, sass/homepage.scss */
+.main .grid-container .grid .resize-box .grid-item {
+  cursor: pointer;
+  position: relative;
+  position: relative;
+  overflow: hidden;
+}
+/* line 176, sass/homepage.scss */
+.main .grid-container .grid .resize-box .grid-item:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 75%;
+}
+/* line 182, sass/homepage.scss */
+.main .grid-container .grid .resize-box .grid-item > .grid-item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 259, sass/homepage.scss */
+.main .grid-container .grid .resize-box .grid-item .grid-item-content img {
+  width: 100%;
 }
 
-/* line 243, sass/homepage.scss */
+/* line 269, sass/homepage.scss */
 .grid-item-overlay {
+  cursor: pointer;
+  font-family: Acumin Pro, sans-serif;
+  font-weight: 500;
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 100;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
+/* line 284, sass/homepage.scss */
+.grid-item-overlay span:first-of-type {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 289, sass/homepage.scss */
+.grid-item-overlay span:nth-of-type(2) {
+  font-size: 21px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-style: italic;
+  padding-bottom: 90px;
+}
+/* line 296, sass/homepage.scss */
+.grid-item-overlay span:nth-of-type(3) {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: brother-1816, sans-serif;
+  padding-bottom: 12px;
+}
 
-/* line 254, sass/homepage.scss */
+/* line 304, sass/homepage.scss */
 .feature {
   display: flex;
   flex-direction: row;
@@ -293,7 +344,7 @@ h1 {
   margin-bottom: 75px;
   height: 350px;
 }
-/* line 264, sass/homepage.scss */
+/* line 314, sass/homepage.scss */
 .feature .focus-image {
   position: relative;
   width: 45%;
@@ -301,7 +352,7 @@ h1 {
   overflow: hidden;
   z-index: 1;
 }
-/* line 270, sass/homepage.scss */
+/* line 320, sass/homepage.scss */
 .feature .focus-image img {
   position: absolute;
   z-index: 2;
@@ -310,37 +361,37 @@ h1 {
   width: 100%;
   transform: translate(-50%, -50%);
 }
-/* line 277, sass/homepage.scss */
+/* line 327, sass/homepage.scss */
 .feature .focus-image img.max {
   width: auto;
   height: 100%;
 }
-/* line 281, sass/homepage.scss */
+/* line 331, sass/homepage.scss */
 .feature .focus-text {
   display: flex;
   flex-direction: column;
   padding: 24px 0px 24px 100px;
   width: 30%;
 }
-/* line 287, sass/homepage.scss */
+/* line 337, sass/homepage.scss */
 .feature .focus-text span, .feature .focus-text a {
   line-height: 1.5em;
 }
-/* line 290, sass/homepage.scss */
+/* line 340, sass/homepage.scss */
 .feature .focus-text a {
   color: white;
   text-decoration: none;
 }
-/* line 294, sass/homepage.scss */
+/* line 344, sass/homepage.scss */
 .feature .focus-text .focus-heading {
   font-size: 1.5em;
   text-transform: uppercase;
 }
-/* line 298, sass/homepage.scss */
+/* line 348, sass/homepage.scss */
 .feature .focus-text span:nth-of-type(2) {
   padding: 24px 0px;
 }
-/* line 303, sass/homepage.scss */
+/* line 353, sass/homepage.scss */
 .feature .focus-button {
   border: 2px solid white;
   border-radius: 5px;
@@ -352,12 +403,136 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-/* line 313, sass/homepage.scss */
+/* line 363, sass/homepage.scss */
 .feature .focus-button span {
   font-size: 0.8em;
 }
-/* line 318, sass/homepage.scss */
+/* line 368, sass/homepage.scss */
 .feature .focus-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
+}
+
+/* line 374, sass/homepage.scss */
+.hidden-overlay {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 379, sass/homepage.scss */
+  .hidden-overlay {
+    display: block;
+  }
+
+  /* line 382, sass/homepage.scss */
+  .grid-item-overlay {
+    cursor: pointer;
+    font-family: Acumin Pro, sans-serif;
+    font-weight: 500;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 397, sass/homepage.scss */
+  .grid-item-overlay span:first-of-type {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  /* line 402, sass/homepage.scss */
+  .grid-item-overlay span:nth-of-type(2) {
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: italic;
+    padding-bottom: 6px;
+  }
+  /* line 409, sass/homepage.scss */
+  .grid-item-overlay span:nth-of-type(3) {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: brother-1816, sans-serif;
+    padding-bottom: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 419, sass/homepage.scss */
+  .about-div {
+    margin-bottom: 10px;
+  }
+
+  /* line 422, sass/homepage.scss */
+  .main-menu {
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* line 428, sass/homepage.scss */
+  .main-menu div {
+    justify-content: center;
+  }
+  /* line 430, sass/homepage.scss */
+  .main-menu div img {
+    padding-top: 50px;
+    margin: auto;
+  }
+  /* line 436, sass/homepage.scss */
+  .main-menu #projects-sub-nav {
+    font-size: 0.9em !important;
+  }
+  /* line 440, sass/homepage.scss */
+  .main-menu .home-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* line 444, sass/homepage.scss */
+  .main-menu .home-nav .expandable-nav {
+    justify-content: center;
+  }
+
+  /* line 452, sass/homepage.scss */
+  .tag-line span {
+    font-size: 2em;
+  }
+
+  /* line 456, sass/homepage.scss */
+  .tag-line .link-div {
+    margin-top: 10px;
+  }
+
+  /* line 459, sass/homepage.scss */
+  .tag-line .link-div a {
+    font-size: 1em;
+  }
+
+  /* line 463, sass/homepage.scss */
+  .main .body-header h3 {
+    font-size: 1.5em;
+  }
+
+  /* line 467, sass/homepage.scss */
+  .main .grid-container .grid .resize-box {
+    width: calc(100% - 24px);
+  }
+
+  /* line 472, sass/homepage.scss */
+  .grid-item-overlay span:first-of-type {
+    font-size: 24px;
+  }
+  /* line 475, sass/homepage.scss */
+  .grid-item-overlay span:nth-of-type(2) {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  /* line 479, sass/homepage.scss */
+  .grid-item-overlay span:nth-of-type(3) {
+    font-size: 15px;
+  }
 }

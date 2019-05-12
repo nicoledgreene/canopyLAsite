@@ -5,6 +5,18 @@ Template Name: Homepage
 
 <?php include 'variables.php' ?>
 
+<script>
+    //grid stuff
+    function revealOverlay(index) {
+        const item = '#overlay-'+index.toString();
+        $(item).removeClass('hidden-overlay');
+    }
+    function removeOverlay(index) {
+        const item = '#overlay-'+index.toString();
+        $(item).addClass('hidden-overlay');
+    }
+</script>
+
 <body>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
@@ -157,17 +169,44 @@ Template Name: Homepage
         <div class="main">
             <div id="gridNav" class="body-header">
                 <h3>Our Work</h3>
-                <!-- <span>sound + music + immersion</span>
-                <a>LEARN MORE</a> -->
             </div>
             <div class="grid-container">
                 <div class="grid"> 
-                    <?php 
-                        foreach($gridImages as $key=>$image) {
-                            echo "<img class='grid-item src=";
-                            echo $image["url"];
-                            echo "> ";
-                        }
+                    <?php $index = -1;
+                        foreach($grid as $item) {
+                            $index+=1;
+                            $revealClass='';
+                            if($index == 2 || $index == 5 || $index == 8 || $index == 11 || $index == 14 || $index == 17 || $index == 20 || $index == 23 || $index == 26 || $index == 29 || $index == 32 ||$index == 35 ||$index == 38 ||$index == 41) {
+                                $revealClass = 'grid-box-3';
+                            }
+                            else if($index == 1 || $index == 4 || $index == 7 || $index == 10 || $index == 13 || $index == 16 || $index == 19 || $index == 22 || $index == 25 || $index == 28 || $index == 31 ||$index == 34 ||$index == 37 ||$index == 40) {
+                                $revealClass = 'grid-box-2';
+                            }
+                            else {
+                                $revealClass = 'grid-box-1';
+                            }
+                                echo "<div class='resize-box ";
+                                echo $revealClass;
+                                echo "'><div class='grid-item' onmouseenter='revealOverlay(";
+                                echo $index;
+                                echo ")' onmouseleave='removeOverlay(";
+                                echo $index;
+                                echo")' onClick=\"location.href='";
+                                echo $item->link;
+                                echo  "'\"><div class='grid-item-overlay hidden-overlay' ";
+                                echo "id='overlay-";
+                                echo $index;
+                                echo "'><span>";
+                                echo $item->hover_title;
+                                echo "</span><span>";
+                                echo $item->client;
+                                echo "</span><span>";
+                                echo $item->category;
+                                echo "</span></div>";
+                                echo "<div class='grid-item-content'><img src='";
+                                echo $item->image;
+                                echo "'></div></div></div>";
+                            }
                     ?>
                 </div>
             </div>    

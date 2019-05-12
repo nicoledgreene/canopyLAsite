@@ -68,9 +68,10 @@ function showNavSubItems(itemKey) {
 
 
 // //grid animations
-// sr.reveal('.grid-item-1', {delay: 200});
-// sr.reveal('.grid-item-2', {delay: 400});
-// sr.reveal('.grid-item-3', {delay: 600});
+sr.reveal('.grid-box-1', {delay: 200});
+sr.reveal('.grid-box-2', {delay: 400});
+sr.reveal('.grid-box-3', {delay: 600});
+
 
 // const gridMap = {
 //     'g1': '#o1',
