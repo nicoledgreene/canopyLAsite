@@ -55,17 +55,32 @@ h1 {
 .active-main-link {
     border-bottom: 4px solid white;
 }
-
+.dark-nav {
+    background-color: black;
+}
+.extra-nav-padding {
+    padding: 25px 25px 150px 25px !important;
+}
+.hidden-title {
+    height: 0px;
+}
+#title-small-logo {
+    width: 150px;
+}
 .main-menu {
     width: calc(100% - 50px);
-    margin: 0px 25px;
+    margin-top: 0;
+    padding: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 0.9em;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
 
     .home-nav {
-        margin-top: 45px; //TODO fix this for mobile
+        // padding-top: 45px; //TODO fix this for mobile
         display: flex;
         flex-direction: row;
         padding-left: 0px;
@@ -78,6 +93,12 @@ h1 {
         }
         .about-div {
             margin-top: 6px;
+        }
+        #nav3 {
+            order: 2;
+        }
+        #nav2 {
+            order: 1;
         }
     }
 
@@ -136,6 +157,7 @@ h1 {
     }
 }
 
+
 .diagonal-strikethrough {
     position: relative;
     }
@@ -176,6 +198,7 @@ h1 {
             // font-size: 20px;
             font-size: 1.2vw;
             font-weight: 700;
+            letter-spacing: .1em;
         }
         span:nth-of-type(2) {
             // font-size: 42px;
@@ -187,18 +210,23 @@ h1 {
             font-family: brother-1816, sans-serif;
             font-weight: 500;
             font-size: 1.4vw;
+            letter-spacing: .1em;
         }
     }
     .feat-select {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         font-size: 1.6vw;
         // font-size: 27px;
         font-weight: 700;
         line-height: 2vw;
         span {
             padding: 0px 6px;
+        }
+        span:nth-of-type(2) {
+            padding: 12px 6px;
         }
     }
 }
@@ -216,11 +244,11 @@ h1 {
     font-family: Acumin Pro, sans-serif;
     padding: 0px 25px;
     span {
-        font-size: 3.2em;
+        font-size: 2.8vw;
         margin-top: 100px;
         margin-bottom: 20px;
         font-weight: 700;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
     }
     .link-div {
         width: 100%;
@@ -228,15 +256,16 @@ h1 {
         display: block;
         margin-bottom: 100px;
         a {
-            font-size: 1.5em;
+            font-size: 1.2vw;
             font-weight: 700;
-            letter-spacing: 7px;
-            border-bottom: 5px solid white;
+            letter-spacing: 5px;
+            padding-bottom: 5px;
         }
         a:hover {
-            color: rgba(255,255,255,0.8);
-            border-bottom: 5px solid rgba(255,255,255,0.8);
+            // color: rgba(255,255,255,0.8);
+            // border-bottom: 5px solid rgba(255,255,255,0.8);
             cursor:pointer;
+            border-bottom: 5px solid white;
         }
     }
 
@@ -289,7 +318,7 @@ h1 {
         justify-content: center;
         h3 {
             font-weight: 700;
-            font-size: 2.5em;
+            font-size: 3vw;
             text-transform: uppercase;
             letter-spacing: 5px;
         }
@@ -403,22 +432,22 @@ h1 {
             margin-left: 12px;
             justify-content: center;
             span:nth-of-type(1) {
-                font-size: 27px;
+                font-size: 2vw;
                 font-weight: 700
             }
             span:nth-of-type(2) {
-                font-size: 40px;
+                font-size: 3vw;
                 font-weight: 700
             }
             span:nth-of-type(3) {
                 font-family: brother-1816, sans-serif;
-                font-size: 27px;
+                font-size: 2vw;
                 font-weight: 500;
             }
             .feat-link {
                 padding-top: 50px;
                 span {
-                    font-size: 27px;
+                    font-size: 2vw;
                     font-weight: 700;
                 }
                 span:hover {
@@ -444,12 +473,15 @@ h1 {
         cursor: pointer;
         font-family: Acumin Pro, sans-serif;
         font-weight: 500;
-        position: absolute;
-        top: calc(100% - 100px);
-        left: 0;
+        // position: absolute;
+        // top: calc(100% - 100px);
+        position: relative;
+        display: block;
+        // left: 0;
         height: 100px;
         width: 100%;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(0,0,0,1);
+        color: white;
         z-index: 100;
         display: flex;
         flex-direction: column;
@@ -495,47 +527,70 @@ h1 {
     }
 }
 
+.hamburger {
+    display: none;
+}
+
 @media only screen and(max-width: 600px) {
+    .active-main-link {
+        border-bottom: 4px solid transparent !important;
+        text-decoration: underline;
+    }
+    .parent-link:hover {
+        border-bottom: 4px solid transparent !important;
+    }
+    #projects-sub-nav {
+        padding-left: 0px !important;
+    }
+    .sub-nav-item-title {
+        padding: 12px 0px !important;
+    }
+    #title-logo {
+        width: 150px;
+    }
     .about-div {
         margin-bottom: 10px;
     }
     .main-menu {
-        flex-direction: column;
-        justify-content: center;
-        // div:first-of-type {
-        //     padding-top: 20px;
-        // }
-        div {
-            justify-content: center;
-            img {
-                padding-top: 50px;
-                margin: auto;
+        flex-wrap: wrap;
+        .hamburger {
+            display: block;
+            .line {
+                background-color: white;
+                width: 50px;
+                height: 3px;
+                margin: 5px 0px;
             }
         }
-
-        #projects-sub-nav {
-            font-size: 0.9em !important;
-        }
-
         .home-nav {
+            display: none;
+        }
+        .home-nav-display {
+            width: 100%;
+            height: 90vh;
+            z-index: 100;
+            display: flex;
             flex-direction: column;
+            text-align: center;
             // justify-content: center;
+            padding-top: 100px;
             align-items: center;
+            #nav1, #nav2, #nav3 {
+                opacity: 100 !important;
+            }
             .expandable-nav {
-                justify-content: center;
-                display: flex;
-                flex-direction: column;
-                #nav3 {
-                    order: 1;
-                }
-                #nav2 {
-                    order: 2;
+                display: block;
+                #nav2, #nav3 {
+                    display: block;
                 }
             }
-
             #projects-sub-nav {
-                top: 300px;
+                display: block;
+                top: 5px !important;
             }
+        }
+        #projects-sub-nav {
+            position: relative;
         }
     }
 
@@ -559,6 +614,7 @@ h1 {
     }
 
     .grid-item-overlay {
+        padding: 24px 0px;
         span:first-of-type {
             font-size: 24px;
         }

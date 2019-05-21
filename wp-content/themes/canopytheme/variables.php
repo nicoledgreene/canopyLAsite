@@ -38,7 +38,7 @@
 
     $grid = array();
     if(have_rows('homepage_grid', 29)):
-        while ( have_rows('homepage_grid', 29) ) : the_row();
+        while ( have_rows('homepage_grid', 29) )  : the_row();
             $object = new stdClass();
             $object->image = get_sub_field('image', 29);
             $object->link = get_sub_field('link', 29);

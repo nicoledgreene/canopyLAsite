@@ -4,32 +4,38 @@ window.sr = ScrollReveal({
     scale: 0
 });
 
-//nav animations
-sr.reveal('#title-logo', {delay: 100});
-sr.reveal('#nav1', {delay: 200});
-sr.reveal('#nav2', {delay: 300});
-sr.reveal('#nav3', {delay: 400});
-sr.reveal('.main-features', {delay: 500});
+const windowWidth = $( window ).width();
+const pageOffset = window.pageYOffset;
+let navExpanded = false;
+$(".main-menu").removeClass('extra-nav-padding');
+
+if(pageOffset<85) {
+	//nav animations
+	sr.reveal('#title-logo', {delay: 100});
+	sr.reveal('.hamburger', {delay: 200});
+	if(windowWidth>600) {
+		sr.reveal('#nav1', {delay: 200});
+		sr.reveal('#nav2', {delay: 300});
+		sr.reveal('#nav3', {delay: 400});
+	}
+	sr.reveal('.main-features', {delay: 500});
+}
+else if(pageOffset>=85) {
+	$('.main-menu').addClass('dark-nav');
+	$('#title-logo').addClass('hidden');
+	$('#title-small-logo').removeClass('hidden');
+}
 
 //nav hide/show
 //parent links
 $('#nav2').click(() => {
+	navExpanded = true;
     $("#nav2").toggleClass('active-main-link');
-    $('#projects-sub-nav').toggleClass('hidden');
+	$('#projects-sub-nav').toggleClass('hidden');
+	if(windowWidth>600) {
+		$(".main-menu").toggleClass('extra-nav-padding');
+	}
 })
-//project links
-// $('#filmToggle').mouseover(() => {
-//     showNavSubItems('filmToggle');
-// })
-// $('#videoGameToggle').mouseover(() => {
-//     showNavSubItems('videoGameToggle');
-// })
-// $('#immersiveToggle').mouseover(() => {
-//     showNavSubItems('immersiveToggle');
-// })
-// $('#commercialToggle').mouseover(() => {
-//     showNavSubItems('commercialToggle');
-// })
 $('#filmToggle').click(() => {
     showNavSubItems('filmToggle');
 })
@@ -41,6 +47,11 @@ $('#immersiveToggle').click(() => {
 })
 $('#commercialToggle').click(() => {
     showNavSubItems('commercialToggle');
+})
+
+$(".hamburger").click(() => {
+	$(".home-nav").toggleClass("home-nav-display");
+	$(".main-menu").addClass("dark-nav");
 })
 
 const navMap = {
@@ -62,6 +73,23 @@ function showNavSubItems(itemKey) {
         }
     }
 }
+
+//navbar fixed
+$(document).scroll(function() {
+	let offset = window.pageYOffset;
+	if(offset >=85) {
+		$('.main-menu').addClass('dark-nav');
+		$('#title-logo').addClass('hidden');
+		$('#title-small-logo').removeClass('hidden');
+	}
+	else {
+		$('.main-menu').removeClass('dark-nav');
+		$('#title-logo').removeClass('hidden');
+		$('#title-small-logo').addClass('hidden');
+	}
+})
+
+
 
 //Homepage top features
 
