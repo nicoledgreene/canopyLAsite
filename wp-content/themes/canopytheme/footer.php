@@ -8,11 +8,11 @@
                 <a class="small-logo" href="<?php echo $host ?>"><img src="<?php echo $host . '/wp-content/uploads/2019/04/small-logo.png' ?>"></a>
             </div>
             <div class="flex-row">
-                <div class="flex-column footer-links">
+                <!-- <div class="flex-column footer-links">
                     <span>ABOUT</span>
                     <span>PROJECTS</span>
                     <span>CONTACT</span>
-                </div>
+                </div> -->
                 <div class="flex-column social">
                     <div #social-icons>
                         <i class="fa fa-facebook-square"></i>

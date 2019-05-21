@@ -35,6 +35,19 @@
         debugToConsole('no rows found for top nav links');
     endif;
 
+    $hero_projects = get_field('hero_projects', 29);
+    if( have_rows('hero_projects', 29) ):
+        while ( have_rows('hero_projects', 29) ) : the_row();
+            $object = new stdClass();
+            $object->desktop_image = get_sub_field('desktop_image', 29);
+            $object->mobile_image = get_sub_field('mobile_image', 29);
+            $object->client_name = get_sub_field('client_name', 29);
+            $object->title = get_sub_field('title', 29);
+            $object->subtitle = get_sub_field('subtitle', 29);
+        endwhile;
+    else: 
+        debugToConsole('no rows found for hero_projects');
+    endif;
 
     $grid = array();
     if(have_rows('homepage_grid', 29)):

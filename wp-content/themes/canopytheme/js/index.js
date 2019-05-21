@@ -4,6 +4,10 @@ window.sr = ScrollReveal({
     scale: 0
 });
 
+function sendEmail() {
+	window.location='mailto:yo@canopy-la.com?Subject=Hey%20Canopy'
+}
+
 const windowWidth = $( window ).width();
 const pageOffset = window.pageYOffset;
 let navExpanded = false;

@@ -63,7 +63,7 @@ Template Name: Homepage
                         <span class="parent-link" id="nav1" onClick="location.href='<?php echo $host?>/about'">ABOUT</span>
                     </div>
                     <div class="expandable-nav">
-                        <span class="parent-link" id="nav3" onClick="location.href='<?php echo $host?>/contact'">CONTACT</span>
+                        <span class="parent-link" id="nav3" onClick="sendEmail()">CONTACT</span>
                         <span class="parent-link" id="nav2" class="projects-link">PROJECTS</span>
                         <div id="projects-sub-nav" class="hidden">
                             <div class="sub-nav-item">
