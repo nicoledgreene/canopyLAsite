@@ -22,7 +22,7 @@ if(pageOffset<85) {
 		sr.reveal('#nav2', {delay: 300});
 		sr.reveal('#nav3', {delay: 400});
 	}
-	sr.reveal('.main-features', {delay: 500});
+	// sr.reveal('.main-features', {delay: 500});
 }
 else if(pageOffset>=85) {
 	$('.main-menu').addClass('dark-nav');
@@ -96,8 +96,83 @@ $(document).scroll(function() {
 
 
 //Homepage top features
+var activeHeroIndex = 0;
+$('#hero-button-0').addClass('diagonal-strikethrough');
+$('.hero-image-1').addClass('hidden');
+$('.hero-image-2').addClass('hidden');
+$('#hero-button-0').click(() => {
+	//TODO: FIX THIS BUG.
+	activeHeroIndex = 0;
+	$('#hero-button-0').addClass('diagonal-strikethrough');
+	$('.hero-index-0').removeClass('hidden');
+	$('.hero-index-1').addClass('hidden');
+	$('#hero-button-1').removeClass('diagonal-strikethrough');
+	$('.hero-index-2').addClass('hidden');
+	$('#hero-button-0').removeClass('diagonal-strikethrough');
+	$('.hero-image-0').removeClass('hidden');
+	$('.hero-image-1').addClass('hidden');
+	$('.hero-image-2').addClass('hidden');
+});
+$('#hero-button-1').click(() => {
+	activeHeroIndex = 1;
+	$('.hero-index-1').removeClass('hidden');
+	$('#hero-button-1').addClass('diagonal-strikethrough');
+	$('.hero-index-0').addClass('hidden');
+	$('#hero-button-0').removeClass('diagonal-strikethrough');
+	$('.hero-index-2').addClass('hidden');
+	$('#hero-button-2').removeClass('diagonal-strikethrough');
+	$('.hero-image-0').addClass('hidden');
+	$('.hero-image-1').removeClass('hidden');
+	$('.hero-image-2').addClass('hidden');
+});
+$('#hero-button-2').click(() => {
+	activeHeroIndex = 2;
+	$('.hero-index-2').removeClass('hidden');
+	$('#hero-button-2').addClass('diagonal-strikethrough');
+	$('.hero-index-0').addClass('hidden');
+	$('#hero-button-0').removeClass('diagonal-strikethrough');
+	$('.hero-index-1').addClass('hidden');
+	$('#hero-button-1').removeClass('diagonal-strikethrough');
+	$('.hero-image-0').addClass('hidden');
+	$('.hero-image-1').addClass('hidden');
+	$('.hero-image-2').removeClass('hidden');
+});
 
+//press slider
+var activePressIndex = 0;
+var pressLength = $('.feat-img').length;
+setActivePressItem(0);
+$(".feat-arrow-previous").click(() => {
+	if(activePressIndex === 0) {
+		activePressIndex = (pressLength - 1);
+	}
+	else {
+		activePressIndex = activePressIndex - 1;
+	}
 
+	setActivePressItem(activePressIndex);
+});
+$(".feat-arrow-next").click(() => {
+	if(activePressIndex === (pressLength - 1)) {
+		activePressIndex = 0;
+	}
+	else {
+		activePressIndex = activePressIndex + 1;
+	}
+	setActivePressItem(activePressIndex);
+})
+function setActivePressItem(index) {
+	for(let i=0; i < (pressLength); i++) {
+		if(index !== i) {
+			$('#feat-img-'+i).attr('class', 'feat-img invisible');
+			$('#feat-text-'+i).attr('class', 'feat-text invisible');
+		}
+		else if(i === index) {
+			$('#feat-img-'+index).attr('class', 'feat-img');
+			$('#feat-text-'+index).attr('class', 'feat-text');
+		}
+	}
+}
 
 
 // //grid animations
@@ -105,84 +180,6 @@ sr.reveal('.grid-box-1', {delay: 200});
 sr.reveal('.grid-box-2', {delay: 400});
 sr.reveal('.grid-box-3', {delay: 600});
 
-
-// const gridMap = {
-//     'g1': '#o1',
-//     'g2': '#o2',
-//     'g3': '#o3',
-//     'g4': '#o4',
-//     'g5': '#o5',
-//     'g6': '#o6',
-//     'g7': '#o7',
-//     'g8': '#o8',
-//     'g9': '#o9',
-// }
-
-// $('#g1').hover(() => {
-//     showElementByGridMap('g1');
-// })
-// $('#g2').hover(() => {
-//     showElementByGridMap('g2');
-// })
-// $('#g3').hover(() => {
-//     showElementByGridMap('g3');
-// })
-// $('#g4').hover(() => {
-//     showElementByGridMap('g4');
-// })
-// $('#g5').hover(() => {
-//     showElementByGridMap('g5');
-// })
-// $('#g6').hover(() => {
-//     showElementByGridMap('g6');
-// })
-// $('#g7').hover(() => {
-//     showElementByGridMap('g7');
-// })
-// $('#g8').hover(() => {
-//     showElementByGridMap('g8');
-// })
-// $('#g9').hover(() => {
-//     showElementByGridMap('g9');
-// })
-
-// function showElementByGridMap(key) {
-//     let val = gridMap[key];
-//     $(val).attr('class', 'grid-item-overlay');
-// }
-
-// $('#g1').mouseleave(() => {
-//     hideElementByGridMap('g1');
-// })
-// $('#g2').mouseleave(() => {
-//     hideElementByGridMap('g2');
-// })
-// $('#g3').mouseleave(() => {
-//     hideElementByGridMap('g3');
-// })
-// $('#g4').mouseleave(() => {
-//     hideElementByGridMap('g4');
-// })
-// $('#g5').mouseleave(() => {
-//     hideElementByGridMap('g5');
-// })
-// $('#g6').mouseleave(() => { 
-//     hideElementByGridMap('g6');
-// })
-// $('#g7').mouseleave(() => {
-//     hideElementByGridMap('g7');
-// })
-// $('#g8').mouseleave(() => {
-//     hideElementByGridMap('g8');
-// })
-// $('#g9').mouseleave(() => {
-//     hideElementByGridMap('g9');
-// })
-
-// function hideElementByGridMap(key) {
-//     let val = gridMap[key];
-//     $(val).attr('class', 'grid-item-overlay hidden');
-// }
 
 $(function() {
 

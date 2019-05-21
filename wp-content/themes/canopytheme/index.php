@@ -161,16 +161,34 @@ Template Name: Homepage
                 </div>
             </div>
             <div class="main-features">
-                <div class="active-feature">
-                    <span>Bagdley Mischka</span>
-                    <span>Interactive Fashion Experience</span>
-                    <span>Sound | Music | Install</span>
-                </div>
-                <div class="feat-select">
-                    <span class="diagonal-strikethrough">01</span>
-                    <span>02</span>
-                    <span>03</span>
-                </div>
+                <?php $index = -1;
+                    foreach($hero_projects as $item) {
+                        $index+=1;
+                        $desktop_image = $host .
+                        $mobile_image = $host . $item->mobile_image;
+                        echo "<img class=\"hero-image-";
+                        echo $index;
+                        echo "\" src=\"";
+                        echo $item->desktop_image;
+                        echo "\"><div class=\"active-feature hero-index-";
+                        echo $index;
+                        if($index == 1 ||$index == 2) {
+                            echo " hidden";
+                        }
+                        echo "\"><span>";
+                        echo $item->client_name;
+                        echo "</span><span>";
+                        echo  $item->title;
+                        echo "</span><span>";
+                        echo $item->subtitle;
+                        echo "</span></div>";
+                    }
+                    echo "<div class=\"feat-select\">";
+                        echo "<span id=\"hero-button-0\">01</span>";
+                        echo "<span id=\"hero-button-1\">02</span>";
+                        echo "<span id=\"hero-button-2\">03</span>";
+                    echo "</div>";
+                ?>
             </div>
         </div>
         <div class="tag-line flex-column">
@@ -230,16 +248,34 @@ Template Name: Homepage
                 <i class="fa fa-chevron-left"></i>                
             </div>
             <div class="feat-content">
-                <div class="feat-img">
-                </div>
-                <div class="feat-text">
-                    <span>PRESS</span>
-                    <span>A VR Acid Trip is All the Fun Without the Pesky Come Down</span>
-                    <span>Wired | April 22, 2019</span>
-                    <div class="feat-link">
-                        <span>LEARN MORE</span>
-                    </div>
-                </div>
+                <?php $index = -1;
+                    foreach($press_links as $item) {
+                    $index+=1;
+                    echo "<div class=\"invisible feat-img\" id=\"feat-img-";
+                    echo $index;
+                    echo "\"><div class=\"feat-img-div\"><img src=\"";
+                    echo $item->image;
+                    echo "\"></div></div>";
+                    echo "<div class=\"invisible feat-text\" id=\"feat-text-";
+                    echo $index;
+                    echo "\">";
+                    echo "<span>PRESS</span>
+                        <span>";
+                    echo $item->headline;
+                        echo "</span>
+                        <span>";
+                        echo $item->subtitle;
+                        echo "</span>
+                        <div class=\"feat-link\">
+                            <a href=\"";
+                            echo $item->url;
+                            echo "\">";
+                            echo $item->link_title;
+                            echo "</a>
+                        </div>
+                    </div>";
+                    }
+                ?>
             </div>
             <div class="feat-arrow-next">
                 <i class="fa fa-chevron-right"></i>                

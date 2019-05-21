@@ -35,7 +35,7 @@
         debugToConsole('no rows found for top nav links');
     endif;
 
-    $hero_projects = get_field('hero_projects', 29);
+    $hero_projects = array();
     if( have_rows('hero_projects', 29) ):
         while ( have_rows('hero_projects', 29) ) : the_row();
             $object = new stdClass();
@@ -44,6 +44,7 @@
             $object->client_name = get_sub_field('client_name', 29);
             $object->title = get_sub_field('title', 29);
             $object->subtitle = get_sub_field('subtitle', 29);
+            array_push($hero_projects, $object);
         endwhile;
     else: 
         debugToConsole('no rows found for hero_projects');
@@ -74,6 +75,24 @@
     else:
         debugToConsole('no rows found for grid');
     endif;
+
+    //Press
+    $press_links = array();
+    if( have_rows('press_links', 29) ):
+        while ( have_rows('press_links', 29) ) : the_row();
+            $object = new stdClass();
+            $object->image = get_sub_field('image', 29);
+            $object->headline = get_sub_field('headline', 29);
+            $object->subtitle = get_sub_field('subtitle', 29);
+            $object->link_title = get_sub_field('link_title', 29);
+            $object->url = get_sub_field('url', 29);
+            array_push($press_links, $object);
+        endwhile;
+    else: 
+        debugToConsole('no rows found for press_links');
+    endif;
+
+
 
 
 

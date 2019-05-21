@@ -13,7 +13,7 @@ get_header();
     <div class="about-upper">
         <div class="nav flex-row">
             <a class="small-logo" href="<?php echo $host ?>"><img src="<?php echo $host . '/wp-content/uploads/2019/04/small-logo.png' ?>"></a>
-            <a class="hamburger flex-column">
+            <a class="about-hamburger flex-column">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>

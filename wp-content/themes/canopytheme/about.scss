@@ -32,9 +32,10 @@
             width: 150px;
         }
     }
-    .hamburger {
+    .about-hamburger {
         margin-right: 50px;
         align-items: center;
+        visibility: hidden !important;
         .line {
             width: 50px;
             height: 2px;
