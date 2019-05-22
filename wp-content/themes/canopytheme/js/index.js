@@ -8,10 +8,23 @@ function sendEmail() {
 	window.location='mailto:yo@canopy-la.com?Subject=Hey%20Canopy'
 }
 
-const windowWidth = $( window ).width();
+let windowWidth = $( window ).width();
 const pageOffset = window.pageYOffset;
 let navExpanded = false;
 $(".main-menu").removeClass('extra-nav-padding');
+
+let isMobileView = false;
+if(windowWidth <= 600) {
+	isMobileView = true;
+}
+
+window.onresize = () => {
+	windowWidth = $( window ).width();
+	if(windowWidth <= 600) {
+		isMobileView = true;
+	}
+	console.log(isMobileView);
+}
 
 if(pageOffset<85) {
 	//nav animations
@@ -221,3 +234,16 @@ $(function() {
 	}).resize();
 
 });
+
+
+//footer links
+function openFb() {
+	window.open("https://www.facebook.com/Canopy-1883362371752079/");
+};
+function openIg() {
+	window.open("https://www.instagram.com/canopy_la/");
+};
+function openVi() {
+	window.open("https://vimeo.com/user96603243");
+};
+

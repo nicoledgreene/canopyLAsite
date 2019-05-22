@@ -15,10 +15,10 @@
                 </div> -->
                 <div class="flex-column social">
                     <div #social-icons>
-                        <i class="fa fa-facebook-square"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-vimeo-v"></i>
+                        <i onClick="openFb()" class="fa fa-facebook-square"></i>
+                        <i onClick="openIg()" class="fa fa-instagram"></i>
+                        <!-- <i id="tw-link" class="fa fa-twitter"></i> -->
+                        <i onClick="openVi()" class="fa fa-vimeo-v"></i>
                     </div>
                 <div>
                 <div id='copyright'>
