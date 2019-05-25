@@ -164,29 +164,53 @@ Template Name: Homepage
                 <?php $index = -1;
                     foreach($hero_projects as $item) {
                         $index+=1;
-                        $desktop_image = $host .
-                        $mobile_image = $host . $item->mobile_image;
                         echo "<img class=\"hero-image-";
                         echo $index;
                         echo "\" src=\"";
                         echo $item->desktop_image;
                         echo "\"><div class=\"active-feature hero-index-";
                         echo $index;
-                        if($index == 1 ||$index == 2) {
-                            echo " hidden";
-                        }
                         echo "\"><span>";
                         echo $item->client_name;
-                        echo "</span><span>";
+                        echo "</span><a href=\"";
+                        echo $host . $item->url;
+                        echo "\">";
                         echo  $item->title;
-                        echo "</span><span>";
+                        echo "</a><span>";
                         echo $item->subtitle;
                         echo "</span></div>";
                     }
                     echo "<div class=\"feat-select\">";
-                        echo "<span id=\"hero-button-0\">01</span>";
-                        echo "<span id=\"hero-button-1\">02</span>";
-                        echo "<span id=\"hero-button-2\">03</span>";
+                        echo "<span class=\"hero-button-0\">01</span>";
+                        echo "<span class=\"hero-button-1\">02</span>";
+                        echo "<span class=\"hero-button-2\">03</span>";
+                    echo "</div>";
+                ?>
+            </div>
+            <div class="main-features-mobile">
+                <?php $index = -1;
+                    foreach($hero_projects as $item) {
+                        $index+=1;
+                        echo "<img class=\"hero-image-";
+                        echo $index;
+                        echo "\" src=\"";
+                        echo $item->mobile_image;
+                        echo "\"><div class=\"active-feature hero-index-";
+                        echo $index;
+                        echo "\"><span>";
+                        echo $item->client_name;
+                        echo "</span><a href=\"";
+                        echo $host . $item->url;
+                        echo "\">";
+                        echo  $item->title;
+                        echo "</a><span>";
+                        echo $item->subtitle;
+                        echo "</span></div>";
+                    }
+                    echo "<div class=\"feat-select\">";
+                        echo "<span class=\"hero-button-0\">01</span>";
+                        echo "<span class=\"hero-button-1\">02</span>";
+                        echo "<span class=\"hero-button-2\">03</span>";
                     echo "</div>";
                 ?>
             </div>

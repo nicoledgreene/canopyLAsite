@@ -44,6 +44,7 @@
             $object->client_name = get_sub_field('client_name', 29);
             $object->title = get_sub_field('title', 29);
             $object->subtitle = get_sub_field('subtitle', 29);
+            $object->url = get_sub_field('url', 29);
             array_push($hero_projects, $object);
         endwhile;
     else: 

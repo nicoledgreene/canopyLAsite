@@ -14,16 +14,23 @@ let navExpanded = false;
 $(".main-menu").removeClass('extra-nav-padding');
 
 let isMobileView = false;
-if(windowWidth <= 600) {
-	isMobileView = true;
+checkIfMobileView();
+function checkIfMobileView() {
+	if(windowWidth <= 600) {
+		isMobileView = true;
+		$(".main-features-mobile").removeClass('hidden');
+		$(".main-features").addClass('hidden');	
+	}
+	else {
+		isMobileView = false;
+		$(".main-features-mobile").addClass('hidden');
+		$(".main-features").removeClass('hidden');
+	}
 }
 
 window.onresize = () => {
 	windowWidth = $( window ).width();
-	if(windowWidth <= 600) {
-		isMobileView = true;
-	}
-	console.log(isMobileView);
+	checkIfMobileView();
 }
 
 if(pageOffset<85) {
@@ -110,46 +117,58 @@ $(document).scroll(function() {
 
 //Homepage top features
 var activeHeroIndex = 0;
-$('#hero-button-0').addClass('diagonal-strikethrough');
-$('.hero-image-1').addClass('hidden');
-$('.hero-image-2').addClass('hidden');
-$('#hero-button-0').click(() => {
-	//TODO: FIX THIS BUG.
-	activeHeroIndex = 0;
-	$('#hero-button-0').addClass('diagonal-strikethrough');
-	$('.hero-index-0').removeClass('hidden');
-	$('.hero-index-1').addClass('hidden');
-	$('#hero-button-1').removeClass('diagonal-strikethrough');
-	$('.hero-index-2').addClass('hidden');
-	$('#hero-button-0').removeClass('diagonal-strikethrough');
-	$('.hero-image-0').removeClass('hidden');
-	$('.hero-image-1').addClass('hidden');
-	$('.hero-image-2').addClass('hidden');
+setActiveBackground(0);
+$('.hero-button-0').click(() => {
+	stopMyTimer();
+	setActiveBackground(0);
+	startMyTimer();
 });
-$('#hero-button-1').click(() => {
-	activeHeroIndex = 1;
-	$('.hero-index-1').removeClass('hidden');
-	$('#hero-button-1').addClass('diagonal-strikethrough');
-	$('.hero-index-0').addClass('hidden');
-	$('#hero-button-0').removeClass('diagonal-strikethrough');
-	$('.hero-index-2').addClass('hidden');
-	$('#hero-button-2').removeClass('diagonal-strikethrough');
-	$('.hero-image-0').addClass('hidden');
-	$('.hero-image-1').removeClass('hidden');
-	$('.hero-image-2').addClass('hidden');
+$('.hero-button-1').click(() => {
+	stopMyTimer();
+	setActiveBackground(1);
+	startMyTimer();
 });
-$('#hero-button-2').click(() => {
-	activeHeroIndex = 2;
-	$('.hero-index-2').removeClass('hidden');
-	$('#hero-button-2').addClass('diagonal-strikethrough');
-	$('.hero-index-0').addClass('hidden');
-	$('#hero-button-0').removeClass('diagonal-strikethrough');
-	$('.hero-index-1').addClass('hidden');
-	$('#hero-button-1').removeClass('diagonal-strikethrough');
-	$('.hero-image-0').addClass('hidden');
-	$('.hero-image-1').addClass('hidden');
-	$('.hero-image-2').removeClass('hidden');
+$('.hero-button-2').click(() => {
+	stopMyTimer();
+	setActiveBackground(2);
+	startMyTimer();
 });
+function setActiveBackground(activeIndex) {
+	activeHeroIndex = activeIndex;
+	let possIndexes = [0,1,2];
+	for(let i=0; i < possIndexes.length; i++) {
+		if(activeIndex===possIndexes[i]) {
+			$('.hero-index-'+possIndexes[i]).removeClass('invisible-with-transition');
+			$('.hero-image-'+possIndexes[i]).removeClass('invisible-with-transition');
+			$('.hero-button-'+possIndexes[i]).addClass('diagonal-strikethrough');
+		}
+		else {
+			$('.hero-index-'+possIndexes[i]).addClass('invisible-with-transition');
+			$('.hero-button-'+possIndexes[i]).removeClass('diagonal-strikethrough');
+			$('.hero-image-'+possIndexes[i]).addClass('invisible-with-transition');
+		}
+	}
+}
+var mySlideshow = setInterval(myTimer, 5000);
+function myTimer() {
+	let newActiveIndex = 0;
+	if(activeHeroIndex===0 || activeHeroIndex===1) {
+		newActiveIndex = activeHeroIndex + 1;
+	}
+	else {
+		newActiveIndex = 0;
+	}
+	window.setTimeout(function(){
+		setActiveBackground(newActiveIndex)
+	}, 0);
+}
+function stopMyTimer() {
+	clearInterval(mySlideshow);
+}
+function startMyTimer() {
+	mySlideshow = setInterval(myTimer, 5000);
+}
+
 
 //press slider
 var activePressIndex = 0;

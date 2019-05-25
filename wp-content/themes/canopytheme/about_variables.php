@@ -1,5 +1,6 @@
 <?php
     //TODO: switch to '' for prod
+    // $host = '';
     $host = '/wordpress';
 
     if(get_field('hero_text')) {
