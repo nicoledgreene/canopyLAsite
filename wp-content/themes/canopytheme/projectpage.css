@@ -59,25 +59,23 @@ body {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
-  padding-top: 25px;
   height: 0;
   overflow: hidden;
 }
-/* line 53, sass/projectpage.scss */
+/* line 52, sass/projectpage.scss */
 .slider .slide img {
   width: 100% !important;
 }
 
-/* line 59, sass/projectpage.scss */
+/* line 58, sass/projectpage.scss */
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
-  padding-top: 25px;
   height: 0;
 }
 
-/* line 65, sass/projectpage.scss */
+/* line 63, sass/projectpage.scss */
 .videoWrapper iframe {
   position: absolute;
   top: 0;
@@ -86,36 +84,37 @@ body {
   height: 100%;
 }
 
-/* line 73, sass/projectpage.scss */
+/* line 71, sass/projectpage.scss */
 .project-container {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-/* line 77, sass/projectpage.scss */
+/* line 76, sass/projectpage.scss */
 .project-container .project-info-detail {
   padding: 48px 96px;
 }
 
-/* line 82, sass/projectpage.scss */
+/* line 81, sass/projectpage.scss */
 .project-info-detail {
   line-height: 2em;
 }
-/* line 85, sass/projectpage.scss */
+/* line 84, sass/projectpage.scss */
 .project-info-detail h4 {
   font-size: 2em;
   padding-bottom: 24px;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 92, sass/projectpage.scss */
+/* line 91, sass/projectpage.scss */
 .project-info-detail .proj-subtitle {
   text-transform: uppercase;
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 99, sass/projectpage.scss */
+/* line 98, sass/projectpage.scss */
 .project-info-detail #proj-desc {
   line-height: 1.5em !important;
   column-count: 2;
@@ -123,50 +122,84 @@ body {
   -moz-column-count: 2;
   font-family: brother-1816, sans-serif;
 }
-/* line 108, sass/projectpage.scss */
+/* line 107, sass/projectpage.scss */
 .project-info-detail .line {
   width: 100%;
   height: 1px;
   background-color: black;
   margin-top: 24px;
 }
-/* line 115, sass/projectpage.scss */
+/* line 114, sass/projectpage.scss */
 .project-info-detail .project-breakdown {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
-/* line 121, sass/projectpage.scss */
-.project-info-detail .project-breakdown .column:first-of-type {
-  padding-right: 50px;
-}
-/* line 125, sass/projectpage.scss */
+/* line 124, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column {
   display: flex;
   flex-direction: row;
 }
-/* line 129, sass/projectpage.scss */
+/* line 128, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column {
   padding: 24px 24px;
 }
-/* line 132, sass/projectpage.scss */
+/* line 131, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column .subhead {
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 137, sass/projectpage.scss */
+/* line 136, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column #tools {
   column-count: 2;
   -webkit-column-count: 2;
   -moz-column-count: 2;
 }
-/* line 143, sass/projectpage.scss */
+/* line 142, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul {
   margin-left: 24px !important;
 }
-/* line 145, sass/projectpage.scss */
+/* line 144, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul li {
   list-style-type: initial !important;
+}
+
+/* line 156, sass/projectpage.scss */
+.transparent-black-background {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* line 162, sass/projectpage.scss */
+  .project-info-detail .project-breakdown {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 170, sass/projectpage.scss */
+  .slider {
+    margin-top: 99px;
+  }
+
+  /* line 173, sass/projectpage.scss */
+  .main-menu {
+    background-color: black !important;
+  }
+
+  /* line 176, sass/projectpage.scss */
+  .project-info-detail {
+    padding: 48px 24px !important;
+  }
+  /* line 179, sass/projectpage.scss */
+  .project-info-detail .project-breakdown .column {
+    flex-direction: column;
+  }
+  /* line 184, sass/projectpage.scss */
+  .project-info-detail #proj-desc {
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
 }

@@ -107,7 +107,7 @@ Template Name: Homepage
         <div class="tag-line flex-column">
             <span>We are all things sound, music, and immersion.</span>
             <div class="link-div">
-                <a>LEARN MORE</a>
+                <a onClick="location.href='<?php echo $host . "/about" ?>'">LEARN MORE</a>
             </div>
         </div>
         <div class="main">

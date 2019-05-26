@@ -5,14 +5,18 @@
         $isHomePage = false;
     }
 ?>
-<div class="main-menu">
+<div class="main-menu
+<?php if (is_page_template('projectpage.php')) { 
+    echo ' transparent-black-background';
+} ?>
+">
     <div>
-        <img id="title-logo" 
+        <img onClick="location.href='<?php echo $host?>'" id="title-logo" 
         <?php if($isHomePage === false) {
             echo 'class="hidden"';
         } ?>
         src="<?php echo $host . '/images/logos/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
-        <img id="title-small-logo" class="
+        <img onClick="location.href='<?php echo $host?>'" id="title-small-logo" class="
         <?php if($isHomePage === true) {
             echo 'hidden';
         } ?>
@@ -24,7 +28,11 @@
         <div class="line"></div>
     </div>
     <div class="home-nav">
-        <div class="parent-nav-links">
+        <div class="parent-nav-links
+        <?php if($isHomePage === false) {
+            echo " important-margin";
+        } ?>
+        ">
             <span class="parent-link" id="nav1" onClick="location.href='<?php echo $host?>/about'">
             ABOUT</span>
             <span class="parent-link" id="nav2" class="projects-link">PROJECTS</span>

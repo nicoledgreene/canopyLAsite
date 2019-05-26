@@ -10,9 +10,8 @@ get_header();
 
 <div class="about-container flex-column">
     <div class="background-upper"></div>
-
+    <?php include('nav.php'); ?>
     <div class="about-upper">
-        <?php include('nav.php'); ?>
         <div class="about-hero flex-column">
             <span class="company-name">Canopy LA</span>
             <span class="company-about"><?php echo $hero_text ?></span>

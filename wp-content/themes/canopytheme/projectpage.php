@@ -6,8 +6,11 @@ get_header();
 ?>
 
 <?php include 'project_variables.php' ?>
+<?php include 'variables.php' ?>
 
 <div class="project-container">
+    <?php include('nav.php'); ?>
+
     <div class="slider">
         <?php 
             if($video_link) {

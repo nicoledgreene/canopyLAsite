@@ -92,6 +92,10 @@
     margin-top: 15px !important;
 }
 
+#title-logo, #title-small-logo {
+    cursor:pointer;
+}
+
 @media only screen and(max-width: 600px) {
     .sub-nav-item-title {
         padding: 12px 0px !important;

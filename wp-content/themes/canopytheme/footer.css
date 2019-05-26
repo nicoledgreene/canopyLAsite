@@ -107,4 +107,9 @@ footer {
   .footer-row .small-logo {
     margin-bottom: 20px;
   }
+
+  /* line 97, sass/footer.scss */
+  .social {
+    align-items: center;
+  }
 }
