@@ -1,12 +1,12 @@
 <?php
-    $host = '';
-    // $host = '/wordpress';
+    // $host = '';
+    $host = '/wordpress';
 ?>
 
     <footer>
         <div class="footer-row">
             <div class="flex-row">
-                <a class="small-logo" href="<?php echo $host ?>"><img src="<?php echo $host . '/wp-content/uploads/2019/04/small-logo.png' ?>"></a>
+                <a class="small-logo" href="/"><img src="<?php echo $host . '/wp-content/uploads/2019/04/small-logo.png' ?>"></a>
             </div>
             <div class="flex-row">
                 <!-- <div class="flex-column footer-links">

@@ -178,11 +178,11 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    .transparent-black-background {
+        background-color: rgba(0,0,0,1) !important;
+    }
     .slider {
         margin-top: 99px;
-    }
-    .main-menu {
-        background-color: black !important;
     }
     .project-info-detail {
         padding: 48px 24px !important;

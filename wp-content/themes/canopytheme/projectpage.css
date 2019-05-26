@@ -167,36 +167,50 @@ body {
 }
 
 /* line 156, sass/projectpage.scss */
+.dark-nav {
+  background-color: black !important;
+}
+
+/* line 159, sass/projectpage.scss */
 .transparent-black-background {
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
+/* line 163, sass/projectpage.scss */
+#projectPagePlaceholder {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  z-index: -2000;
+}
+
 @media only screen and (max-width: 1000px) {
-  /* line 162, sass/projectpage.scss */
+  /* line 173, sass/projectpage.scss */
   .project-info-detail .project-breakdown {
     flex-direction: column;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 170, sass/projectpage.scss */
+  /* line 181, sass/projectpage.scss */
+  .transparent-black-background {
+    background-color: black !important;
+  }
+
+  /* line 184, sass/projectpage.scss */
   .slider {
     margin-top: 99px;
   }
 
-  /* line 173, sass/projectpage.scss */
-  .main-menu {
-    background-color: black !important;
-  }
-
-  /* line 176, sass/projectpage.scss */
+  /* line 187, sass/projectpage.scss */
   .project-info-detail {
     padding: 48px 24px !important;
   }
-  /* line 179, sass/projectpage.scss */
+  /* line 190, sass/projectpage.scss */
   .project-info-detail .project-breakdown .column {
     flex-direction: column;
   }
-  /* line 184, sass/projectpage.scss */
+  /* line 195, sass/projectpage.scss */
   .project-info-detail #proj-desc {
     column-count: 1;
     -webkit-column-count: 1;

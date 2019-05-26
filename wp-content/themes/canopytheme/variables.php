@@ -4,8 +4,8 @@
     }
 
     //TODO update this on publish
-    $host = '';
-    // $host = '/wordpress';
+    // $host = '';
+    $host = '/wordpress';
 
     $commercialLinks = array();
     $filmLinks = array();
