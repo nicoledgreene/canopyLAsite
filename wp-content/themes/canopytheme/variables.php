@@ -11,7 +11,6 @@
     $filmLinks = array();
     $videoGameLinks = array();
     $immersiveLinks = array();
-
     $nav_links = get_field('nav_links', 29);
     if( have_rows('nav_links', 29) ):
         while ( have_rows('nav_links', 29) ) : the_row();

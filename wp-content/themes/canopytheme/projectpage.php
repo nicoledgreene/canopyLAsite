@@ -71,4 +71,6 @@ get_header();
     </div>
 </div>
 
+<div id="projectPagePlaceholder"></div>
+
 <?php get_footer(); ?>

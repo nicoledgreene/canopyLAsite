@@ -95,6 +95,14 @@ function showNavSubItems(itemKey) {
     }
 }
 
+var isProjectPage = false;
+if(document.getElementById('projectPagePlaceholder')) {
+	isProjectPage = true;
+}
+else {
+	isProjectPage = false;
+}
+
 //navbar fixed
 $(document).scroll(function() {
 	let offset = window.pageYOffset;
@@ -102,10 +110,16 @@ $(document).scroll(function() {
 		$('.main-menu').addClass('dark-nav');
 		$('#title-logo').addClass('hidden');
 		$('#title-small-logo').removeClass('hidden');
+		if(isProjectPage) {
+			$('.main-menu').removeClass('transparent-black-background');
+		}
 	}
 	else {
 		$('.main-menu').removeClass('dark-nav');
 		$('.parent-nav-links').addClass('important-margin');
+		if(isProjectPage) {
+			$('.main-menu').addClass('transparent-black-background');
+		}
 	}
 	// 	$('#title-logo').removeClass('hidden');
 	// 	$('#title-small-logo').addClass('hidden');

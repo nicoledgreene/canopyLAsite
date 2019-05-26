@@ -11,12 +11,12 @@
 } ?>
 ">
     <div>
-        <img onClick="location.href='<?php echo $host?>'" id="title-logo" 
+        <img onClick="location.href='/'" id="title-logo" 
         <?php if($isHomePage === false) {
             echo 'class="hidden"';
         } ?>
         src="<?php echo $host . '/images/logos/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
-        <img onClick="location.href='<?php echo $host?>'" id="title-small-logo" class="
+        <img onClick="location.href='/'" id="title-small-logo" class="
         <?php if($isHomePage === true) {
             echo 'hidden';
         } ?>

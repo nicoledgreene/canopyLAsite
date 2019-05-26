@@ -1,5 +1,6 @@
 <?php
   /* enqueue styles and scripts */
+
   function addStyleSheets() {
     
     /* theme's primary style.css file */
@@ -18,7 +19,7 @@
     wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
   }
   add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
-
+  
   function addScripts() {
     wp_register_script('scrollReveal', 'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js');
     wp_enqueue_script('scrollReveal');
@@ -28,6 +29,7 @@
 
     wp_enqueue_script( 'indexJS', '/wp-content/themes/canopytheme/js/index.js');
     wp_enqueue_script( 'sliderJS', '/wp-content/themes/canopytheme/js/slider.js');
+
   }
   add_action('wp_head', 'addScripts');
 

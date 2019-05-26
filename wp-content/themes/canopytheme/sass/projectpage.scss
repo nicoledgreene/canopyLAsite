@@ -153,8 +153,19 @@ body {
 
 }
 
+.dark-nav {
+    background-color: black !important;
+}
 .transparent-black-background {
     background-color: rgba(0,0,0,0.3) !important;
+}
+
+#projectPagePlaceholder {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: -2000;
 }
 
 @media only screen and (max-width: 1000px) {
