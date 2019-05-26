@@ -11,7 +11,6 @@ function sendEmail() {
 let windowWidth = $( window ).width();
 const pageOffset = window.pageYOffset;
 let navExpanded = false;
-$(".main-menu").removeClass('extra-nav-padding');
 
 let isMobileView = false;
 checkIfMobileView();
@@ -55,10 +54,7 @@ else if(pageOffset>=85) {
 $('#nav2').click(() => {
 	navExpanded = true;
     $("#nav2").toggleClass('active-main-link');
-	$('#projects-sub-nav').toggleClass('hidden');
-	if(windowWidth>600) {
-		$(".main-menu").toggleClass('extra-nav-padding');
-	}
+	$('.expandable-nav').toggleClass('hidden');
 })
 $('#filmToggle').click(() => {
     showNavSubItems('filmToggle');

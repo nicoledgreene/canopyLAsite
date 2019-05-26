@@ -64,9 +64,9 @@ h1 {
 }
 .dark-nav {
     background-color: black;
-}
-.extra-nav-padding {
-    padding: 25px 25px 150px 25px !important;
+    .parent-nav-links {
+        margin-top: 15px !important;
+    } 
 }
 .hidden-title {
     height: 0px;
@@ -85,82 +85,74 @@ h1 {
     font-size: 0.9em;
     position: fixed;
     z-index: 1000;
-    align-items: center;
 
     .home-nav {
-        // padding-top: 45px; //TODO fix this for mobile
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding-left: 0px;
         font-weight: 600;
         color: white;
-        align-items: flex-start;
-        .expandable-nav {
+
+        .parent-nav-links {
             display: flex;
             flex-direction: row;
+            align-items: flex-start;
+            margin-top: 40px;
         }
-        .about-div {
-            margin-top: 6px;
+        .expandable-nav {
+            display: flex;
+            flex-direction: column;
+            margin-left: 110px;
+            line-height: 1.5em;
+            margin-top: 10px;
+            font-weight: 600;
+            color: white;
+            font-size: 0.8em;
+            .sub-nav-item {
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                .sub-nav-item-title {
+                    padding: 6px 0px;
+                    padding-left: 3px;
+                }
+                .sub-nav-item-title:hover {
+                    cursor:pointer;
+                    background-color: rgba(255,255,255,0.3)
+                }
+                .active-title {
+                    background-color: rgba(255,255,255,0.3)
+                }
+                .sub-project-links {
+                    margin-top: 6px;
+                    margin-bottom: 6px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .project-nav-link {
+                        padding: 6px 24px;
+                    }
+                    .project-nav-link:hover {
+                        cursor: pointer;
+                    }
+        
+                    .even-link {
+                        cursor:pointer;
+                        background-color: rgba(255,255,255,0.5);
+                        color: black;
+                    }
+                    .odd-link {
+                        cursor:pointer;
+                        background-color: rgba(255,255,255,0.3);
+                    }
+                }
+            }
         }
         #nav3 {
             order: 2;
         }
         #nav2 {
             order: 1;
-        }
-    }
-
-    #projects-sub-nav {
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-        font-weight: 600;
-        color: white;
-        font-size: 0.8em;
-        margin-top: 6px;
-        position: absolute;
-        top: 90px;
-        z-index: 500;
-        .sub-nav-item {
-            display: flex;
-            flex-direction: column;
-            width: 200px;
-            .sub-nav-item-title {
-                padding: 6px 0px;
-                padding-left: 3px;
-            }
-            .sub-nav-item-title:hover {
-                cursor:pointer;
-                background-color: rgba(255,255,255,0.3)
-            }
-            .active-title {
-                background-color: rgba(255,255,255,0.3)
-            }
-
-
-            .sub-project-links {
-                margin-top: 6px;
-                margin-bottom: 6px;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                .project-nav-link {
-                    padding: 6px 24px;
-                }
-                .project-nav-link:hover {
-                    cursor: pointer;
-                }
-    
-                .even-link {
-                    cursor:pointer;
-                    background-color: rgba(255,255,255,0.5);
-                    color: black;
-                }
-                .odd-link {
-                    cursor:pointer;
-                    background-color: rgba(255,255,255,0.3);
-                }
-            }
         }
     }
 }
@@ -696,25 +688,26 @@ h1 {
             display: flex;
             flex-direction: column;
             text-align: center;
-            // justify-content: center;
             padding-top: 100px;
             align-items: center;
-            #nav1, #nav2, #nav3 {
-                opacity: 100 !important;
-            }
-            .expandable-nav {
-                display: block;
-                #nav2, #nav3 {
-                    display: block;
+
+            .parent-nav-links {
+                flex-direction: column;
+                align-items: center;
+                #nav1, #nav2, #nav3 {
+                    opacity: 100 !important;
+                }
+                #nav2 {
+                    order: 3 !important;
+                }
+                #nav3 {
+                    order: 2 !important;
                 }
             }
-            #projects-sub-nav {
-                display: block;
-                top: 5px !important;
+            .expandable-nav {
+                margin-left: 0px !important;
+                margin-top: 0px !important;
             }
-        }
-        #projects-sub-nav {
-            position: relative;
         }
     }
 

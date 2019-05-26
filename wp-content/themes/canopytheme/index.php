@@ -59,103 +59,102 @@ Template Name: Homepage
                     <div class="line"></div>
                 </div>
                 <div class="home-nav">
-                    <div class="about-div">
+                    <div class="parent-nav-links">
                         <span class="parent-link" id="nav1" onClick="location.href='<?php echo $host?>/about'">ABOUT</span>
-                    </div>
-                    <div class="expandable-nav">
-                        <span class="parent-link" id="nav3" onClick="sendEmail()">CONTACT</span>
                         <span class="parent-link" id="nav2" class="projects-link">PROJECTS</span>
-                        <div id="projects-sub-nav" class="hidden">
-                            <div class="sub-nav-item">
-                                <span class="sub-nav-item-title" id="commercialToggle">COMMERCIAL</span>
-                                <div class="hidden sub-project-links" id="commercialSub">
-                                <?php $index = 0;
-                                    foreach($commercialLinks as $item) {
-                                        $index+=1;
-                                        $link = $host . $item->url;
-                                        if(($index % 2)==0) {
-                                            echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
-                                            echo $link;
-                                            echo '\'">+ ';
-                                        }
-                                        else {
-                                            echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
-                                            echo $link;
-                                            echo '\'">+ ';
-                                        }
-                                        echo $item->text;
-                                        echo "</span>";
+                        <span class="parent-link" id="nav3" onClick="sendEmail()">CONTACT</span>
+                    </div>
+                    <div class="expandable-nav hidden">
+                        <div class="sub-nav-item">
+                            <span class="sub-nav-item-title" id="commercialToggle">COMMERCIAL</span>
+                            <div class="hidden sub-project-links" id="commercialSub">
+                            <?php $index = 0;
+                                foreach($commercialLinks as $item) {
+                                    $index+=1;
+                                    $link = $host . $item->url;
+                                    if(($index % 2)==0) {
+                                        echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                                        echo $link;
+                                        echo '\'">+ ';
                                     }
-                                ?>
-                                </div>
-                            </div>
-                            <div class="sub-nav-item">
-                                <span class="sub-nav-item-title" id="filmToggle">FILM</span>
-                                <div class="hidden sub-project-links" id="filmSub">
-                                <?php 
-                                    $index = 0;
-                                    foreach($filmLinks as $item) {
-                                        $index+=1;
-                                        $link = $host . $item->url;
-                                        if(($index % 2)==0) {
-                                            echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
-                                            echo $link;
-                                            echo '\'">+ ';
-                                        }
-                                        else {
-                                            echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
-                                            echo $link;
-                                            echo '\'">+ ';
-                                        }
-                                        echo $item->text;
-                                        echo "</span>";
+                                    else {
+                                        echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                                        echo $link;
+                                        echo '\'">+ ';
                                     }
-                                ?>
-                                </div>
+                                    echo $item->text;
+                                    echo "</span>";
+                                }
+                            ?>
                             </div>
-                            <div class="sub-nav-item">
-                                <span class="sub-nav-item-title" id="videoGameToggle">VIDEO GAME</span>
-                                <div class="hidden sub-project-links" id="videoGameSub">
-                                <?php 
-                                    $index = 0;
-                                    foreach($videoGameLinks as $item) {
-                                        $index+=1;
-                                        $link = $host . $item->url;
-                                        if(($index % 2)==0) {
-                                            echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
-                                            echo $link;
-                                            echo '\'">+ ';
-                                        }
-                                        else {
-                                            echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
-                                            echo $link;
-                                            echo '\'">+ ';
-                                        }
-                                        echo $item->text;
-                                        echo "</span>";
+                        </div>
+                        <div class="sub-nav-item">
+                            <span class="sub-nav-item-title" id="filmToggle">FILM</span>
+                            <div class="hidden sub-project-links" id="filmSub">
+                            <?php 
+                                $index = 0;
+                                foreach($filmLinks as $item) {
+                                    $index+=1;
+                                    $link = $host . $item->url;
+                                    if(($index % 2)==0) {
+                                        echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                                        echo $link;
+                                        echo '\'">+ ';
                                     }
-                                ?>
-                                </div>
-                            </div>
-                            <div class="sub-nav-item">
-                                <span class="sub-nav-item-title" id="immersiveToggle">IMMERSIVE EXPERIENCE</span>
-                                <div class="hidden sub-project-links" id="immersiveSub">
-                                <?php 
-                                    $index = 0;
-                                    foreach($immersiveLinks as $item) {
-                                        $index+=1;
-                                        if(($index % 2)==0) {
-                                            echo "<span class='project-nav-link even-link'>+ ";
-                                        }
-                                        else {
-                                            echo "<span class='project-nav-link odd-link'>+ ";
-                                        }
-                                        echo $item->text;
-                                        echo "</span>";
+                                    else {
+                                        echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                                        echo $link;
+                                        echo '\'">+ ';
                                     }
-                                ?>
-                                </div>
+                                    echo $item->text;
+                                    echo "</span>";
+                                }
+                            ?>
                             </div>
+                        </div>
+                        <div class="sub-nav-item">
+                            <span class="sub-nav-item-title" id="videoGameToggle">VIDEO GAME</span>
+                            <div class="hidden sub-project-links" id="videoGameSub">
+                            <?php 
+                                $index = 0;
+                                foreach($videoGameLinks as $item) {
+                                    $index+=1;
+                                    $link = $host . $item->url;
+                                    if(($index % 2)==0) {
+                                        echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                                        echo $link;
+                                        echo '\'">+ ';
+                                    }
+                                    else {
+                                        echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                                        echo $link;
+                                        echo '\'">+ ';
+                                    }
+                                    echo $item->text;
+                                    echo "</span>";
+                                }
+                            ?>
+                            </div>
+                        </div>
+                        <div class="sub-nav-item">
+                            <span class="sub-nav-item-title" id="immersiveToggle">IMMERSIVE EXPERIENCE</span>
+                            <div class="hidden sub-project-links" id="immersiveSub">
+                            <?php 
+                                $index = 0;
+                                foreach($immersiveLinks as $item) {
+                                    $index+=1;
+                                    if(($index % 2)==0) {
+                                        echo "<span class='project-nav-link even-link'>+ ";
+                                    }
+                                    else {
+                                        echo "<span class='project-nav-link odd-link'>+ ";
+                                    }
+                                    echo $item->text;
+                                    echo "</span>";
+                                }
+                            ?>
+                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
