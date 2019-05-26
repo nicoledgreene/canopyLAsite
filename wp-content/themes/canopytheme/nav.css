@@ -1,0 +1,168 @@
+/* line 1, sass/nav.scss */
+.main-menu {
+  width: calc(100vw - 50px);
+  overflow: hidden;
+  margin-top: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.9em;
+  position: fixed;
+  z-index: 1000;
+}
+/* line 13, sass/nav.scss */
+.main-menu .home-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  font-weight: 600;
+  color: white;
+}
+/* line 20, sass/nav.scss */
+.main-menu .home-nav .parent-nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+/* line 26, sass/nav.scss */
+.main-menu .home-nav .expandable-nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 110px;
+  line-height: 1.5em;
+  margin-top: 10px;
+  font-weight: 600;
+  color: white;
+  font-size: 0.8em;
+}
+/* line 35, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+/* line 39, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-nav-item-title {
+  padding: 6px 0px;
+  padding-left: 3px;
+}
+/* line 43, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-nav-item-title:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* line 47, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .active-title {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* line 50, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-project-links {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* line 56, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-project-links .project-nav-link {
+  padding: 6px 24px;
+}
+/* line 59, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-project-links .project-nav-link:hover {
+  cursor: pointer;
+}
+/* line 63, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-project-links .even-link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+/* line 68, sass/nav.scss */
+.main-menu .home-nav .expandable-nav .sub-nav-item .sub-project-links .odd-link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* line 75, sass/nav.scss */
+.main-menu .home-nav #nav3 {
+  order: 2;
+}
+/* line 78, sass/nav.scss */
+.main-menu .home-nav #nav2 {
+  order: 1;
+}
+
+/* line 84, sass/nav.scss */
+.dark-nav {
+  background-color: black;
+}
+/* line 86, sass/nav.scss */
+.dark-nav .parent-nav-links {
+  margin-top: 15px !important;
+}
+
+/* line 91, sass/nav.scss */
+.important-margin {
+  margin-top: 15px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 96, sass/nav.scss */
+  .sub-nav-item-title {
+    padding: 12px 0px !important;
+  }
+
+  /* line 100, sass/nav.scss */
+  .main-menu {
+    flex-wrap: wrap;
+  }
+  /* line 102, sass/nav.scss */
+  .main-menu .hamburger {
+    display: block;
+  }
+  /* line 104, sass/nav.scss */
+  .main-menu .hamburger .line {
+    background-color: white;
+    width: 50px;
+    height: 3px;
+    margin: 5px 0px;
+  }
+  /* line 111, sass/nav.scss */
+  .main-menu .home-nav {
+    display: none;
+  }
+  /* line 114, sass/nav.scss */
+  .main-menu .home-nav-display {
+    width: 100%;
+    height: 90vh;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    align-items: center;
+  }
+  /* line 124, sass/nav.scss */
+  .main-menu .home-nav-display .parent-nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* line 127, sass/nav.scss */
+  .main-menu .home-nav-display .parent-nav-links #nav1, .main-menu .home-nav-display .parent-nav-links #nav2, .main-menu .home-nav-display .parent-nav-links #nav3 {
+    opacity: 100 !important;
+  }
+  /* line 130, sass/nav.scss */
+  .main-menu .home-nav-display .parent-nav-links #nav2 {
+    order: 3 !important;
+  }
+  /* line 133, sass/nav.scss */
+  .main-menu .home-nav-display .parent-nav-links #nav3 {
+    order: 2 !important;
+  }
+  /* line 137, sass/nav.scss */
+  .main-menu .home-nav-display .expandable-nav {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+  }
+}

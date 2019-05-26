@@ -6,19 +6,13 @@ get_header();
 ?>
 
 <?php include 'about_variables.php' ?>
+<?php include 'variables.php' ?>
 
 <div class="about-container flex-column">
     <div class="background-upper"></div>
 
     <div class="about-upper">
-        <div class="nav flex-row">
-            <a class="small-logo" href="<?php echo $host ?>"><img src="<?php echo $host . '/wp-content/uploads/2019/04/small-logo.png' ?>"></a>
-            <a class="about-hamburger flex-column">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </a>
-        </div>
+        <?php include('nav.php'); ?>
         <div class="about-hero flex-column">
             <span class="company-name">Canopy LA</span>
             <span class="company-about"><?php echo $hero_text ?></span>

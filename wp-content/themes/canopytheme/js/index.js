@@ -49,6 +49,7 @@ else if(pageOffset>=85) {
 	$('#title-small-logo').removeClass('hidden');
 }
 
+
 //nav hide/show
 //parent links
 $('#nav2').click(() => {
@@ -104,9 +105,11 @@ $(document).scroll(function() {
 	}
 	else {
 		$('.main-menu').removeClass('dark-nav');
-		$('#title-logo').removeClass('hidden');
-		$('#title-small-logo').addClass('hidden');
+		$('.parent-nav-links').addClass('important-margin');
 	}
+	// 	$('#title-logo').removeClass('hidden');
+	// 	$('#title-small-logo').addClass('hidden');
+	// }
 })
 
 

@@ -22,29 +22,6 @@
     left: 0;
 }
 
-.nav {
-    margin-top: 50px;
-    width: 100%;
-    justify-content: space-between;
-    .small-logo {
-        margin-left: 50px;
-        img {
-            width: 150px;
-        }
-    }
-    .about-hamburger {
-        margin-right: 50px;
-        align-items: center;
-        visibility: hidden !important;
-        .line {
-            width: 50px;
-            height: 2px;
-            background-color: white;
-            margin: 3px 0px;
-        }
-    }
-}
-
 .about-hero {
     width: 100%;
     height: 90vh;
