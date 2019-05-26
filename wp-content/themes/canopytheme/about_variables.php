@@ -1,7 +1,7 @@
 <?php
     //TODO: switch to '' for prod
-    // $host = '';
-    $host = '/wordpress';
+    $host = '';
+    // $host = '/wordpress';
 
     if(get_field('hero_text')) {
         $hero_text = get_field('hero_text');
