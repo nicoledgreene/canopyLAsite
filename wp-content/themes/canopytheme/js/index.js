@@ -1,3 +1,26 @@
+function checkIfIE() {
+	var ua = window.navigator.userAgent;
+	var msie = ua.indexOf('MSIE ');
+	if (msie > 0) {
+		// IE 10 or older => return version number
+		return true;
+	}
+
+	var trident = ua.indexOf('Trident/');
+	if (trident > 0) {
+		// IE 11 => return version number
+		return true;
+	}
+	return false;
+}
+if(checkIfIE()===true) {
+	document.getElementById('canopy-theme').setAttribute('class', 'hidden');
+	document.getElementById('ie-canopy-theme').setAttribute('class', '');
+}
+else {
+	document.getElementById('ie-canopy-theme').setAttribute('class', 'hidden');
+}
+
 window.sr = ScrollReveal({ 
     distance: '30px',
     duration: 1000,

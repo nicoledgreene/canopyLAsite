@@ -858,6 +858,43 @@ h1 {
     border-bottom: 4px solid black;
   }
 }
+/* line 631, sass/homepage.scss */
+#ie-canopy-theme {
+  background-image: url(/images/logos/palms.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+/* line 639, sass/homepage.scss */
+#ie-title-logo {
+  position: absolute;
+  height: 200px;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 649, sass/homepage.scss */
+.coming-soon {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 100;
+}
+
+/* line 659, sass/homepage.scss */
+.coming-soon-text {
+  color: white;
+  font-size: 1.3em;
+}
+
 /* line 1, sass/footer.scss */
 footer {
   background-color: black;
