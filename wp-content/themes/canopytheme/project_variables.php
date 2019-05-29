@@ -1,10 +1,10 @@
 <?php
-    // $host = '';
-    $host = '/wordpress';
+    $host = '';
+    // $host = '/wordpress';
 
-    if(get_field('project_video_link')) {
-        $video_link = get_field('project_video_link');
-    }
+    // if(get_field('project_video_link')) {
+    //     $video_link = get_field('project_video_link');
+    // }
 
     $sliderImages = array();
 

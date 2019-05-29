@@ -90,31 +90,32 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 188px);
 }
-/* line 76, sass/projectpage.scss */
+/* line 77, sass/projectpage.scss */
 .project-container .project-info-detail {
   padding: 48px 96px;
 }
 
-/* line 81, sass/projectpage.scss */
+/* line 82, sass/projectpage.scss */
 .project-info-detail {
   line-height: 2em;
 }
-/* line 84, sass/projectpage.scss */
+/* line 85, sass/projectpage.scss */
 .project-info-detail h4 {
   font-size: 2em;
   padding-bottom: 24px;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 91, sass/projectpage.scss */
+/* line 92, sass/projectpage.scss */
 .project-info-detail .proj-subtitle {
   text-transform: uppercase;
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 98, sass/projectpage.scss */
+/* line 99, sass/projectpage.scss */
 .project-info-detail #proj-desc {
   line-height: 1.5em !important;
   column-count: 2;
@@ -122,61 +123,56 @@ body {
   -moz-column-count: 2;
   font-family: brother-1816, sans-serif;
 }
-/* line 107, sass/projectpage.scss */
+/* line 108, sass/projectpage.scss */
 .project-info-detail .line {
   width: 100%;
   height: 1px;
   background-color: black;
   margin-top: 24px;
 }
-/* line 114, sass/projectpage.scss */
+/* line 115, sass/projectpage.scss */
 .project-info-detail .project-breakdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-/* line 124, sass/projectpage.scss */
+/* line 125, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column {
   display: flex;
   flex-direction: row;
 }
-/* line 128, sass/projectpage.scss */
+/* line 129, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column {
   padding: 24px 24px;
 }
-/* line 131, sass/projectpage.scss */
+/* line 132, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column .subhead {
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 136, sass/projectpage.scss */
+/* line 137, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column #tools {
   column-count: 2;
   -webkit-column-count: 2;
   -moz-column-count: 2;
 }
-/* line 142, sass/projectpage.scss */
+/* line 143, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul {
   margin-left: 24px !important;
 }
-/* line 144, sass/projectpage.scss */
+/* line 145, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul li {
   list-style-type: initial !important;
 }
 
-/* line 156, sass/projectpage.scss */
+/* line 157, sass/projectpage.scss */
 .dark-nav {
   background-color: black !important;
 }
 
-/* line 159, sass/projectpage.scss */
-.transparent-black-background {
-  background-color: rgba(0, 0, 0, 0.3) !important;
-}
-
-/* line 163, sass/projectpage.scss */
+/* line 164, sass/projectpage.scss */
 #projectPagePlaceholder {
   visibility: hidden;
   height: 0px;
@@ -186,31 +182,41 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-  /* line 173, sass/projectpage.scss */
+  /* line 174, sass/projectpage.scss */
   .project-info-detail .project-breakdown {
     flex-direction: column;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 181, sass/projectpage.scss */
+  /* line 182, sass/projectpage.scss */
+  .project-container {
+    min-height: 0px;
+  }
+
+  /* line 185, sass/projectpage.scss */
   .transparent-black-background {
     background-color: black !important;
   }
 
-  /* line 184, sass/projectpage.scss */
+  /* line 188, sass/projectpage.scss */
   .slider {
-    margin-top: 99px;
+    margin-top: 79px;
   }
 
-  /* line 187, sass/projectpage.scss */
+  /* line 191, sass/projectpage.scss */
   .project-info-detail {
     padding: 48px 24px !important;
   }
-  /* line 190, sass/projectpage.scss */
+  /* line 193, sass/projectpage.scss */
+  .project-info-detail .project-breakdown {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+  /* line 196, sass/projectpage.scss */
   .project-info-detail .project-breakdown .column {
     flex-direction: column;
   }
-  /* line 195, sass/projectpage.scss */
+  /* line 201, sass/projectpage.scss */
   .project-info-detail #proj-desc {
     column-count: 1;
     -webkit-column-count: 1;

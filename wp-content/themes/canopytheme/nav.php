@@ -7,7 +7,7 @@
 ?>
 <div class="main-menu
 <?php if (is_page_template('projectpage.php')) { 
-    echo ' transparent-black-background';
+    echo ' hidden-on-desktop';
 } ?>
 ">
     <div>
@@ -47,12 +47,12 @@
                         $index+=1;
                         $link = $host . $item->url;
                         if(($index % 2)==0) {
-                            echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                            echo '<span class=\'project-nav-link even-link\' onclick="location.href=\'';
                             echo $link;
                             echo '\'">+ ';
                         }
                         else {
-                            echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                            echo '<span class=\'project-nav-link odd-link\' onc lick="location.href=\'';
                             echo $link;
                             echo '\'">+ ';
                         }
@@ -62,7 +62,7 @@
                 ?>
                 </div>
             </div>
-            <div class="sub-nav-item">
+            <!-- <div class="sub-nav-item">
                 <span class="sub-nav-item-title" id="filmToggle">FILM</span>
                 <div class="hidden sub-project-links" id="filmSub">
                 <?php 
@@ -81,11 +81,12 @@
                             echo '\'">+ ';
                         }
                         echo $item->text;
+                        echo $link;
                         echo "</span>";
                     }
                 ?>
                 </div>
-            </div>
+            </div> -->
             <div class="sub-nav-item">
                 <span class="sub-nav-item-title" id="videoGameToggle">VIDEO GAME</span>
                 <div class="hidden sub-project-links" id="videoGameSub">
@@ -93,14 +94,14 @@
                     $index = 0;
                     foreach($videoGameLinks as $item) {
                         $index+=1;
-                        $link = $host . $item->url;
+                        $link = $item->url;
                         if(($index % 2)==0) {
-                            echo '<span class=\'project-nav-link even-link\' onClick="location.href=\'';
+                            echo '<span class=\'project-nav-link even-link\' onclick="location.href=\'';
                             echo $link;
                             echo '\'">+ ';
                         }
                         else {
-                            echo '<span class=\'project-nav-link odd-link\' onClick="location.href=\'';
+                            echo '<span class=\'project-nav-link odd-link\' onclick="location.href=\'';
                             echo $link;
                             echo '\'">+ ';
                         }
@@ -118,10 +119,14 @@
                     foreach($immersiveLinks as $item) {
                         $index+=1;
                         if(($index % 2)==0) {
-                            echo "<span class='project-nav-link even-link'>+ ";
+                            echo '<span class=\'project-nav-link even-link\' onclick="location.href=\'';
+                            echo $link;
+                            echo '\'">+ ';
                         }
                         else {
-                            echo "<span class='project-nav-link odd-link'>+ ";
+                            echo '<span class=\'project-nav-link odd-link\' onclick="location.href=\'';
+                            echo $link;
+                            echo '\'">+ ';
                         }
                         echo $item->text;
                         echo "</span>";

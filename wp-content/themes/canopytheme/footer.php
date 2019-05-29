@@ -1,6 +1,6 @@
 <?php
-    // $host = '';
-    $host = '/wordpress';
+    $host = '';
+    // $host = '/wordpress';
 ?>
 
     <footer>

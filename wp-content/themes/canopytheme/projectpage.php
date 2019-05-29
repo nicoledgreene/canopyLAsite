@@ -13,10 +13,10 @@ get_header();
 
     <div class="slider">
         <?php 
-            if($video_link) {
-                    echo "<div id='slideItem100' class='videoWrapper'>";
-                        echo $video_link;
-                    echo "</div>";
+            if(get_field('project_video_link')) {
+                echo "<div id='slideItem100' class='videoWrapper'>";
+                    echo get_field('project_video_link');
+                echo "</div>";
             }
         ?>
         <?php

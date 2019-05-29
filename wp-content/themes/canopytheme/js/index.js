@@ -4,12 +4,22 @@ window.sr = ScrollReveal({
     scale: 0
 });
 
+var isProjectPage = false;
+if(document.getElementById('projectPagePlaceholder')) {
+	isProjectPage = true;
+}
+else {
+	isProjectPage = false;
+}
+
+
 function sendEmail() {
 	window.location='mailto:yo@canopy-la.com?Subject=Hey%20Canopy'
 }
 
 let windowWidth = $( window ).width();
 const pageOffset = window.pageYOffset;
+console.log(pageOffset);
 let navExpanded = false;
 
 let isMobileView = false;
@@ -19,11 +29,21 @@ function checkIfMobileView() {
 		isMobileView = true;
 		$(".main-features-mobile").removeClass('hidden');
 		$(".main-features").addClass('hidden');	
+		if(isProjectPage) {
+			$(".main-menu").removeClass('hidden-on-desktop');
+			$(".main-menu").addClass('dark-nav');
+		}
 	}
 	else {
 		isMobileView = false;
 		$(".main-features-mobile").addClass('hidden');
 		$(".main-features").removeClass('hidden');
+		if(isProjectPage && pageOffset < 85) {
+			$(".main-menu").addClass('hidden-on-desktop');
+		}
+		else if(isProjectPage && pageOffset >= 85) {
+			setProjectNav();
+		}
 	}
 }
 
@@ -32,14 +52,20 @@ window.onresize = () => {
 	checkIfMobileView();
 }
 
+
 if(pageOffset<85) {
 	//nav animations
-	sr.reveal('#title-logo', {delay: 100});
-	sr.reveal('.hamburger', {delay: 200});
-	if(windowWidth>600) {
-		sr.reveal('#nav1', {delay: 200});
-		sr.reveal('#nav2', {delay: 300});
-		sr.reveal('#nav3', {delay: 400});
+	if(!isProjectPage) {
+		sr.reveal('#title-logo', {delay: 100});
+		sr.reveal('.hamburger', {delay: 200});
+		if(windowWidth>600) {
+			sr.reveal('#nav1', {delay: 200});
+			sr.reveal('#nav2', {delay: 300});
+			sr.reveal('#nav3', {delay: 400});
+		}
+	}
+	if(isProjectPage && !isMobileView) {
+		$('.main-menu').addClass('hidden-on-desktop');
 	}
 	// sr.reveal('.main-features', {delay: 500});
 }
@@ -47,6 +73,20 @@ else if(pageOffset>=85) {
 	$('.main-menu').addClass('dark-nav');
 	$('#title-logo').addClass('hidden');
 	$('#title-small-logo').removeClass('hidden');
+	if(isProjectPage && !isMobileView) {
+		setProjectNav();
+	}
+}
+
+function setProjectNav() {
+	console.log('set project nav');
+	$('.main-menu').removeClass('hidden-on-desktop');
+	$('#nav1').removeClass('invisible');
+	$('#nav2').removeClass('invisible');
+	$('#nav3').removeClass('invisible');
+	$('#nav1').addClass('visible');
+	$('#nav2').addClass('visible');
+	$('#nav3').addClass('visible');
 }
 
 
@@ -95,14 +135,6 @@ function showNavSubItems(itemKey) {
     }
 }
 
-var isProjectPage = false;
-if(document.getElementById('projectPagePlaceholder')) {
-	isProjectPage = true;
-}
-else {
-	isProjectPage = false;
-}
-
 //navbar fixed
 $(document).scroll(function() {
 	let offset = window.pageYOffset;
@@ -110,15 +142,17 @@ $(document).scroll(function() {
 		$('.main-menu').addClass('dark-nav');
 		$('#title-logo').addClass('hidden');
 		$('#title-small-logo').removeClass('hidden');
-		if(isProjectPage) {
-			$('.main-menu').removeClass('transparent-black-background');
+		if(isProjectPage && !isMobileView) {
+			setProjectNav();
 		}
 	}
 	else {
-		$('.main-menu').removeClass('dark-nav');
 		$('.parent-nav-links').addClass('important-margin');
-		if(isProjectPage) {
-			$('.main-menu').addClass('transparent-black-background');
+		if(!isProjectPage) {
+			$('.main-menu').removeClass('dark-nav');
+		}
+		if(isProjectPage && !isMobileView) {
+			$('.main-menu').addClass('hidden-on-desktop');
 		}
 	}
 	// 	$('#title-logo').removeClass('hidden');
