@@ -202,21 +202,39 @@ body {
   .slider {
     margin-top: 79px;
   }
+  /* line 190, sass/projectpage.scss */
+  .slider #slidePrevious, .slider #slideNext {
+    top: 60%;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  /* line 194, sass/projectpage.scss */
+  .slider #slidePrevious i, .slider #slideNext i {
+    font-size: 45px !important;
+  }
+  /* line 198, sass/projectpage.scss */
+  .slider #slidePrevious {
+    left: 10px !important;
+  }
+  /* line 201, sass/projectpage.scss */
+  .slider #slideNext {
+    right: 10px;
+  }
 
-  /* line 191, sass/projectpage.scss */
+  /* line 205, sass/projectpage.scss */
   .project-info-detail {
     padding: 48px 24px !important;
   }
-  /* line 193, sass/projectpage.scss */
+  /* line 207, sass/projectpage.scss */
   .project-info-detail .project-breakdown {
     max-width: 100%;
     overflow-x: scroll;
   }
-  /* line 196, sass/projectpage.scss */
+  /* line 210, sass/projectpage.scss */
   .project-info-detail .project-breakdown .column {
     flex-direction: column;
   }
-  /* line 201, sass/projectpage.scss */
+  /* line 215, sass/projectpage.scss */
   .project-info-detail #proj-desc {
     column-count: 1;
     -webkit-column-count: 1;

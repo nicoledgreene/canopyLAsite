@@ -14,7 +14,7 @@ else {
 if($('.slide').length) {
     imageArrayLength = $('.slide').length;
 }
-if(imageArrayLength===0) {
+if(imageArrayLength<=1) {
     $('#slideNext').addClass('invisible');
 }
 

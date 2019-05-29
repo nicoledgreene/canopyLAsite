@@ -187,6 +187,20 @@ body {
     }
     .slider {
         margin-top: 79px;
+        #slidePrevious, #slideNext {
+            top: 60%;
+            width: 45px !important;
+            height: 45px !important;
+            i {
+                font-size: 45px !important;
+            }
+        }
+        #slidePrevious {
+            left: 10px !important;
+        }
+        #slideNext {
+            right: 10px;
+        }
     }
     .project-info-detail {
         padding: 48px 24px !important;

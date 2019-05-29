@@ -118,6 +118,7 @@
                     $index = 0;
                     foreach($immersiveLinks as $item) {
                         $index+=1;
+                        $link = $item->url;
                         if(($index % 2)==0) {
                             echo '<span class=\'project-nav-link even-link\' onclick="location.href=\'';
                             echo $link;

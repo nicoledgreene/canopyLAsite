@@ -19,7 +19,6 @@ function sendEmail() {
 
 let windowWidth = $( window ).width();
 const pageOffset = window.pageYOffset;
-console.log(pageOffset);
 let navExpanded = false;
 
 let isMobileView = false;
@@ -79,7 +78,6 @@ else if(pageOffset>=85) {
 }
 
 function setProjectNav() {
-	console.log('set project nav');
 	$('.main-menu').removeClass('hidden-on-desktop');
 	$('#nav1').removeClass('invisible');
 	$('#nav2').removeClass('invisible');
