@@ -52,7 +52,7 @@
                             echo '\'">+ ';
                         }
                         else {
-                            echo '<span class=\'project-nav-link odd-link\' onc lick="location.href=\'';
+                            echo '<span class=\'project-nav-link odd-link\' onclick="location.href=\'';
                             echo $link;
                             echo '\'">+ ';
                         }

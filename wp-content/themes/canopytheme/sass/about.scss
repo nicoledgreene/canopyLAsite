@@ -16,7 +16,7 @@
 .background-upper {
     background-color: black;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     position: absolute;
     z-index: -200;
     top: 0;
@@ -123,11 +123,13 @@
 @media only screen and (max-width: 1000px) {
     .about-hero {
         line-height: 2em;
+        padding: 99px 0px;
+        height: calc(90vh - 200px);
         .company-name {
-            font-size: 30px;
+            font-size: 25px;
         }
         .company-about {
-            font-size: 24px;
+            font-size: 20px;
         }
     }
 }

@@ -23,4 +23,6 @@
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <?php wp_head(); ?>
     <div id="wptime-plugin-preloader"></div>
+    <link rel="shortcut icon" href="/palmtrees_cHf_icon" type="image/x-icon">
+    <link rel="icon" href="/palmtrees_cHf_icon" type="image/x-icon">
 </head>
