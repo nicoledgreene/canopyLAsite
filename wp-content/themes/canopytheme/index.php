@@ -44,14 +44,6 @@ Template Name: Homepage
     <?php else : ?>
     <?php endif; ?>
 
-    <div id="ie-canopy-theme">
-        <img id="ie-title-logo" src="/images/logos/CANOPY_LOGO_ai_FULL_WHT.png">
-        <div class="coming-soon">
-            <span class="in-touch">Get in touch</span>
-            <a href="mailto:yo@canopy-la.com?Subject=Hello%20there" target="_top" class="coming-soon-text">yo@canopy-la.com</a >
-        </div>
-    </div>
-
     <div id="canopy-theme" class="container">
         <div class="hero">
             <div class="blur"></div>

@@ -1,26 +1,3 @@
-function checkIfIE() {
-	var ua = window.navigator.userAgent;
-	var msie = ua.indexOf('MSIE ');
-	if (msie > 0) {
-		// IE 10 or older => return version number
-		return true;
-	}
-
-	var trident = ua.indexOf('Trident/');
-	if (trident > 0) {
-		// IE 11 => return version number
-		return true;
-	}
-	return false;
-}
-if(checkIfIE()===true) {
-	document.getElementById('canopy-theme').setAttribute('class', 'hidden');
-	document.getElementById('ie-canopy-theme').setAttribute('class', '');
-}
-else {
-	document.getElementById('ie-canopy-theme').setAttribute('class', 'hidden');
-}
-
 window.sr = ScrollReveal({ 
     distance: '30px',
     duration: 1000,
@@ -69,7 +46,7 @@ function checkIfMobileView() {
 	}
 }
 
-window.onresize = () => {
+window.onresize = function resize() {
 	windowWidth = $( window ).width();
 	checkIfMobileView();
 }
@@ -113,25 +90,25 @@ function setProjectNav() {
 
 //nav hide/show
 //parent links
-$('#nav2').click(() => {
+$('#nav2').click(function() {
 	navExpanded = true;
     $("#nav2").toggleClass('active-main-link');
 	$('.expandable-nav').toggleClass('hidden');
 })
-$('#filmToggle').click(() => {
+$('#filmToggle').click(function(){
     showNavSubItems('filmToggle');
 })
-$('#videoGameToggle').click(() => {
+$('#videoGameToggle').click(function(){
     showNavSubItems('videoGameToggle');
 })
-$('#immersiveToggle').click(() => {
+$('#immersiveToggle').click(function(){
     showNavSubItems('immersiveToggle');
 })
-$('#commercialToggle').click(() => {
+$('#commercialToggle').click(function(){
     showNavSubItems('commercialToggle');
 })
 
-$(".hamburger").click(() => {
+$(".hamburger").click(function(){
 	$(".home-nav").toggleClass("home-nav-display");
 	$(".main-menu").addClass("dark-nav");
 })
@@ -186,17 +163,17 @@ $(document).scroll(function() {
 //Homepage top features
 var activeHeroIndex = 0;
 setActiveBackground(0);
-$('.hero-button-0').click(() => {
+$('.hero-button-0').click(function(){
 	stopMyTimer();
 	setActiveBackground(0);
 	startMyTimer();
 });
-$('.hero-button-1').click(() => {
+$('.hero-button-1').click(function(){
 	stopMyTimer();
 	setActiveBackground(1);
 	startMyTimer();
 });
-$('.hero-button-2').click(() => {
+$('.hero-button-2').click(function(){
 	stopMyTimer();
 	setActiveBackground(2);
 	startMyTimer();
@@ -242,7 +219,7 @@ function startMyTimer() {
 var activePressIndex = 0;
 var pressLength = $('.feat-img').length;
 setActivePressItem(0);
-$(".feat-arrow-previous").click(() => {
+$(".feat-arrow-previous").click(function(){
 	if(activePressIndex === 0) {
 		activePressIndex = (pressLength - 1);
 	}
@@ -252,7 +229,7 @@ $(".feat-arrow-previous").click(() => {
 
 	setActivePressItem(activePressIndex);
 });
-$(".feat-arrow-next").click(() => {
+$(".feat-arrow-next").click(function(){
 	if(activePressIndex === (pressLength - 1)) {
 		activePressIndex = 0;
 	}

@@ -19,7 +19,7 @@ if(imageArrayLength<=1) {
 }
 
 $('#slideNext').click(
-    () => {
+    function goNext() {
         if(activeSlideIndex===100) {
             activeSlideIndex = 0;
         }
@@ -30,7 +30,7 @@ $('#slideNext').click(
     }
 )
 $('#slidePrevious').click(
-    () => {
+    function goPrevious() {
         if(activeSlideIndex===0) {
             activeSlideIndex = 100;
         }
