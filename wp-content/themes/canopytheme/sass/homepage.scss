@@ -514,6 +514,9 @@ h1 {
 }
 
 @media only screen and(max-width: 600px) {
+    #title-small-logo {
+        width: 110px;
+    }
     .hero {
         width: 100%;
         height: 100vh;
