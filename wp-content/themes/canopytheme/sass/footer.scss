@@ -79,9 +79,10 @@ footer {
     margin-top: 20px;
     margin-left: 12px;
     text-decoration: italic;
-    line-height: 1em;
+    line-height: 1.2em;
     display: flex;
     flex-direction: column;
+    letter-spacing: 3px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -96,5 +97,11 @@ footer {
 
     .social {
         align-items: center;
+        text-align: center;
+    }
+
+    #copyright {
+        margin-left: 0px;
+        
     }
 }

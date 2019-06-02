@@ -67,14 +67,15 @@
 .about-hero .company-name {
   text-transform: uppercase;
   font-size: 1.6em;
+  letter-spacing: 3px;
 }
-/* line 64, sass/about.scss */
+/* line 65, sass/about.scss */
 .about-hero .company-about {
   font-size: 2.7vw;
   padding: 0px 12vw;
 }
 
-/* line 70, sass/about.scss */
+/* line 71, sass/about.scss */
 .about-info {
   position: relative;
   z-index: -100;
@@ -85,110 +86,122 @@
   align-items: center;
 }
 
-/* line 80, sass/about.scss */
+/* line 81, sass/about.scss */
 .the-gang, .bios {
   position: relative;
   width: 75%;
   z-index: -20;
 }
 
-/* line 86, sass/about.scss */
+/* line 87, sass/about.scss */
 .bios {
   margin: 50px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-/* line 92, sass/about.scss */
+/* line 93, sass/about.scss */
 .bios .person {
   width: calc(33% - 24px);
   display: flex;
   flex-direction: column;
 }
-/* line 97, sass/about.scss */
+/* line 98, sass/about.scss */
 .bios .person .name {
   font-weight: 700;
   display: flex;
   flex-direction: column;
 }
-/* line 101, sass/about.scss */
+/* line 102, sass/about.scss */
 .bios .person .name span:nth-of-type(1) {
   font-size: 2.25vw;
   margin-bottom: 5px;
 }
-/* line 105, sass/about.scss */
+/* line 106, sass/about.scss */
 .bios .person .name span:nth-of-type(2) {
-  margin-top: 8px;
+  margin-top: 3px;
   font-size: 16px;
 }
-/* line 110, sass/about.scss */
+/* line 111, sass/about.scss */
 .bios .person .bio-desc {
   font-family: brother-1816, sans-serif;
   padding: 24px 0px;
   font-size: 15px;
   line-height: 1.5em;
 }
-/* line 116, sass/about.scss */
+/* line 117, sass/about.scss */
 .bios .person .bio-email {
   font-size: 15px;
   font-weight: 700;
 }
 
 @media only screen and (max-width: 1000px) {
-  /* line 124, sass/about.scss */
+  /* line 125, sass/about.scss */
   .about-hero {
     line-height: 3em;
     padding: 99px 0px;
     height: calc(90vh - 200px);
   }
-  /* line 128, sass/about.scss */
+  /* line 129, sass/about.scss */
   .about-hero .company-name {
     font-size: 25px;
   }
-  /* line 131, sass/about.scss */
+  /* line 132, sass/about.scss */
   .about-hero .company-about {
     font-size: 2em;
   }
 }
 @media only screen and (max-width: 800px) {
-  /* line 138, sass/about.scss */
+  /* line 139, sass/about.scss */
   .about-hero {
     line-height: 2.5em;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 144, sass/about.scss */
+  /* line 145, sass/about.scss */
   .about-hero {
     line-height: 2em;
   }
-  /* line 146, sass/about.scss */
+  /* line 147, sass/about.scss */
   .about-hero .company-name {
     font-size: 1.1em !important;
+    margin-top: 20px !important;
   }
-  /* line 149, sass/about.scss */
+  /* line 151, sass/about.scss */
   .about-hero .company-about {
     font-size: 1em !important;
   }
 
-  /* line 153, sass/about.scss */
+  /* line 155, sass/about.scss */
   .the-gang, .bios {
     width: 95%;
   }
 
-  /* line 156, sass/about.scss */
+  /* line 158, sass/about.scss */
   .bios {
     flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
   }
-  /* line 158, sass/about.scss */
+  /* line 162, sass/about.scss */
   .bios .person {
-    width: calc(100% - 48px);
+    width: calc(100% - 92px);
     padding: 24px 12px;
   }
-  /* line 163, sass/about.scss */
+  /* line 167, sass/about.scss */
   .bios .person .name span:nth-of-type(1) {
     font-size: 25px;
   }
-  /* line 168, sass/about.scss */
+  /* line 170, sass/about.scss */
+  .bios .person .name span:nth-of-type(2) {
+    margin-top: 0px;
+  }
+  /* line 174, sass/about.scss */
+  .bios .person .name, .bios .person .bio-desc, .bios .person .bio-email {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+  }
+  /* line 179, sass/about.scss */
   .bios .person:nth-of-type(1), .bios .person:nth-of-type(2) {
     border-bottom: 1px solid black;
   }

@@ -103,34 +103,39 @@ body {
 }
 
 /* line 85, sass/projectpage.scss */
-.bc2, .bc3 {
+.bc2 {
   padding: 24px 24px;
 }
 
 /* line 88, sass/projectpage.scss */
+.bc3 {
+  padding: 24px 24px 24px 0px;
+}
+
+/* line 91, sass/projectpage.scss */
 .bc4 {
   padding: 24px 0px 24px 24px;
 }
 
-/* line 92, sass/projectpage.scss */
+/* line 95, sass/projectpage.scss */
 .project-info-detail {
   line-height: 2em;
 }
-/* line 95, sass/projectpage.scss */
+/* line 98, sass/projectpage.scss */
 .project-info-detail h4 {
   font-size: 2em;
   padding-bottom: 24px;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 102, sass/projectpage.scss */
+/* line 105, sass/projectpage.scss */
 .project-info-detail .proj-subtitle {
   text-transform: uppercase;
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 109, sass/projectpage.scss */
+/* line 112, sass/projectpage.scss */
 .project-info-detail #proj-desc {
   line-height: 1.5em !important;
   column-count: 2;
@@ -138,54 +143,54 @@ body {
   -moz-column-count: 2;
   font-family: brother-1816, sans-serif;
 }
-/* line 118, sass/projectpage.scss */
+/* line 121, sass/projectpage.scss */
 .project-info-detail .line {
   width: 100%;
   height: 1px;
   background-color: black;
   margin-top: 24px;
 }
-/* line 125, sass/projectpage.scss */
+/* line 128, sass/projectpage.scss */
 .project-info-detail .project-breakdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-/* line 135, sass/projectpage.scss */
+/* line 138, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column {
   display: flex;
   flex-direction: row;
   width: 50%;
   justify-content: flex-start;
 }
-/* line 142, sass/projectpage.scss */
+/* line 145, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column .subhead {
   display: block;
   font-family: Acumin Pro Bold, sans-serif;
   font-weight: 700;
 }
-/* line 147, sass/projectpage.scss */
+/* line 150, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column #tools {
   column-count: 2;
   -webkit-column-count: 2;
   -moz-column-count: 2;
 }
-/* line 153, sass/projectpage.scss */
+/* line 156, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul {
   margin-left: 24px !important;
 }
-/* line 155, sass/projectpage.scss */
+/* line 158, sass/projectpage.scss */
 .project-info-detail .project-breakdown .column .breakdown-column div ul li {
   list-style-type: initial !important;
 }
 
-/* line 167, sass/projectpage.scss */
+/* line 170, sass/projectpage.scss */
 .dark-nav {
   background-color: black !important;
 }
 
-/* line 174, sass/projectpage.scss */
+/* line 177, sass/projectpage.scss */
 #projectPagePlaceholder {
   visibility: hidden;
   height: 0px;
@@ -195,98 +200,98 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-  /* line 184, sass/projectpage.scss */
+  /* line 187, sass/projectpage.scss */
   .project-info-detail .project-breakdown {
     flex-direction: column;
   }
-  /* line 186, sass/projectpage.scss */
+  /* line 189, sass/projectpage.scss */
   .project-info-detail .project-breakdown .column {
     width: 100%;
   }
-  /* line 189, sass/projectpage.scss */
+  /* line 192, sass/projectpage.scss */
   .project-info-detail .project-breakdown .breakdown-column {
     width: 50%;
   }
 
-  /* line 195, sass/projectpage.scss */
+  /* line 198, sass/projectpage.scss */
   .bc1, .bc3 {
     padding: 24px 24px 24px 0px;
   }
 
-  /* line 198, sass/projectpage.scss */
+  /* line 201, sass/projectpage.scss */
   .bc2, .bc4 {
     padding: 24px 24px 0px 24px;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 205, sass/projectpage.scss */
+  /* line 208, sass/projectpage.scss */
   .project-container {
     min-height: 0px;
   }
 
-  /* line 208, sass/projectpage.scss */
+  /* line 211, sass/projectpage.scss */
   .transparent-black-background {
     background-color: black !important;
   }
 
-  /* line 211, sass/projectpage.scss */
+  /* line 214, sass/projectpage.scss */
   .slider {
     margin-top: 99px;
   }
-  /* line 213, sass/projectpage.scss */
+  /* line 216, sass/projectpage.scss */
   .slider #slidePrevious, .slider #slideNext {
     top: 60%;
     width: 45px !important;
     height: 45px !important;
   }
-  /* line 217, sass/projectpage.scss */
+  /* line 220, sass/projectpage.scss */
   .slider #slidePrevious i, .slider #slideNext i {
     font-size: 45px !important;
   }
-  /* line 221, sass/projectpage.scss */
+  /* line 224, sass/projectpage.scss */
   .slider #slidePrevious {
     left: 10px !important;
   }
-  /* line 224, sass/projectpage.scss */
+  /* line 227, sass/projectpage.scss */
   .slider #slideNext {
     right: 10px;
   }
 
-  /* line 228, sass/projectpage.scss */
+  /* line 231, sass/projectpage.scss */
   .project-info-detail {
     padding: 48px 24px !important;
   }
-  /* line 230, sass/projectpage.scss */
+  /* line 233, sass/projectpage.scss */
   .project-info-detail .project-breakdown {
     max-width: 100%;
     overflow-x: scroll;
   }
-  /* line 233, sass/projectpage.scss */
+  /* line 236, sass/projectpage.scss */
   .project-info-detail .project-breakdown .column {
     flex-direction: column;
   }
-  /* line 235, sass/projectpage.scss */
+  /* line 238, sass/projectpage.scss */
   .project-info-detail .project-breakdown .column .breakdown-column {
     width: 100%;
   }
-  /* line 241, sass/projectpage.scss */
+  /* line 244, sass/projectpage.scss */
   .project-info-detail #proj-desc {
     column-count: 1;
     -webkit-column-count: 1;
     -moz-column-count: 1;
   }
 
-  /* line 248, sass/projectpage.scss */
+  /* line 251, sass/projectpage.scss */
   .bc1 {
     margin-top: 12px;
   }
 
-  /* line 251, sass/projectpage.scss */
+  /* line 254, sass/projectpage.scss */
   .bc4 {
     margin-bottom: 12px;
   }
 
-  /* line 254, sass/projectpage.scss */
+  /* line 257, sass/projectpage.scss */
   .bc1, .bc2, .bc3, .bc4 {
     padding: 12px 0px;
   }

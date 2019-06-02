@@ -91,25 +91,32 @@ footer {
   margin-top: 20px;
   margin-left: 12px;
   text-decoration: italic;
-  line-height: 1em;
+  line-height: 1.2em;
   display: flex;
   flex-direction: column;
+  letter-spacing: 3px;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 88, sass/footer.scss */
+  /* line 89, sass/footer.scss */
   .footer-row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  /* line 92, sass/footer.scss */
+  /* line 93, sass/footer.scss */
   .footer-row .small-logo {
     margin-bottom: 20px;
   }
 
-  /* line 97, sass/footer.scss */
+  /* line 98, sass/footer.scss */
   .social {
     align-items: center;
+    text-align: center;
+  }
+
+  /* line 103, sass/footer.scss */
+  #copyright {
+    margin-left: 0px;
   }
 }

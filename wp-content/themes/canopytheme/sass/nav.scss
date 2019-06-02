@@ -110,11 +110,12 @@
 
     .main-menu {
         flex-wrap: wrap;
+        align-items:center;
         .hamburger {
             display: block;
             .line {
                 background-color: white;
-                width: 50px;
+                width: 37px;
                 height: 3px;
                 margin: 5px 0px;
             }
