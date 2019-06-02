@@ -12,6 +12,15 @@ else {
 	isProjectPage = false;
 }
 
+var isAboutPage = false;
+if(document.getElementById('aboutpgid')) {
+	isAboutPage = true;
+}
+else {
+	isAboutPage = false;
+}
+
+
 
 function sendEmail() {
 	window.location='mailto:yo@canopy-la.com?Subject=Hey%20Canopy'
@@ -146,7 +155,7 @@ $(document).scroll(function() {
 	}
 	else {
 		$('.parent-nav-links').addClass('important-margin');
-		if(!isProjectPage) {
+		if(!isProjectPage && !isAboutPage) {
 			$('.main-menu').removeClass('dark-nav');
 		}
 		if(isProjectPage && !isMobileView) {

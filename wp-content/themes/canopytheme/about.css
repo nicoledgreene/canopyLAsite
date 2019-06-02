@@ -61,7 +61,7 @@
   align-items: center;
   text-align: center;
   font-weight: 700;
-  line-height: 5vw;
+  line-height: 4vw;
 }
 /* line 59, sass/about.scss */
 .about-hero .company-name {
@@ -70,8 +70,8 @@
 }
 /* line 64, sass/about.scss */
 .about-hero .company-about {
-  font-size: 3vw;
-  padding: 0px 50px;
+  font-size: 2.7vw;
+  padding: 0px 12vw;
 }
 
 /* line 70, sass/about.scss */
@@ -113,12 +113,12 @@
 }
 /* line 101, sass/about.scss */
 .bios .person .name span:nth-of-type(1) {
-  font-size: 3vw;
+  font-size: 2.25vw;
   margin-bottom: 5px;
 }
 /* line 105, sass/about.scss */
 .bios .person .name span:nth-of-type(2) {
-  margin-top: 16px;
+  margin-top: 8px;
   font-size: 16px;
 }
 /* line 110, sass/about.scss */
@@ -137,7 +137,7 @@
 @media only screen and (max-width: 1000px) {
   /* line 124, sass/about.scss */
   .about-hero {
-    line-height: 2em;
+    line-height: 3em;
     padding: 99px 0px;
     height: calc(90vh - 200px);
   }
@@ -147,29 +147,48 @@
   }
   /* line 131, sass/about.scss */
   .about-hero .company-about {
-    font-size: 20px;
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* line 138, sass/about.scss */
+  .about-hero {
+    line-height: 2.5em;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 138, sass/about.scss */
+  /* line 144, sass/about.scss */
+  .about-hero {
+    line-height: 2em;
+  }
+  /* line 146, sass/about.scss */
+  .about-hero .company-name {
+    font-size: 1.1em !important;
+  }
+  /* line 149, sass/about.scss */
+  .about-hero .company-about {
+    font-size: 1em !important;
+  }
+
+  /* line 153, sass/about.scss */
   .the-gang, .bios {
     width: 95%;
   }
 
-  /* line 141, sass/about.scss */
+  /* line 156, sass/about.scss */
   .bios {
     flex-direction: column;
   }
-  /* line 143, sass/about.scss */
+  /* line 158, sass/about.scss */
   .bios .person {
     width: calc(100% - 48px);
     padding: 24px 12px;
   }
-  /* line 148, sass/about.scss */
+  /* line 163, sass/about.scss */
   .bios .person .name span:nth-of-type(1) {
     font-size: 25px;
   }
-  /* line 153, sass/about.scss */
+  /* line 168, sass/about.scss */
   .bios .person:nth-of-type(1), .bios .person:nth-of-type(2) {
     border-bottom: 1px solid black;
   }

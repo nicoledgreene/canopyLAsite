@@ -9,13 +9,16 @@
 <?php if (is_page_template('projectpage.php')) { 
     echo ' hidden-on-desktop';
 } ?>
+<?php if (is_page_template('aboutpage.php')) {
+    echo ' dark-nav';
+} ?>
 ">
     <div>
         <img onClick="location.href='/'" id="title-logo" 
-        <?php if($isHomePage === false) {
+        <?php if($isHomePage === false) {  
             echo 'class="hidden"';
         } ?>
-        src="<?php echo $host . '/images/logos/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
+        src="<?php echo $host . '/wp-content/uploads/2019/06/CANOPY_LOGO_ai_FULL_WHT.png' ?>">
         <img onClick="location.href='/'" id="title-small-logo" class="
         <?php if($isHomePage === true) {
             echo 'hidden';

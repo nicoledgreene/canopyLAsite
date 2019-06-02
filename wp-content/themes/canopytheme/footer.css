@@ -24,7 +24,7 @@ footer {
 }
 /* line 22, sass/footer.scss */
 .flex-row .small-logo img {
-  width: 200px;
+  width: 150px;
 }
 
 /* line 28, sass/footer.scss */
@@ -44,7 +44,7 @@ footer {
 /* line 40, sass/footer.scss */
 .social {
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 /* line 45, sass/footer.scss */

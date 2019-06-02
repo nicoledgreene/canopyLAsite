@@ -33,10 +33,12 @@ get_header();
             }
         ?>
         <div id="slidePrevious">
-            <i class="fa fa-chevron-circle-left"></i>
+            <i class="fa fa-chevron-left"></i>
+            <!-- <i class="fa fa-chevron-circle-left"></i> -->
         </div>
         <div id="slideNext">
-            <i class="fa fa-chevron-circle-right"></i>
+            <!-- <i class="fa fa-chevron-circle-right"></i> -->
+            <i class="fa fa-chevron-right"></i>
         </div>
     </div>
     <div class="project-info-detail">
@@ -48,21 +50,21 @@ get_header();
         <div class="line"></div>
         <div class="project-breakdown">
             <div class="column">
-                <div class="breakdown-column">
+                <div class="breakdown-column bc1">
                     <span class="subhead">CLIENT</span>
                     <span><?php echo $client_name ?></span>
                 </div>
-                <div class="breakdown-column">
-                    <span class="subhead">TEAM CREDITS</span>
+                <div class="breakdown-column bc2">
+                    <span class="subhead">ADDITIONAL CREDITS</span>
                     <div><?php echo $team_credits; ?></div>
                 </div>
             </div>
             <div class="column">
-                <div class="breakdown-column">
+                <div class="breakdown-column bc3">
                     <span class="subhead">TOOLS USED</span>
                     <div  id="tools"><?php echo $tools_used; ?></div>
                 </div>
-                <div class="breakdown-column">
+                <div class="breakdown-column bc4">
                     <span class="subhead">CONTACT US</span>
                     <span><?php echo $contact_us?></span>
                 </div>

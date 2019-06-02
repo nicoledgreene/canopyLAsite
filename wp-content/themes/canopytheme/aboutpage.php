@@ -8,7 +8,7 @@ get_header();
 <?php include 'about_variables.php' ?>
 <?php include 'variables.php' ?>
 
-<div class="about-container flex-column">
+<div id="aboutpgid" class="about-container flex-column">
     <div class="background-upper"></div>
     <?php include('nav.php'); ?>
     <div class="about-upper">
