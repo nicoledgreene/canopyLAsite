@@ -25,7 +25,7 @@ body {
 /* line 19, sass/projectpage.scss */
 .slider #slidePrevious, .slider #slideNext {
   position: absolute;
-  top: calc(50% - 60px);
+  top: calc(50% - 40px);
   z-index: 50;
   border-radius: 50%;
   width: 60px;
